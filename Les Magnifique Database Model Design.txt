@@ -1,0 +1,37 @@
+Event						Client
+- Name						- Client Name
+- Description					- Client Address
+- Start Date					- Client Phone Number
+- End Date					- Event ID
+						- Created On
+						- Updated On
+Activity
+- Activity Name
+- Event ID
+- Start Date
+- End Date
+- Venue
+- Description
+- Created On
+- Updated On
+
+
+Service Provider
+- Service Provide Name
+- Address
+- Phone Number
+- Contact Person Name
+- Contact Person Phone Number
+- Activity ID
+- Cost Estimate
+- Created On
+- Updated On
+
+
+Sponsor
+- Sponsor Name
+- Acitivity ID
+- Contact Person Name
+- Contact Person Phone Number
+- Created On
+- Updated On
