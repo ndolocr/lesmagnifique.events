@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/admin', 'AdminController@homePage');
+/* ADMIN ROUTES */
+
+Route::get('/admin', 'AdminController@dashboard');
