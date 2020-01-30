@@ -13,6 +13,15 @@
 	
 	<header class="header">
 		
+
+		<div class="header__img">
+			<img src="assets/img/hero/hero.jpg" alt="Header Background Image">
+		</div>
+
+		<div class="header__cover">
+			
+		</div>
+
 		<nav>
 			
 			<div class="logo-box">
