@@ -6,6 +6,8 @@
 
 @section('page-title') Dashboard @endsection
 
+@section('events-active') start active open @endsection
+
 @section('content')
     
     <div class="row">
@@ -24,7 +26,7 @@
                                 <div class="portlet-title">
                                     <div class="caption font-red-sunglo">
                                         <i class="icon-settings font-red-sunglo"></i>
-                                        <span class="caption-subject bold uppercase">  </span>
+                                        <span class="caption-subject bold uppercase"> Event Details </span>
                                     </div>                                   
                                 </div>
                                 
@@ -35,7 +37,7 @@
                                             <label>Event Title</label>
                                             <div class="input-group">
                                                 <span class="input-group-addon">
-                                                    <i class="fa fa-info-circle"></i>
+                                                    <i class="fa fa-info"></i>
                                                 </span>
                                                 <input type="text" id="title" name="title" class="form-control" placeholder="Describe the event"> 
                                             </div>
@@ -43,7 +45,7 @@
                                         </div>                                                                                                                                                                               
 
                                         <div class="form-group">
-                                            <label>From</label>
+                                            <label>Event Start Date</label>
                                             <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
@@ -54,7 +56,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label>To</label>
+                                            <label>Event End Date</label>
                                             <div class="input-group">
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
@@ -76,7 +78,7 @@
                             <div class="portlet light bordered">
                                 <div class="portlet-title">
                                     <div class="caption font-red-sunglo">
-                                        <i class="fa fa-crosshairs font-red-sunglo"></i>
+                                        <i class="icon-settings font-red-sunglo"></i>
                                         <span class="caption-subject bold uppercase"> Event Description</span>
                                     </div>                                                                       
                                 </div>

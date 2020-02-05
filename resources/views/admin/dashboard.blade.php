@@ -5,6 +5,8 @@
 
 @section('page-title') Dashboard @endsection
 
+@section('dashboard-active') start active open @endsection
+
 @section('content')
     
 

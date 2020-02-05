@@ -77,8 +77,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- BEGIN USER LOGIN DROPDOWN -->
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg" />
-                                <span class="username username-hide-on-mobile"> Nick </span>
+                                <img alt="" class="img-circle" src="{{ URL::asset('assets/img/profile/team8.jpg') }}" />
+                                <span class="username username-hide-on-mobile"> Muendi </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
 
@@ -138,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!-- END RESPONSIVE QUICK SEARCH FORM -->
                         </li>
 
-                        <li class="nav-item start active open">
+                        <li class="nav-item @yield('dashboard-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <span class="title">Dashboard</span>
@@ -149,10 +149,33 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li class="heading">
                             <h3 class="uppercase">Feature Actions</h3>
                         </li>
-
-                        <li class="nav-item  ">
+                        
+                        <!-- BEGIN CLIENT SIDE MENU -->
+                        <li class="nav-item @yield('clients-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-diamond"></i>
+                                <i class="fa fa-user"></i>
+                                <span class="title">Clients</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="ui_colors.html" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="ui_general.html" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END CLIENT SIDE MENU -->
+                        
+                        <!-- BEGIN EVENTS SIDE MENU -->
+                        <li class="nav-item @yield('events-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-calendar"></i>
                                 <span class="title">Events</span>
                                 <span class="arrow"></span>
                             </a>
@@ -169,6 +192,73 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </li>                                
                             </ul>
                         </li>
+                        <!-- END EVENTS SIDE MENU -->
+
+                        <!-- BEGIN ACTIVITY SIDE MENU -->
+                        <li class="nav-item @yield('activity-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-cog"></i>
+                                <span class="title">Activity</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="ui_colors.html" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="ui_general.html" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END ACTIVITY SIDE MENU -->
+
+                        <!-- BEGIN SPONSOR SIDE MENU -->
+                        <li class="nav-item @yield('sponsor-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-money"></i>
+                                <span class="title">Sponsor</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="ui_colors.html" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="ui_general.html" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END SPONSOR SIDE MENU -->
+
+                        <!-- BEGIN SERVICE PROVIDER SIDE MENU -->
+                        <li class="nav-item @yield('service-provider-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-user"></i>
+                                <span class="title">Service Provider</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="ui_colors.html" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="ui_general.html" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END SERVICE PROVIDER SIDE MENU -->
                                 
                     </ul>
                     <!-- END SIDEBAR MENU -->
