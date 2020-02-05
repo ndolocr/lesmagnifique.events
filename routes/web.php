@@ -22,6 +22,9 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 Route::get('/admin/events', 'AdminController@events')->name('events');
 Route::get('/admin/events/add', 'AdminController@eventsAdd')->name('events-add');
 
+Route::get('/admin/clients', 'AdminController@clients')->name('clients');
+Route::get('/admin/clients/add', 'AdminController@clientsAdd')->name('clients-add');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -18,4 +18,12 @@ class AdminController extends Controller
     public function eventsAdd(){
     	return view('admin.events-add');
     }
+
+    public function clients(){
+    	return view('admin.clients');
+    }
+
+    public function clientsAdd(){
+    	return view('admin.clients-add');
+    }
 }
