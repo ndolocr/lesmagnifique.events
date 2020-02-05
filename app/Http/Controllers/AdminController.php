@@ -11,6 +11,10 @@ class AdminController extends Controller
     	return view('admin.dashboard');
     }
 
+    public function events(){
+    	return view('admin.events');
+    }
+
     public function eventsAdd(){
     	return view('admin.events-add');
     }

@@ -28,18 +28,18 @@ License: You must have a valid license purchased only from themeforest(the above
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="assets/global/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
 
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="assets/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="{{ URL::asset('assets/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
 
         <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="{{ URL::asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/css/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
 
         <!--<link rel="shortcut icon" href="favicon.ico" /> -->
     </head>
@@ -57,16 +57,17 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="page-logo">
                     
                     <a href="index.html">
-                        <img src="assets/img/logo/lg.png" alt="logo" class="logo-default" /> 
+                        <img src="{{ URL::asset('assets/img/logo/lg.png') }}" alt="logo" class="logo-default" /> 
                     </a>
 
-                    <div class="menu-toggler sidebar-toggler"> </div>
+                    <div class="menu-toggler sidebar-toggler" style="color:#FFFFFF;"> <i class="fa fa-bars fa-lg"></i> </div>
                 
                 </div>
                 <!-- END LOGO -->
                 
                 <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                </a>
                 <!-- END RESPONSIVE MENU TOGGLER -->
 
                 <!-- BEGIN TOP NAVIGATION MENU -->
@@ -232,28 +233,28 @@ License: You must have a valid license purchased only from themeforest(the above
         <![endif]-->
         
         <!-- BEGIN CORE PLUGINS -->
-        <script src="assets/ckeditor/ckeditor.js"></script>
-        <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-        <script src="assets/js/js.cookie.min.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.blockui.min.js" type="text/javascript"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="assets/js/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-        <script src="assets/js/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-        <script src="assets/bootstrap/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/jquery.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/js.cookie.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/jquery.blockui.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/bootstrap/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="assets/js/morris/morris.min.js" type="text/javascript"></script>
-        <script src="assets/js/morris/raphael-min.js" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/morris/morris.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/morris/raphael-min.js') }}" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
 
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="assets/js/app.min.js" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/app.min.js') }}" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
-        <script src="assets/js/layout.min.js" type="text/javascript"></script> 
-        <script src="assets/js/quick-sidebar.min.js" type="text/javascript"></script> 
+        <script src="{{ URL::asset('assets/js/layout.min.js') }}" type="text/javascript"></script> 
+        <script src="{{ URL::asset('assets/js/quick-sidebar.min.js') }}" type="text/javascript"></script> 
         <!-- END THEME LAYOUT SCRIPTS -->
 
         @yield('scripts')
