@@ -33,21 +33,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                	<tr>
-                		<td> 1 </td>                		
-						<td> Reginal Animal Welfare Conference </td>
-						<td> 12 Delegates </td>
-						<td> 24 Nationalities </td>
-						<td>
-							<a href="#" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
-						</td>
-						<td> 
-							<a href="#" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
-						</td>
-						<td>
-							<a href="#" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
-						</td>
-                	</tr>                                                                                            
+                    
+                    @if($events)
+                        
+                        @foreach($events as $event)
+                            <tr>
+                                <td> 1 </td>                        
+                                <td> Reginal Animal Welfare Conference </td>
+                                <td> 12 Delegates </td>
+                                <td> 24 Nationalities </td>
+                                <td>
+                                    <a href="#" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
+                                </td>
+                                <td> 
+                                    <a href="#" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                </td>
+                                <td>
+                                    <a href="#" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
+                    @else
+                        <tr>
+                            <td colspan="7"> No records Available! </td>
+                        </tr>
+
+                    @endif
+                                                                                            
                 </tbody>
             </table>
         </div>
