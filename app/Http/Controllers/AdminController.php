@@ -12,7 +12,8 @@ class AdminController extends Controller
     }
 
     public function events(){
-    	return view('admin.events');
+        $events = Event::all();
+    	return view('admin.events', compact('events'));
     }
 
     public function eventsAdd(){
