@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     
-                    <a href="index.html">
+                    <a href="{{ route('dashboard') }}">
                         <img src="{{ URL::asset('assets/img/logo/lg.png') }}" alt="logo" class="logo-default" /> 
                     </a>
 
@@ -139,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
 
                         <li class="nav-item @yield('dashboard-active') ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <a href="{{ route('dashboard') }}" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <span class="title">Dashboard</span>
                                 <span class="selected"></span>
