@@ -18,7 +18,7 @@ class AdminController extends Controller
     }
 
     public function eventsAdd(){
-    	return view('admin.events-add');
+    	
     }
 
     public function clients(){

@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
-Route::get('/admin/events', 'AdminController@events')->name('events');
-Route::get('/admin/events/add', 'AdminController@eventsAdd')->name('events-add');
+Route::get('/admin/events', 'EventsController@index')->name('events-all');
+Route::get('/admin/events/add', 'EventsController@create')->name('events-create');
 
 Route::get('/admin/clients', 'AdminController@clients')->name('clients');
 Route::get('/admin/clients/add', 'AdminController@clientsAdd')->name('clients-add');

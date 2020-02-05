@@ -13,7 +13,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return view('admin.events-all', compact('events'));
     }
 
     /**
@@ -23,7 +24,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.events-create');
     }
 
     /**

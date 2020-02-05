@@ -181,12 +181,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('events-add') }}" class="nav-link ">
+                                    <a href="{{ route('events-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="{{ route('events') }}" class="nav-link ">
+                                    <a href="{{ route('events-all') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
