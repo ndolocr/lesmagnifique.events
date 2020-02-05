@@ -1,4 +1,4 @@
-extends('layouts.adminMaster')
+@extends('layouts.adminMaster')
 
 @section('title') Add Event @endsection
     

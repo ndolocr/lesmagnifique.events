@@ -28,18 +28,18 @@ License: You must have a valid license purchased only from themeforest(the above
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
 
         <!-- BEGIN THEME GLOBAL STYLES -->
-        <link href="assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="assets/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
         <!-- END THEME GLOBAL STYLES -->
 
         <!-- BEGIN THEME LAYOUT STYLES -->
-        <link href="assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="assets/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
 
         <!--<link rel="shortcut icon" href="favicon.ico" /> -->
     </head>
@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END CORE PLUGINS -->
         
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        --><script src="assets/js/morris/morris.min.js" type="text/javascript"></script>
+        <script src="assets/js/morris/morris.min.js" type="text/javascript"></script>
         <script src="assets/js/morris/raphael-min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
 

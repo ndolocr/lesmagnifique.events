@@ -1,10 +1,10 @@
-extends('layouts.adminMaster')
+@extends('layouts.adminMaster')
 
-@section('title') Add Event @endsection
+    @section('title') Dashboard @endsection
     
-@section('page-title') Events Add @endsection
+    @section('page-title') Dashboard @endsection
 
-@section('content')
+    @section('content')
 	<!-- BEGIN CONTENT ROW -->
 	<div class="row">
 		<div class="col-sx-12 col-sm-12 col-md-12 col-lg-12">
