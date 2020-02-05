@@ -18,8 +18,9 @@ Route::get('/', function () {
 /* ADMIN ROUTES */
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
-Route::get('/admin/events', 'AdminController@events');
-Route::get('/admin/events/add', 'AdminController@eventsAdd');
+
+Route::get('/admin/events', 'AdminController@events')->name('events');
+Route::get('/admin/events/add', 'AdminController@eventsAdd')->name('events-add');
 
 Auth::routes();
 
