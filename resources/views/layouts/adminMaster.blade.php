@@ -159,12 +159,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('clients') }}" class="nav-link ">
+                                    <a href="{{ route('clients-add') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="{{ route('clients-add') }}" class="nav-link ">
+                                    <a href="{{ route('clients') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -203,12 +203,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="ui_colors.html" class="nav-link ">
+                                    <a href="{{ route('activities-add') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="ui_general.html" class="nav-link ">
+                                    <a href="{{ route('activities') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -217,7 +217,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- END ACTIVITY SIDE MENU -->
 
                         <!-- BEGIN SPONSOR SIDE MENU -->
-                        <li class="nav-item @yield('sponsor-active') ">
+                        <li class="nav-item @yield('sponsors-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-money"></i>
                                 <span class="title">Sponsor</span>
@@ -225,12 +225,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="ui_colors.html" class="nav-link ">
+                                    <a href="{{ route('sponsors-add') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="ui_general.html" class="nav-link ">
+                                    <a href="{{ route('sponsors') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
@@ -247,12 +247,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="ui_colors.html" class="nav-link ">
+                                    <a href="{{ route('service-providers-add') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="ui_general.html" class="nav-link ">
+                                    <a href="{{ route('service-providers') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                

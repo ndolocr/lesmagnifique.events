@@ -26,4 +26,28 @@ class AdminController extends Controller
     public function clientsAdd(){
     	return view('admin.clients-add');
     }
+
+    public function activities(){
+    	return view('admin.activities');
+    }
+
+    public function activitiesAdd(){
+    	return view('admin.activities-add');
+    }
+
+    public function sponsors(){
+    	return view('admin.sponsors');
+    }
+
+    public function sponsorsAdd(){
+    	return view('admin.sponsors-add');
+    }
+
+    public function serviceProviders(){
+    	return view('admin.service-providers');
+    }
+
+    public function serviceProvidersAdd(){
+    	return view('admin.service-providers-add');
+    }
 }
