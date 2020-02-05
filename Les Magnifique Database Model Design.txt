@@ -1,10 +1,12 @@
-Event						Client
-- Name						- Client Name
-- Description					- Client Address
-- Start Date					- Client Phone Number
-- End Date					- Event ID
-						- Created On
-						- Updated On
+Event
+- Name
+- Delegates
+- Nationalities
+- Description
+- Start Date
+- End Date
+
+
 Activity
 - Activity Name
 - Event ID
@@ -31,7 +33,19 @@ Service Provider
 Sponsor
 - Sponsor Name
 - Acitivity ID
-- Contact Person Name
+- Email
+- Address
 - Contact Person Phone Number
+- Created On
+- Updated On
+
+
+Client (This could be an individual or a company)
+- Client Name
+- Address
+- Town
+- Email
+- Telephone
+- Events ID
 - Created On
 - Updated On

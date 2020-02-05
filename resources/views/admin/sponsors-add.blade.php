@@ -14,7 +14,7 @@
         
         <div class="col-md-12">
             <!-- BEGIN PAGE TITLE-->
-                <h3 class="page-title"> Events
+                <h3 class="page-title"> Sponsor
                     <small>add</small>
                 </h3>
                 <!-- END PAGE TITLE-->
