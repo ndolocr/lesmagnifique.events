@@ -34,6 +34,19 @@
                                     <div class="form-body">
 
                                         <div class="form-group">
+                                            <label>Featured Image - (Image size 800 x 560 pixels)</label>
+                                            <div class="member-image">
+                                                <img src="" id="image">
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-image"></i>
+                                                </span>
+                                                <input type="file" onchange="showImage.call(this)" name="image" class="form-control" placeholder="Picture">                                                                                   
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
                                             <label>Event Title</label>
                                             <div class="input-group">
                                                 <span class="input-group-addon">
@@ -42,7 +55,7 @@
                                                 <input type="text" id="title" name="title" class="form-control" placeholder="Describe the event"> 
                                             </div>
                                             <span class="error_form" id="description_error_message"> </span>
-                                        </div>                                                                                                                                                                               
+                                        </div>                          
 
                                         <div class="form-group">
                                             <label>Event Start Date</label>
