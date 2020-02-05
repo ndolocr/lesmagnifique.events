@@ -232,6 +232,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <![endif]-->
         
         <!-- BEGIN CORE PLUGINS -->
+        <script src="assets/ckeditor/ckeditor.js"></script>
         <script src="assets/js/jquery.min.js" type="text/javascript"></script>
         <script src="assets/js/js.cookie.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery.blockui.min.js" type="text/javascript"></script>
