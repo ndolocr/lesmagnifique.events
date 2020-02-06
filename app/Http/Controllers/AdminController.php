@@ -12,15 +12,6 @@ class AdminController extends Controller
     	return view('admin.dashboard');
     }
 
-    public function events(){
-        $events = Event::all();
-    	return view('admin.events', compact('events'));
-    }
-
-    public function eventsAdd(){
-    	
-    }
-
     public function clients(){
     	return view('admin.clients');
     }
