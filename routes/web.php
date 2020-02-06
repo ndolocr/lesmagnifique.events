@@ -21,6 +21,7 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 Route::get('/admin/events', 'EventsController@index')->name('events-all');
 Route::get('/admin/events/add', 'EventsController@create')->name('events-create');
+Route::post('/admin/events/add', 'EventsController@store')->name('events-store');
 
 Route::get('/admin/clients', 'AdminController@clients')->name('clients');
 Route::get('/admin/clients/add', 'AdminController@clientsAdd')->name('clients-add');

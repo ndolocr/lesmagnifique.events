@@ -18,7 +18,7 @@
                     <small>add</small>
                 </h3>
                 <!-- END PAGE TITLE-->
-                    <form role="form" method="POST" id="events" name="events" action="event_add.php">
+                    <form role="form" method="POST" id="events" name="events" action="{{ route('events-store') }}">
                         <div class="col-md-6">
                             <!-- BEGIN SAMPLE FORM PORTLET-->
                             <div class="portlet light bordered">
@@ -52,7 +52,7 @@
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-info"></i>
                                                 </span>
-                                                <input type="text" id="title" name="title" class="form-control" placeholder="Describe the event"> 
+                                                <input type="text" id="title" name="title" class="form-control" placeholder="Event Title"> 
                                             </div>
                                             <span class="error_form" id="description_error_message"> </span>
                                         </div>                          

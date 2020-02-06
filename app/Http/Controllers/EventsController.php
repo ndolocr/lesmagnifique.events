@@ -35,7 +35,9 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $title = $request->get('title');
+
+        return $title;
     }
 
     /**
