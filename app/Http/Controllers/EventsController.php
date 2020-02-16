@@ -1,8 +1,10 @@
 <?php
 
+
+namespace App\Http\Controllers;
+
 use App\Event;
 use Illuminate\Http\Request;
-namespace App\Http\Controllers;
 
 class EventsController extends Controller
 {
@@ -39,10 +41,10 @@ class EventsController extends Controller
         $this->validate(
             $request,
             [
-            'title'->'required',
-            'description'->'required'
+            'title'=>'required',
+            'description'=>'required'
             ]
-        )
+        );
 
         //Initialize a new Event
         $event = new Event;

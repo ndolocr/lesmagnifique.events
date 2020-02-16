@@ -288,7 +288,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </ul>
                     </div>
                     <!-- END PAGE BAR -->
-
+                    @include('includes.messages')
                     @yield('content')
 
             <!--|
