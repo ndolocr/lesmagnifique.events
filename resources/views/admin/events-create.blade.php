@@ -18,6 +18,12 @@
                     <small>add</small>
                 </h3>
                 <!-- END PAGE TITLE-->
+
+                <!-- BEGIN FORM CREATION -->
+                {!! Form::Open( ['action' => 'EventsController@store', method => 'POST'] ) !!}
+
+                {!! Form::close !!}
+                <!-- END FORM CREATION -->
                     <form role="form" method="POST" id="events" name="events" action="{{ route('events-store') }}">
                         {{csrf_field()}}
                          
