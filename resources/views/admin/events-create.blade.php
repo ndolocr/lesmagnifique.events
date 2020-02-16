@@ -20,7 +20,7 @@
                 <!-- END PAGE TITLE-->
                     <form role="form" method="POST" id="events" name="events" action="{{ route('events-store') }}">
                         {{csrf_field()}}
-                        
+                         
                         <div class="col-md-6">
                             <!-- BEGIN SAMPLE FORM PORTLET-->
                             <div class="portlet light bordered">
