@@ -20,9 +20,29 @@
                 <!-- END PAGE TITLE-->
 
                 <!-- BEGIN FORM CREATION -->
-                {!! Form::Open( ['action' => 'EventsController@store', method => 'POST'] ) !!}
+                {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST'] ) !!}
+                    
+                    <!-- BEGIN FIRST FORM SECTION -->
+                    <div class="col-md-6">
+                        
+                        <!-- BEGIN SAMPLE FORM PORTLET-->
+                        <div class="portlet light bordered">
+                            
+                            <!-- BEGIN FORM TITLE -->
+                            <div class="portlet-title">
+                                <div class="caption font-red-sunglo">
+                                    <i class="icon-settings font-red-sunglo"></i>
+                                    <span class="caption-subject bold uppercase"> Event Details </span>
+                                </div>                                   
+                            </div>
+                            <!-- END FORM TITLE -->
+                        </div>
+                        <!-- END SAMPLE FORM PORTLET-->
 
-                {!! Form::close !!}
+                    </div>
+                    <!-- END FIRST FORM SECTION -->
+
+                {!! Form::close() !!}
                 <!-- END FORM CREATION -->
                     <form role="form" method="POST" id="events" name="events" action="{{ route('events-store') }}">
                         {{csrf_field()}}
