@@ -27,7 +27,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 425px">
+                    <div class="portlet light bordered" style="height: 550px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -102,6 +102,36 @@
                                 </div>
                                 <!-- END FORM GROUP FOR EVENTS END DATE -->
 
+                                <!-- BEGIN FORM GROUP FOR EVENT DELEGATES -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('delegate', 'Number of Delegates') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-users"></i>
+                                        </span>
+                                        {{ Form::text('delegates', '', ['class' => 'form-control', 'id' => 'delegates', 'placeholder' => 'Number of Delegates']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR EVENT DELEGATES -->
+
+                                <!-- BEGIN FORM GROUP FOR DELEGATE NATIONALITIES -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('nationality', 'Number of Nationalities Attending') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-map"></i>
+                                        </span>
+                                        {{ Form::text('nationality', '', ['class' => 'form-control', 'id' => 'nationality', 'placeholder' => 'Number of Nationalities Attending']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR DELEGATE NATIONALITIES -->
+
                             </div>
                         
                         </div>
@@ -118,7 +148,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 425px">
+                    <div class="portlet light bordered" style="height: 550px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
