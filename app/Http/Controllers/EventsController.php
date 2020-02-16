@@ -48,11 +48,18 @@ class EventsController extends Controller
         $event = new Event;
 
         //Assign Request values to database fields
+        $event->title = $request->get('title');
+        $event->end_date = $request->get('end_date');
+        $event->delegates = $request->get('delegates');
+        $event->start_date = $request->get('start_date');
+        $event->description = $request->get('description');
+        $event->nationality = $request->get('nationality');
 
+        //Save events data in the database
+        $event->save();
 
-        $title = $request->get('title');
-
-        return $title;
+        //Redirect User to events page
+        return redirect('events-all')->with('success', 'Record Successfully Saved!');
     }
 
     /**
