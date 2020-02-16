@@ -75,7 +75,7 @@
                                 <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('title', 'Event Title') }}
+                                    {{ Form::label('start_date', 'Events Start Date') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -90,7 +90,7 @@
                                 <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('title', 'Event Title') }}
+                                    {{ Form::label('end_date', 'Events End Date') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -123,7 +123,7 @@
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
-                                <i class="icon-settings font-red-sunglo"></i>
+                                <i class="icon-info font-red-sunglo"></i>
                                 <span class="caption-subject bold uppercase"> Event Description </span>
                             </div>                                   
                         </div>
