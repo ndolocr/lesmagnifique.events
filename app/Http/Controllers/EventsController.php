@@ -15,7 +15,7 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
+        $events = Event::orderBy('created_at')->paginate(6);
         return view('admin.events-all', compact('events'));
     }
 
@@ -55,13 +55,13 @@ class EventsController extends Controller
         $event->delegates = $request->get('delegates');
         $event->start_date = $request->get('start_date');
         $event->description = $request->get('description');
-        $event->nationality = $request->get('nationality');
+        $event->nationalities = $request->get('nationality');
 
         //Save events data in the database
         $event->save();
 
         //Redirect User to events page
-        return redirect('events-all')->with('success', 'Record Successfully Saved!');
+        return redirect()->route('events-all')->with('success', 'Record Successfully Saved!');
     }
 
     /**

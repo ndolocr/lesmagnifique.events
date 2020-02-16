@@ -19,7 +19,11 @@
                 <small>add</small>
             </h3>
             <!-- END PAGE TITLE-->
-
+            
+            <!-- BEGIN MESSAGES -->
+            @include('includes.messages')
+            <!-- END MESSAGES -->
+            
             <!-- BEGIN FORM CREATION -->
             {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST'] ) !!}
                 

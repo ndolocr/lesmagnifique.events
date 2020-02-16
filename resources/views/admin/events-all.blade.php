@@ -19,6 +19,10 @@
             </h3>
             <!-- END PAGE TITLE-->
 
+            <!-- BEGIN MESSAGES -->
+            @include('includes.messages')
+            <!-- END MESSAGES -->
+
         	<!-- BEGIN TABLE -->
             <table class="table table-striped">
                 <thead>
@@ -38,10 +42,10 @@
                         
                         @foreach($events as $event)
                             <tr>
-                                <td> 1 </td>                        
-                                <td> Reginal Animal Welfare Conference </td>
-                                <td> 12 Delegates </td>
-                                <td> 24 Nationalities </td>
+                                <td> {{ $loop->iteration }} </td>                        
+                                <td> {{ $event->title }} </td>
+                                <td> {{ $event->start_date }} </td>
+                                <td> {{ $event->end_date}} </td>
                                 <td>
                                     <a href="#" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
@@ -53,7 +57,9 @@
                                 </td>
                             </tr>
                         @endforeach
-
+                        <tr>
+                            <td colspan="7"> {{ $events->links() }} </td>
+                        </tr>
                     @else
                         <tr>
                             <td colspan="7"> No records Available! </td>
