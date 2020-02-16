@@ -111,7 +111,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-users"></i>
                                         </span>
-                                        {{ Form::text('delegates', '', ['class' => 'form-control', 'id' => 'delegates', 'placeholder' => 'Number of Delegates']) }}
+                                        {{ Form::number('delegates', '', ['class' => 'form-control', 'id' => 'delegates', 'placeholder' => 'Number of Delegates']) }}
                                     </div>
 
                                 </div>
@@ -126,7 +126,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-map"></i>
                                         </span>
-                                        {{ Form::text('nationality', '', ['class' => 'form-control', 'id' => 'nationality', 'placeholder' => 'Number of Nationalities Attending']) }}
+                                        {{ Form::number('nationality', '', ['class' => 'form-control', 'id' => 'nationality', 'placeholder' => 'Number of Nationalities Attending']) }}
                                     </div>
 
                                 </div>

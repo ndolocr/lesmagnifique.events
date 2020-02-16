@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
 use App\Event;
 use Illuminate\Http\Request;
+namespace App\Http\Controllers;
 
 class EventsController extends Controller
 {
@@ -35,6 +35,21 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+            'title'->'required',
+            'description'->'required'
+            ]
+        )
+
+        //Initialize a new Event
+        $event = new Event;
+
+        //Assign Request values to database fields
+
+
         $title = $request->get('title');
 
         return $title;
