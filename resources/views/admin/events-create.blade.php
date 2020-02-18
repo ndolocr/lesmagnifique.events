@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST'] ) !!}
+            {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
@@ -55,7 +55,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-image"></i>
                                         </span>
-                                        {{ Form::text('image', '', ['class' => 'form-control']) }}
+                                        {{ Form::file('image', ['class' => 'form-control']) }}
                                     </div>
 
                                 </div>
