@@ -403,6 +403,6 @@
 	</div>
 	-->
 
-	<script src="assets/ckeditor/ckeditor.js"></script>
+	<script src="assets/ckeditor-basic/ckeditor.js"></script>
 </body>
 </html>
