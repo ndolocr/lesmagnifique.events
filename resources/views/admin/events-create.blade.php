@@ -31,7 +31,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 550px">
+                    <div class="portlet light bordered" style="height: 320px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -45,21 +45,6 @@
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
                             <div class="form-body">
-                                
-                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('feature_image', 'Featured Image - (Image size 800 x 560 pixels)') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('feature_image', ['class' => 'form-control']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
 
                                 <!-- BEGIN FORM GROUP FOR EVENTS TITLE -->
                                 <div class="form-group">
@@ -106,6 +91,37 @@
                                 </div>
                                 <!-- END FORM GROUP FOR EVENTS END DATE -->
 
+                            </div>
+                        
+                        </div>
+                        <!-- END FORM BODY -->
+
+                    </div>
+                    <!-- END SAMPLE FORM PORTLET-->
+
+                </div>
+                <!-- END FIRST FORM SECTION COLUMN -->
+
+
+                <!-- BEGIN SECOND FORM SECTION COLUMN-->
+                <div class="col-md-6">
+                    
+                    <!-- BEGIN SAMPLE FORM PORTLET-->
+                    <div class="portlet light bordered" style="height: 320px">
+                        
+                        <!-- BEGIN FORM TITLE -->
+                        <div class="portlet-title">
+                            <div class="caption font-red-sunglo">
+                                <i class="icon-settings font-red-sunglo"></i>
+                                <span class="caption-subject bold uppercase"> Event Details </span>
+                            </div>                                   
+                        </div>
+                        <!-- END FORM TITLE -->
+                        
+                        <!-- CREATE FORM BODY -->
+                        <div class="portlet-body form">
+                            <div class="form-body">
+
                                 <!-- BEGIN FORM GROUP FOR EVENT DELEGATES -->
                                 <div class="form-group">
                                     
@@ -136,6 +152,21 @@
                                 </div>
                                 <!-- END FORM GROUP FOR DELEGATE NATIONALITIES -->
 
+                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('feature_image', 'Featured Image - (Image size 800 x 560 pixels)') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-image"></i>
+                                        </span>
+                                        {{ Form::file('feature_image', ['class' => 'form-control']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
+
                             </div>
                         
                         </div>
@@ -145,14 +176,14 @@
                     <!-- END SAMPLE FORM PORTLET-->
 
                 </div>
-                <!-- END FIRST FORM SECTION COLUMN -->
+                <!-- END SECOND FORM SECTION COLUMN -->
 
 
-                <!-- BEGIN SECOND FORM SECTION COLUMN-->
-                <div class="col-md-6">
+                <!-- BEGIN THIRD FORM SECTION COLUMN-->
+                <div class="col-md-12">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 550px">
+                    <div class="portlet light bordered" style="height: 600px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -171,7 +202,6 @@
                                 <div class="form-group">
                                     
                                     <div class="input-group">
-                                        <span class="input-group-addon"> </span>
                                         {{ Form::textarea('description', '', ['class' => 'ckeditor form-control', 'id' => 'description']) }}
                                     </div>
 
