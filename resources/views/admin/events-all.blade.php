@@ -27,7 +27,8 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th></th>              
+                        <th></th>
+                        <th> </th>              
                         <th> Event Title </th>
                         <th> Start Date </th>
                         <th> End Date </th>
@@ -42,7 +43,8 @@
                         
                         @foreach($events as $event)
                             <tr>
-                                <td> {{ $loop->iteration }} </td>                        
+                                <td> {{ $loop->iteration }} </td>
+                                <td> <img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="Feature Image" style="width: 45px;"> </td>
                                 <td> {{ $event->title }} </td>
                                 <td> {{ $event->start_date }} </td>
                                 <td> {{ $event->end_date}} </td>
