@@ -131,131 +131,189 @@
 			</div>
 
 		</section>
-
-		<section class="section-events">
+		
+		<!-- CHECK IF EVENTS ARE AVAILABLE -->
+		@if($events)
 			
-			<div class="u-center-text u-margin-bottom-big">
-				<h2 class="heading-secondary">
-					Our recent Events
-				</h2>
-			</div>
-
-			<div class="row">
+			<!-- BEGIN EVENTS SECTION -->
+			<section class="section-events">
 				
-				<div class="col-1-of-3"> 
-					<div class="card">
-						<div class="card__side card__side--front">
-							
-							<div class="card__picture">
-								<img src="assets/img/events/image3.JPG" alt="Child Immunization">
-							</div>
-
-							<h4 class="card__heading">
-								Regional Animal Welfare Conference
-							</h4>
-
-							<div class="card__details">
-								<ul>
-									<li> 5 Days </li>
-									<li> 120 Delegates </li>
-									<li> 12 Nationalities </li>
-									<li> 3 Continents </li>
-								</ul>
-							</div>
-
-							<div class="hide__button">
-								<a href="" class="btn btn--white__narrow--hide"> view Event </a>
-							</div>
-
-						</div>
-
-						<div class="card__side card__side--back card__side--back-one">
-							<div class="card__cta">
-								<h4> Regional Animal Welfare Conference </h4>
-								<a href="" class="btn btn--white__narrow"> view Event </a>
-							</div>
-						</div>		
-					</div>
+				<!-- BEGIN EVENTS SECTION HEADER -->
+				<div class="u-center-text u-margin-bottom-big">
+					<h2 class="heading-secondary">
+						Our recent Events
+					</h2>
 				</div>
+				<!-- END EVENTS SECTION HEADER -->
 
-				<div class="col-1-of-3"> 
-					<div class="card">
-						<div class="card__side card__side--front">
-							
-							<div class="card__picture">
-								<img src="assets/img/events/image1.JPG" alt="Child Immunization">
+				<!-- BEGIN EVENTS SECTION -->
+				<div class="row">
+					
+					<!-- BEGIN CARD COLUMN LOOP-->
+					@foreach($events as $event)
+						
+						<!-- BEGIN CARD COLUMN -->
+						<div class="col-1-of-3"> 
+							<div class="card">
+								<div class="card__side card__side--front">
+									
+									<div class="card__picture">
+										<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="Feature Image">
+									</div>
+
+									<h4 class="card__heading">
+										{{ $event->title }}
+									</h4>
+
+									<div class="card__details">
+										<ul>
+											<li> {{ $event->start_date }} </li>
+											<li> {{ $event->delegates }} Delegates </li>
+											<li> {{ $event->nationalities }} Nationalities </li>
+										</ul>
+									</div>
+
+									<div class="hide__button">
+										<a href="" class="btn btn--white__narrow--hide"> view Event </a>
+									</div>
+
+								</div>
+
+								<div class="card__side card__side--back card__side--back-one">
+									<div class="card__cta">
+										<h4> {{ $event->title }} </h4>
+										<a href="" class="btn btn--white__narrow"> view Event </a>
+									</div>
+								</div>		
 							</div>
-
-							<h4 class="card__heading">
-								Child Immunization Conference
-							</h4>
-
-							<div class="card__details">
-								<ul>
-									<li> 4 Days </li>
-									<li> 220 Delegates </li>
-									<li> 23 Nationalities </li>
-									<li> 1 Continents </li>
-								</ul>
-							</div>
-
-							<div class="hide__button">
-								<a href="" class="btn btn--white__narrow--hide"> view Event </a>
-							</div>
-
 						</div>
+						<!-- END CARD COLUMN -->
 
-						<div class="card__side card__side--back card__side--back-one">
-							<div class="card__cta">
-								<h4> Child Immunization Conference </h4>
-								<a href="" class="btn btn--white__narrow"> view Event </a>
+					@endforeach
+					<!-- END CARD COLUMN LOOP-->
+					
+
+
+					<!--
+					<div class="col-1-of-3"> 
+						<div class="card">
+							<div class="card__side card__side--front">
+								
+								<div class="card__picture">
+									<img src="assets/img/events/image3.JPG" alt="Child Immunization">
+								</div>
+
+								<h4 class="card__heading">
+									Regional Animal Welfare Conference
+								</h4>
+
+								<div class="card__details">
+									<ul>
+										<li> 5 Days </li>
+										<li> 120 Delegates </li>
+										<li> 12 Nationalities </li>
+										<li> 3 Continents </li>
+									</ul>
+								</div>
+
+								<div class="hide__button">
+									<a href="" class="btn btn--white__narrow--hide"> view Event </a>
+								</div>
+
 							</div>
-						</div>		
-					</div>
-				</div>
 
-				<div class="col-1-of-3"> 
-					<div class="card">
-						<div class="card__side card__side--front">
-							
-							<div class="card__picture">
-								<img src="assets/img/events/image5.JPG" alt="Child Immunization">
-							</div>
-
-							<h4 class="card__heading">
-								LGBTQ Africa Health Conference
-							</h4>
-
-							<div class="card__details">
-								<ul>
-									<li> 2 Days </li>
-									<li> 320 Delegates </li>
-									<li> 15 Nationalities </li>
-									<li> 2 Continents </li>
-								</ul>
-							</div>
-
-							<div class="hide__button">
-								<a href="" class="btn btn--white__narrow--hide"> view Event </a>
-							</div>
-
+							<div class="card__side card__side--back card__side--back-one">
+								<div class="card__cta">
+									<h4> Regional Animal Welfare Conference </h4>
+									<a href="" class="btn btn--white__narrow"> view Event </a>
+								</div>
+							</div>		
 						</div>
-
-						<div class="card__side card__side--back card__side--back-one">
-							<div class="card__cta">
-								<h4> LGBTQ Africa Health Conference </h4>
-								<a href="" class="btn btn--white__narrow"> view Event </a>
-							</div>
-						</div>		
 					</div>
+
+					<div class="col-1-of-3"> 
+						<div class="card">
+							<div class="card__side card__side--front">
+								
+								<div class="card__picture">
+									<img src="assets/img/events/image1.JPG" alt="Child Immunization">
+								</div>
+
+								<h4 class="card__heading">
+									Child Immunization Conference
+								</h4>
+
+								<div class="card__details">
+									<ul>
+										<li> 4 Days </li>
+										<li> 220 Delegates </li>
+										<li> 23 Nationalities </li>
+										<li> 1 Continents </li>
+									</ul>
+								</div>
+
+								<div class="hide__button">
+									<a href="" class="btn btn--white__narrow--hide"> view Event </a>
+								</div>
+
+							</div>
+
+							<div class="card__side card__side--back card__side--back-one">
+								<div class="card__cta">
+									<h4> Child Immunization Conference </h4>
+									<a href="" class="btn btn--white__narrow"> view Event </a>
+								</div>
+							</div>		
+						</div>
+					</div>
+
+					<div class="col-1-of-3"> 
+						<div class="card">
+							<div class="card__side card__side--front">
+								
+								<div class="card__picture">
+									<img src="assets/img/events/image5.JPG" alt="Child Immunization">
+								</div>
+
+								<h4 class="card__heading">
+									LGBTQ Africa Health Conference
+								</h4>
+
+								<div class="card__details">
+									<ul>
+										<li> 2 Days </li>
+										<li> 320 Delegates </li>
+										<li> 15 Nationalities </li>
+										<li> 2 Continents </li>
+									</ul>
+								</div>
+
+								<div class="hide__button">
+									<a href="" class="btn btn--white__narrow--hide"> view Event </a>
+								</div>
+
+							</div>
+
+							<div class="card__side card__side--back card__side--back-one">
+								<div class="card__cta">
+									<h4> LGBTQ Africa Health Conference </h4>
+									<a href="" class="btn btn--white__narrow"> view Event </a>
+								</div>
+							</div>		
+						</div>
+					</div>
+					-->
 				</div>
+				<!-- END EVENTS SECTION -->
 
-			</div>
+				<div class="u-center-text u-margin-top-big">
+					<a href="#" class="btn btn--gold"> View All Events </a>	
 
-			<div class="u-center-text u-margin-top-big">
-				<a href="#" class="btn btn--gold"> View All Events </a>	
+			</section>
+			<!-- END EVENTS SECTION -->
 
-		</section>
+		@endif
+		<!-- END CHECKING IF EVENTS ARE AVAILABLE -->
 
 		<section class="section-contact">
 			<div class="row">

@@ -11,11 +11,11 @@
 |
 */
 
-use App\Events;
+use App\Event;
 
 Route::get('/', function () {
-	$events = Events::orderBy('start_date', 'DESC')->limit(3)->get();
-    return view('index', compact('$events'));
+	$events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
+    return view('index', compact('events'));
 });
 
 /* ADMIN ROUTES */
