@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
             $table->text('description');
             $table->integer('delegates');
             $table->integer('nationalities');
+            $table->string('featured_image');
             $table->timestamps();
         });
     }
