@@ -20,8 +20,8 @@ class CreateEventsTable extends Migration
             $table->date('start_date');
             $table->text('description');
             $table->integer('delegates');
+            $table->string('feature_image');
             $table->integer('nationalities');
-            $table->string('featured_image');
             $table->timestamps();
         });
     }

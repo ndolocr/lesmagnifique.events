@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/data'] ) !!}
+            {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
@@ -49,13 +49,13 @@
                                 <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('image', 'Featured Image - (Image size 800 x 560 pixels)') }}
+                                    {{ Form::label('feature_image', 'Featured Image - (Image size 800 x 560 pixels)') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-image"></i>
                                         </span>
-                                        {{ Form::file('image', ['class' => 'form-control']) }}
+                                        {{ Form::file('feature_image', ['class' => 'form-control']) }}
                                     </div>
 
                                 </div>

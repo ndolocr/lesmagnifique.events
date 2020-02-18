@@ -42,15 +42,39 @@ class EventsController extends Controller
             $request,
             [
             'title'=>'required',
-            'description'=>'required'
+            'end_date'=>'required',
+            'start_date'=>'required',
+            'description'=>'required',
+            'feature_image'=>'image|nullable|max:1999'
             ]
         );
+
+        //Handle Feature Image Upload
+        if($request->hasFile('feature_image')){
+            //Get file name with extension
+            $fileNameWithExtension = $request->file('feature_image')->getClientOriginalName();
+
+            //Get file name witout extension
+            $filename = pathinfo($fileNameWithExtension, PATHINFO_FILENAME);
+
+            //get extension
+            $extension = $request->file('feature_image')->getClientOriginalExtension();
+
+            //Create a eunique filename to store
+            $fileNameToStore = time().'.'.$extension;
+
+            //Upload feature image
+            $path = $request->file('feature_image')->storeAs('public/assets/img/events', $fileNameToStore); 
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
 
         //Initialize a new Event
         $event = new Event;
 
         //Assign Request values to database fields
         $event->title = $request->get('title');
+        $event->feature_image = $fileNameToStore;
         $event->end_date = $request->get('end_date');
         $event->delegates = $request->get('delegates');
         $event->start_date = $request->get('start_date');
