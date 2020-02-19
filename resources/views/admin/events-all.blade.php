@@ -55,7 +55,7 @@
                                     <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
-                                    <a href="#" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <a href="{{ route('events-delete', $event-id) }}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
                             </tr>
                         @endforeach
