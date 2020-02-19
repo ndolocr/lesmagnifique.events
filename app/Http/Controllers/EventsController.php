@@ -35,7 +35,7 @@ class EventsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    
+
     public function store(Request $request)
     {
         //Perform Validations
@@ -121,7 +121,55 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "Update Function";    
+        //Initialize a new Event
+        $event =  Event::find($id);
+
+        //Perform Validations
+        $this->validate(
+            $request,
+            [
+            'title'=>'required',
+            'end_date'=>'required',
+            'start_date'=>'required',
+            'description'=>'required',
+            'feature_image'=>'image|nullable|max:1999'
+            ]
+        );
+
+        //Handle Feature Image Upload
+        if($request->hasFile('feature_image')){
+            //Get file name with extension
+            $fileNameWithExtension = $request->file('feature_image')->getClientOriginalName();
+
+            //Get file name witout extension
+            $filename = pathinfo($fileNameWithExtension, PATHINFO_FILENAME);
+
+            //get extension
+            $extension = $request->file('feature_image')->getClientOriginalExtension();
+
+            //Create a eunique filename to store
+            $fileNameToStore = time().'.'.$extension;
+
+            //Upload feature image
+            $path = $request->file('feature_image')->storeAs('public/assets/img/events', $fileNameToStore); 
+
+            //Assign Featured image to uploaded image
+            $event->feature_image = $fileNameToStore;
+        }        
+
+        //Assign Request values to database fields
+        $event->title = $request->get('title');
+        $event->end_date = $request->get('end_date');
+        $event->delegates = $request->get('delegates');
+        $event->start_date = $request->get('start_date');
+        $event->description = $request->get('description');
+        $event->nationalities = $request->get('nationality');
+
+        //Save events data in the database
+        $event->save();
+
+        //Redirect User to events page
+        return redirect()->route('events-all')->with('success', 'Record Successfully Updated!'); 
     }
 
     /**
