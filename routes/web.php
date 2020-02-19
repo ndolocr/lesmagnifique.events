@@ -26,6 +26,7 @@ Route::get('/admin/events', 'EventsController@index')->name('events-all');
 Route::get('/admin/events/add', 'EventsController@create')->name('events-create');
 Route::post('/admin/events/store', 'EventsController@store')->name('events-store');
 Route::get('/admin/events/edit/{id}', 'EventsController@edit')->name('events-edit');
+Route::get('/admin/events/show/{id}', 'EventsController@show')->name('events-show');
 Route::get('/admin/events/delete/{id}', 'EventsController@delete')->name('events-delete');
 Route::put('/admin/events/update/{id}', 'EventsController@update')->name('events-update');
 Route::delete('/admin/events/destroy/{id}', 'EventsController@destroy')->name('events-destroy');
