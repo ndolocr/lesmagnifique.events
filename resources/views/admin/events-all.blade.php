@@ -49,7 +49,7 @@
                                 <td> {{ $event->start_date }} </td>
                                 <td> {{ $event->end_date}} </td>
                                 <td>
-                                    <a href="#" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
+                                    <a href="{{ route('events-show', $event->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
                                 <td> 
                                     <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
