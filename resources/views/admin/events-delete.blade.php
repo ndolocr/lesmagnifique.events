@@ -26,48 +26,38 @@
         	<!-- BEGIN TABLE -->
             <table class="table table-striped">
                 <thead>
-                    <tr>
-                        <th></th>
-                        <th> </th>              
-                        <th> Event Title </th>
-                        <th> Start Date </th>
-                        <th> End Date </th>
-                        <th> View </th>
-                        <th> Edit </th>
-                        <th> Delete </th>
+                    <tr>             
+                        <th style="text-align: center;"> Event Title </th>
+                        <th > Start Date </th>                        
                     </tr>
                 </thead>
                 <tbody>
                     
-                    @if($events)
-                        
-                        @foreach($events as $event)
-                            <tr>
-                                <td> {{ $loop->iteration }} </td>
-                                <td> <img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="Feature Image" style="width: 45px;"> </td>
-                                <td> {{ $event->title }} </td>
-                                <td> {{ $event->start_date }} </td>
-                                <td> {{ $event->end_date}} </td>
-                                <td>
-                                    <a href="#" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
-                                </td>
-                                <td> 
-                                    <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('events-delete', $event-id) }}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
-                                </td>
-                            </tr>
-                        @endforeach
-                        <tr>
-                            <td colspan="7"> {{ $events->links() }} </td>
-                        </tr>
-                    @else
-                        <tr>
-                            <td colspan="7"> No records Available! </td>
-                        </tr>
+                    <tr>                        
+                        <td style="text-align: center; color:#e7505a;"> {{ $events->title }} </td>
+                        <td  style=" color:#e7505a;"> {{ $events->start_date }} </td>
+                    </tr>
 
-                    @endif
+                    <tr>
+                        <td colspan="2" style="text-align: center; color:#e7505a;" > 
+                            Are you sure you want to delete this record?
+                        </td>
+                    </tr>
+                    
+                    <tr>    
+                        <td style="text-align: center;">
+                            <a href="{{ route('events-all') }}" class='btn green btn-outline sbold uppercase'> Cancel  </a>
+                        </td>
+                        <td> 
+                            {!! Form::open(['action'=>['EventsController@destroy', $events->id], 'method'=>'POST']) !!}
+
+                                {{ Form::hidden('_method', 'DELETE') }}
+                                {{ Form::submit('Delete', ['class'=>'btn red btn-outline sbold uppercase']) }}
+
+                            {!! Form::close() !!}
+                        </td>
+                    </tr>
+                       
                                                                                             
                 </tbody>
             </table>

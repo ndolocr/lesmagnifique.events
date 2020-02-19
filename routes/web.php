@@ -28,6 +28,7 @@ Route::post('/admin/events/store', 'EventsController@store')->name('events-store
 Route::get('/admin/events/edit/{id}', 'EventsController@edit')->name('events-edit');
 Route::get('/admin/events/delete/{id}', 'EventsController@delete')->name('events-delete');
 Route::put('/admin/events/update/{id}', 'EventsController@update')->name('events-update');
+Route::delete('/admin/events/destroy/{id}', 'EventsController@destroy')->name('events-destroy');
 
 Route::get('/admin/clients', 'AdminController@clients')->name('clients');
 Route::get('/admin/clients/add', 'AdminController@clientsAdd')->name('clients-add');
