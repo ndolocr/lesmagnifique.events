@@ -41,6 +41,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{ URL::asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ URL::asset('assets/css/darkblue.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
 
+        <!-- BEGIN ADMIN STYLES -->
+        <link href="{{ URL::asset('assets/css/admin-styles.css') }}" rel="stylesheet" type="text/css" />
+
         <!--<link rel="shortcut icon" href="favicon.ico" /> -->
     </head>
     <!-- END HEAD -->
