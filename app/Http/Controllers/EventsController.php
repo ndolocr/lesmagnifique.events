@@ -35,6 +35,7 @@ class EventsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
         //Perform Validations
@@ -120,7 +121,7 @@ class EventsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Update Function";    
     }
 
     /**
