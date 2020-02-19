@@ -178,6 +178,13 @@ class EventsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function delete($id)
+    {
+        $events = Event::find($id);
+
+        return view('admin.events-delete', compact('events'));
+    }
+
     public function destroy($id)
     {
         //
