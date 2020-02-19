@@ -38,7 +38,7 @@
                         <div class="page_title">
                             {{ $events->title }}
                         </div>
-                        
+
                     </div>
                     <!-- END FEATURE IMAGE SECTION -->
 
@@ -92,7 +92,7 @@
                 <!-- BEGIN COL -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                     <!-- BEGIN DESCRIPTION SECTION -->
-                    <div class="page_description"> {{ $events->description }} </div>
+                    <div class="page_description"> {!! $events->description !!} </div>
                     <!-- END DESCRIPTION SECTION -->
                 </div>
                 <!-- END COL --> 
