@@ -40,6 +40,9 @@ Route::get('/admin/sponsors/add', 'AdminController@sponsorsAdd')->name('sponsors
 Route::get('/admin/activities', 'AdminController@activities')->name('activities');
 Route::get('/admin/activities/add', 'AdminController@activitiesAdd')->name('activities-add');
 
+Route::get('/admin/our-services', 'ServicesController@index')->name('our-services');
+Route::get('/admin/our-services/add', 'ServicesController@create')->name('our-services-add');
+
 Route::get('/admin/service-providers', 'AdminController@serviceProviders')->name('service-providers');
 Route::get('/admin/service-providers/add', 'AdminController@serviceProvidersAdd')->name('service-providers-add');
 

@@ -241,6 +241,28 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                         <!-- END SPONSOR SIDE MENU -->
 
+                        <!-- BEGIN OUR SERVICES SIDE MENU -->
+                        <li class="nav-item @yield('service-provider-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-cog"></i>
+                                <span class="title">Our Services</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="{{ route('our-services-add') }}" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="{{ route('our-services') }}" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END OUR SERVICE SIDE MENU -->
+                        
                         <!-- BEGIN SERVICE PROVIDER SIDE MENU -->
                         <li class="nav-item @yield('service-provider-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
