@@ -31,13 +31,13 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 380px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
                                 <i class="icon-settings font-red-sunglo"></i>
-                                <span class="caption-subject bold uppercase"> Event Details </span>
+                                <span class="caption-subject bold uppercase"> Client Details </span>
                             </div>                                   
                         </div>
                         <!-- END FORM TITLE -->
@@ -46,50 +46,65 @@
                         <div class="portlet-body form">
                             <div class="form-body">
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS TITLE -->
+                                <!-- BEGIN FORM GROUP FOR CLIENT NAME -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('title', 'Event Title') }}
+                                    {{ Form::label('name', 'Client Name') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('title', '', ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'Event Title']) }}
+                                        {{ Form::text('name', '', ['class' => 'form-control', 'id' => 'name', 'placeholder' => 'Client Name']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS TITLE -->
+                                <!-- END FORM GROUP FOR CLIENT NAME -->
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
+                                <!-- BEGIN FORM GROUP FOR CLIENT ADDRESS -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('start_date', 'Events Start Date') }}
+                                    {{ Form::label('address', 'Client Address') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
+                                            <i class="fa fa-file"></i>
                                         </span>
-                                        {{ Form::date('start_date', '', ['class' => 'form-control', 'id' => 'start_date', 'placeholder' => 'Start Date']) }}
+                                        {{ Form::text('address', '', ['class' => 'form-control', 'id' => 'address', 'placeholder' => 'Client Address']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS END DATE -->
+                                <!-- END FORM GROUP FOR CLIENT ADDRESS -->
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
+                                <!-- BEGIN FORM GROUP FOR AREA CODE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('end_date', 'Events End Date') }}
+                                    {{ Form::label('area_code', 'Area Code') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
+                                            <i class="fa fa-map"></i>
                                         </span>
-                                        {{ Form::date('end_date', '', ['class' => 'form-control', 'id' => 'end_date', 'placeholder' => 'End Date']) }}
+                                        {{ Form::text('area_code', '', ['class' => 'form-control', 'id' => 'area_code', 'placeholder' => 'Area Code']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS END DATE -->
+                                <!-- END FORM GROUP FOR AREA CODE -->
+
+                                <!-- BEGIN FORM GROUP FOR TOWN -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('town', 'Town') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-map-pin"></i>
+                                        </span>
+                                        {{ Form::text('town', '', ['class' => 'form-control', 'id' => 'town', 'placeholder' => 'Town']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR TOWN -->
 
                             </div>
                         
@@ -107,7 +122,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 380px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -122,92 +137,36 @@
                         <div class="portlet-body form">
                             <div class="form-body">
 
-                                <!-- BEGIN FORM GROUP FOR EVENT DELEGATES -->
+                                <!-- BEGIN FORM GROUP FOR EMAIL -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('delegate', 'Number of Delegates') }}
+                                    {{ Form::label('email', 'Email') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-users"></i>
+                                            <i class="fa fa-envelope"></i>
                                         </span>
-                                        {{ Form::number('delegates', '', ['class' => 'form-control', 'id' => 'delegates', 'placeholder' => 'Number of Delegates']) }}
+                                        {{ Form::text('email', '', ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'Email']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENT DELEGATES -->
+                                <!-- END FORM GROUP FOR EMAIL -->
 
-                                <!-- BEGIN FORM GROUP FOR DELEGATE NATIONALITIES -->
+                                <!-- BEGIN FORM GROUP FOR PHONE NUMBER -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('nationality', 'Number of Nationalities Attending') }}
+                                    {{ Form::label('phone', 'Phone Number') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-map"></i>
+                                            <i class="fa fa-phone"></i>
                                         </span>
-                                        {{ Form::number('nationality', '', ['class' => 'form-control', 'id' => 'nationality', 'placeholder' => 'Number of Nationalities Attending']) }}
+                                        {{ Form::number('phone', '', ['class' => 'form-control', 'id' => 'phone', 'placeholder' => 'Phone Nuber']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR DELEGATE NATIONALITIES -->
+                                <!-- END FORM GROUP FOR PHONE NUMBER -->
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('feature_image', 'Featured Image - (Image size 800 x 560 pixels)') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('feature_image', ['class' => 'form-control']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
-
-                            </div>
-                        
-                        </div>
-                        <!-- END FORM BODY -->
-
-                    </div>
-                    <!-- END SAMPLE FORM PORTLET-->
-
-                </div>
-                <!-- END SECOND FORM SECTION COLUMN -->
-
-
-                <!-- BEGIN THIRD FORM SECTION COLUMN-->
-                <div class="col-md-12">
-                    
-                    <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 600px">
-                        
-                        <!-- BEGIN FORM TITLE -->
-                        <div class="portlet-title">
-                            <div class="caption font-red-sunglo">
-                                <i class="icon-info font-red-sunglo"></i>
-                                <span class="caption-subject bold uppercase"> Event Description </span>
-                            </div>                                   
-                        </div>
-                        <!-- END FORM TITLE -->
-                        
-                        <!-- CREATE FORM BODY -->
-                        <div class="portlet-body form">
-                            <div class="form-body">
-
-                                <!-- BEGIN FORM GROUP FOR EVENTS TITLE -->
-                                <div class="form-group">
-                                    
-                                    <div class="input-group">
-                                        {{ Form::textarea('description', '', ['class' => 'ckeditor form-control', 'id' => 'description']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS TITLE -->
-                                
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">
                                     {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
