@@ -31,8 +31,8 @@ Route::get('/admin/events/delete/{id}', 'EventsController@delete')->name('events
 Route::put('/admin/events/update/{id}', 'EventsController@update')->name('events-update');
 Route::delete('/admin/events/destroy/{id}', 'EventsController@destroy')->name('events-destroy');
 
-Route::get('/admin/clients', 'AdminController@clients')->name('clients');
-Route::get('/admin/clients/add', 'AdminController@clientsAdd')->name('clients-add');
+Route::get('/admin/clients', 'ClientController@index')->name('clients');
+Route::get('/admin/clients/add', 'ClientController@create')->name('clients-add');
 
 Route::get('/admin/sponsors', 'AdminController@sponsors')->name('sponsors');
 Route::get('/admin/sponsors/add', 'AdminController@sponsorsAdd')->name('sponsors-add');
