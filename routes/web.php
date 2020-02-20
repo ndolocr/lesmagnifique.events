@@ -37,8 +37,8 @@ Route::get('/admin/clients/add', 'ClientController@create')->name('clients-add')
 Route::get('/admin/sponsors', 'SponsorController@index')->name('sponsors');
 Route::get('/admin/sponsors/add', 'SponsorController@create')->name('sponsors-add');
 
-Route::get('/admin/activities', 'AdminController@activities')->name('activities');
-Route::get('/admin/activities/add', 'AdminController@activitiesAdd')->name('activities-add');
+Route::get('/admin/activities', 'ActivityController@index')->name('activities');
+Route::get('/admin/activities/add', 'ActiivityController@create')->name('activities-add');
 
 Route::get('/admin/our-services', 'ServicesController@index')->name('our-services');
 Route::get('/admin/our-services/add', 'ServicesController@create')->name('our-services-add');
