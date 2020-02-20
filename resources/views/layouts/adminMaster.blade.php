@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- END SPONSOR SIDE MENU -->
 
                         <!-- BEGIN OUR SERVICES SIDE MENU -->
-                        <li class="nav-item @yield('service-provider-active') ">
+                        <li class="nav-item @yield('our-services-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-cog"></i>
                                 <span class="title">Our Services</span>
