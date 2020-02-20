@@ -34,8 +34,8 @@ Route::delete('/admin/events/destroy/{id}', 'EventsController@destroy')->name('e
 Route::get('/admin/clients', 'ClientController@index')->name('clients');
 Route::get('/admin/clients/add', 'ClientController@create')->name('clients-add');
 
-Route::get('/admin/sponsors', 'AdminController@sponsors')->name('sponsors');
-Route::get('/admin/sponsors/add', 'AdminController@sponsorsAdd')->name('sponsors-add');
+Route::get('/admin/sponsors', 'SponsorController@index')->name('sponsors');
+Route::get('/admin/sponsors/add', 'SponsorController@create')->name('sponsors-add');
 
 Route::get('/admin/activities', 'AdminController@activities')->name('activities');
 Route::get('/admin/activities/add', 'AdminController@activitiesAdd')->name('activities-add');
