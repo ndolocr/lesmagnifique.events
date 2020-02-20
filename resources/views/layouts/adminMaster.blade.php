@@ -167,7 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="{{ route('clients') }}" class="nav-link ">
+                                    <a href="{{ route('clients-all') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                

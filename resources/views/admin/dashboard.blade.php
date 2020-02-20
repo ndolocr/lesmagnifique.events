@@ -45,10 +45,11 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
-                <div class="desc"> Total Profit </div>
+                    <span data-counter="counterup" data-value="{{ $clients_count }}">0</span> 
+                </div>
+                <div class="desc"> Our Clients </div>
             </div>
-            <a class="more" href="javascript:;"> View more
+            <a class="more" href="{{ route('clients-all') }}"> View more
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>

@@ -24,7 +24,7 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 
 //CLIENT ROUTES
-Route::get('/admin/clients', 'ClientController@index')->name('clients');
+Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
 Route::get('/admin/clients/add', 'ClientController@create')->name('clients-add');
 Route::post('/admin/clients/store', 'ClientController@store')->name('clients-store');
 
