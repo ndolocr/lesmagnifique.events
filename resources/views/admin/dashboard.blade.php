@@ -29,11 +29,11 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="1349">0</span>
+                    <span data-counter="counterup" data-value="{{ $events_count }}">0</span>
                 </div>
-                <div class="desc"> New Feedbacks </div>
+                <div class="desc"> Total Events </div>
             </div>
-            <a class="more" href="javascript:;"> View more
+            <a class="more" href="{{ route('events-all') }}"> View more
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
