@@ -11,6 +11,17 @@
 
 <!-- BEGIN DASHBOARD STATS 1-->
 <div class="row">
+	<!-- BEGIN COLUMN -->
+        <div class="col-md-12">
+
+            <!-- BEGIN PAGE TITLE-->
+            <h3 class="page-title"> Dashboard
+                <small>Statistics</small>
+            </h3>
+            <!-- END PAGE TITLE-->
+        </div>
+  
+
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <div class="dashboard-stat blue">
             <div class="visual">

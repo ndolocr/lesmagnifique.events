@@ -365,6 +365,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="{{ URL::asset('assets/js/app.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/jquery.waypoints.min.js') }}" type="text/javascript"></script>
+        <script src="{{ URL::asset('assets/js/jquery.counterup.min.js') }}" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
