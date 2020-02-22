@@ -34,7 +34,18 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validation
+        $this->validate(
+            $request,
+
+            'name' => 'required',
+            'town' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required'
+        );
+
+        
     }
 
     /**
