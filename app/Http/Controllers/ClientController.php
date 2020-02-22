@@ -37,12 +37,13 @@ class ClientController extends Controller
         //Validation
         $this->validate(
             $request,
-
-            'name' => 'required',
-            'town' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'address' => 'required'
+            [
+                'name' => 'required',
+                'town' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'address' => 'required'
+            ]
         );
 
         $client = new Client;

@@ -41,11 +41,11 @@ class EventsController extends Controller
         $this->validate(
             $request,
             [
-            'title'=>'required',
-            'end_date'=>'required',
-            'start_date'=>'required',
-            'description'=>'required',
-            'feature_image'=>'image|nullable|max:1999'
+                'title'=>'required',
+                'end_date'=>'required',
+                'start_date'=>'required',
+                'description'=>'required',
+                'feature_image'=>'image|nullable|max:1999'
             ]
         );
 
