@@ -155,13 +155,13 @@
                                 <!-- BEGIN FORM GROUP FOR PHONE NUMBER -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('phone', 'Phone Number') }}
+                                    {{ Form::label('telephone', 'Phone Number') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-phone"></i>
                                         </span>
-                                        {{ Form::number('phone', '', ['class' => 'form-control', 'id' => 'phone', 'placeholder' => 'Phone Nuber']) }}
+                                        {{ Form::number('telephone', '', ['class' => 'form-control', 'id' => 'phone', 'placeholder' => 'Phone Nuber']) }}
                                     </div>
 
                                 </div>

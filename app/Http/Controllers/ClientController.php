@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-
+use App\Client;
 use Illuminate\Http\Request;
+namespace App\Http\Controllers;
 
 class ClientController extends Controller
 {
@@ -45,7 +45,19 @@ class ClientController extends Controller
             'address' => 'required'
         );
 
-        
+        $client = new Client;
+
+        $client->name = $request->get('name');
+        $client->town = $request->get('town');
+        $client->email = $request->get('email');
+        $client->address = $request->get('address');
+        $client->area_code = $request->get('area_code');
+        $client->telephone = $request->get('telephone');
+
+        $client->save();
+
+        return redicrect()->route('clients-all')->with('success', 'Record Successfully Saved!');
+
     }
 
     /**
