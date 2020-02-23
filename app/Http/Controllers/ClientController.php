@@ -1,8 +1,9 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use App\Client;
 use Illuminate\Http\Request;
-namespace App\Http\Controllers;
 
 class ClientController extends Controller
 {
@@ -34,6 +35,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+        
         //Validation
         $this->validate(
             $request,
@@ -57,7 +59,7 @@ class ClientController extends Controller
 
         $client->save();
 
-        return redicrect()->route('clients-all')->with('success', 'Record Successfully Saved!');
+        return redirect()->route('clients-all')->with('success', 'Record Successfully Saved!');
 
     }
 
