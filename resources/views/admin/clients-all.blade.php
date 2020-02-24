@@ -57,7 +57,7 @@
                                 </td>
 
                                 <td>
-                                    <a href="{{ route('clients-all', $client->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <a href="{{ route('clients-delete', $client->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
 
                             </tr>
