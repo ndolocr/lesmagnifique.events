@@ -28,7 +28,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="{{ URL::asset('assets/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ URL::asset('assets/font-awesome/css/all.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ URL::asset('assets/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ URL::asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->

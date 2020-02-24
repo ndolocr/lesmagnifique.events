@@ -31,7 +31,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 260px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -46,7 +46,7 @@
                         <div class="portlet-body form">
                             <div class="form-body">
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS TITLE -->
+                                <!-- BEGIN FORM GROUP FOR SERVICE NAME -->
                                 <div class="form-group">
                                     
                                     {{ Form::label('name', 'Service Name') }}
@@ -59,37 +59,7 @@
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS TITLE -->
-
-                                <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('icon', 'Icon') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </span>
-                                        {{ Form::radio('icon', 'fa fa-print', ['class' => 'form-control', 'id' => 'start_date', 'placeholder' => 'Start Date']) }} <i class="fa fa-user"></i>
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS END DATE -->
-
-                                <!-- BEGIN FORM GROUP FOR EVENTS START DATE -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('end_date', 'Events End Date') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </span>
-                                        {{ Form::date('end_date', '', ['class' => 'form-control', 'id' => 'end_date', 'placeholder' => 'End Date']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS END DATE -->
+                                <!-- END FORM GROUP FOR SERVICE NAME -->
 
                             </div>
                         
@@ -107,13 +77,13 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 320px">
+                    <div class="portlet light bordered" style="height: 260px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
                                 <i class="icon-settings font-red-sunglo"></i>
-                                <span class="caption-subject bold uppercase"> Event Details </span>
+                                <span class="caption-subject bold uppercase"> Service Icons </span>
                             </div>                                   
                         </div>
                         <!-- END FORM TITLE -->
@@ -125,47 +95,216 @@
                                 <!-- BEGIN FORM GROUP FOR EVENT DELEGATES -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('delegate', 'Number of Delegates') }}
+                                    <!-- BEGIN ROW -->
+                                    <div class="row">
+                                        
+                                        <!-- BEGIN COL -->
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            
+                                            <div class="input-group">
+                                                Hotel Service Icons
+                                            </div>
+                                            
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-users"></i>
-                                        </span>
-                                        {{ Form::number('delegates', '', ['class' => 'form-control', 'id' => 'delegates', 'placeholder' => 'Number of Delegates']) }}
+                                                {{ Form::radio('icon', 'fa fa-hotel', ['style'=>'float:left;']) }} <i class="fa fa-hotel"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-bed', ['style'=>'float:left;']) }} <i class="fa fa-bed"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-bath', ['style'=>'float:left;']) }} <i class="fa fa-bath"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-shower', ['style'=>'float:left;']) }} <i class="fa fa-shower"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-concierge-bell', ['style'=>'float:left;']) }} <i class="fa fa-concierge-bell"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-utensils', ['style'=>'float:left;']) }} <i class="fa fa-utensils"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-coffee', ['style'=>'float:left;']) }} <i class="fa fa-coffee"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-glass-martini', ['style'=>'float:left;']) }} <i class="fa fa-glass-martini"></i>
+                                            </div>
+        
+                                        </div>
+                                        <!-- END COL -->
+
+                                        <!-- BEGIN COL -->
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            
+                                            <div class="input-group" style="clear: both;">
+                                                Transport Icons
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-plane', ['style'=>'float:left;']) }} <i class="fa fa-plane"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-plane-departure', ['style'=>'float:left;']) }} <i class="fa fa-plane-departure"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-shuttle-van', ['style'=>'float:left;']) }} <i class="fa fa-shuttle-van"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-bus', ['style'=>'float:left;']) }} <i class="fa fa-bus"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-caravan', ['style'=>'float:left;']) }} <i class="fa fa-caravan"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-subway', ['style'=>'float:left;']) }} <i class="fa fa-subway"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-car', ['style'=>'float:left;']) }} <i class="fa fa-car"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-taxi', ['style'=>'float:left;']) }} <i class="fa fa-taxi"></i>
+                                            </div>
+        
+                                        </div>
+                                        <!-- END COL -->
+
+                                        <!-- BEGIN COL -->
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            
+                                            <div class="input-group" style="clear: both;">
+                                                Office Service Icons
+                                            </div>
+                                            
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-user', ['style'=>'float:left;']) }} <i class="fa fa-user"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-calendar', ['style'=>'float:left;']) }} <i class="fa fa-calendar"></i>
+                                            </div>
+                    
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-print', ['style'=>'float:left;']) }} <i class="fa fa-print"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-file-pdf', ['style'=>'float:left;']) }} <i class="fa fa-file-pdf"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-network-wired', ['style'=>'float:left;']) }} <i class="fa fa-network-wired"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-envelope', ['style'=>'float:left;']) }} <i class="fa fa-envelope"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-keyboard', ['style'=>'float:left;']) }} <i class="fa fa-keyboard"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-pencil-alt', ['style'=>'float:left;']) }} <i class="fa fa-pencil-alt"></i>
+                                            </div>
+        
+                                        </div>
+                                        <!-- END COL -->
+
+                                        <!-- BEGIN COL -->
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            
+                                            <div class="input-group" style="clear: both;">
+                                                Entertainment Icons
+                                            </div>
+                                            
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-camera', ['style'=>'float:left;']) }} <i class="fa fa-camera"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-film', ['style'=>'float:left;']) }} <i class="fa fa-film"></i>
+                                            </div>
+                                            
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+                                                {{ Form::radio('icon', 'fa fa-eject', ['style'=>'float:left;']) }} <i class="fa fa-eject"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-gift', ['style'=>'float:left;']) }} <i class="fa fa-gift"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-swimmer', ['style'=>'float:left;']) }} <i class="fa fa-swimmer"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-hiking', ['style'=>'float:left;']) }} <i class="fa fa-hiking"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-biking', ['style'=>'float:left;']) }} <i class="fa fa-biking"></i>
+                                            </div>
+
+                                            <div class="input-group" style="padding: 0 15px; float: left;">
+
+                                                {{ Form::radio('icon', 'fa fa-skating', ['style'=>'float:left;']) }} <i class="fa fa-skating"></i>
+                                            </div>
+                                            
+                                            
+                                            
+        
+                                        </div>
+                                        <!-- END COL -->
+
                                     </div>
+                                    <!-- END ROW -->
 
                                 </div>
                                 <!-- END FORM GROUP FOR EVENT DELEGATES -->
-
-                                <!-- BEGIN FORM GROUP FOR DELEGATE NATIONALITIES -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('nationality', 'Number of Nationalities Attending') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-map"></i>
-                                        </span>
-                                        {{ Form::number('nationality', '', ['class' => 'form-control', 'id' => 'nationality', 'placeholder' => 'Number of Nationalities Attending']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR DELEGATE NATIONALITIES -->
-
-                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
-                                <div class="form-group">
-                                    
-                                    {{ Form::label('feature_image', 'Featured Image - (Image size 800 x 560 pixels)') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('feature_image', ['class' => 'form-control']) }}
-                                    </div>
-
-                                </div>
-                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
 
                             </div>
                         

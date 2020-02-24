@@ -42,14 +42,15 @@ Route::get('/admin/activities/create', 'ActiivityController@create')->name('acti
 
 //OUR SERVICES ROUTES
 Route::get('/admin/services', 'ServicesController@index')->name('services-all');
+Route::post('/admin/services/store', 'ServicesController@store')->name('services-store');
 Route::get('/admin/services/create', 'ServicesController@create')->name('services-create');
 
 //EVENTS ROUTES
 Route::get('/admin/events', 'EventsController@index')->name('events-all');
-Route::get('/admin/events/create', 'EventsController@create')->name('events-create');
 Route::post('/admin/events/store', 'EventsController@store')->name('events-store');
 Route::get('/admin/events/edit/{id}', 'EventsController@edit')->name('events-edit');
 Route::get('/admin/events/show/{id}', 'EventsController@show')->name('events-show');
+Route::get('/admin/events/create', 'EventsController@create')->name('events-create');
 Route::get('/admin/events/delete/{id}', 'EventsController@delete')->name('events-delete');
 Route::put('/admin/events/update/{id}', 'EventsController@update')->name('events-update');
 Route::delete('/admin/events/destroy/{id}', 'EventsController@destroy')->name('events-destroy');
