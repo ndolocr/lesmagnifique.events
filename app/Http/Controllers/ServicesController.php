@@ -111,6 +111,13 @@ class ServicesController extends Controller
         return redirect()->route('services-all')->with('success', 'Record Successfully Saved!');
     }
 
+    public function delete($id)
+    {
+        $service = Service::find($id);
+
+        return view('admin.services-delete', comapct('service'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *
