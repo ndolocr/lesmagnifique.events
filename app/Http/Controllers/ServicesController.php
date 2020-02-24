@@ -91,7 +91,7 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        /$this->validate(
+        $this->validate(
             $request,
             [
                 'name'=>'required',

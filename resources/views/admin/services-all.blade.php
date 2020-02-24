@@ -41,15 +41,19 @@
                         
                         @foreach($services as $service)
                             <tr>
-                                <td> {{ $loop->iteration }} </td>
-                                <td> <i class=" {{ $service->icon}} "> </i> </td>
-                                <td> {{ $service->name }} </td>
+                                <td> <p> {{ $loop->iteration }} </p> </td>
+                                <td> <p> <i class=" {{ $service->icon}} "> </i> </p> </td>
+                                <td> <p> {{ $service->name }} </p> </td>
                                 <td> {!! $service->description !!} </td>
-                                <td> 
-                                    <a href="{{ route('services-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                <td>
+                                    <p> 
+                                        <a href="{{ route('services-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    </p>
                                 </td>
                                 <td>
-                                    <a href="{{ route('events-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <p>
+                                        <a href="{{ route('events-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    </p>
                                 </td>
                             </tr>
                         @endforeach

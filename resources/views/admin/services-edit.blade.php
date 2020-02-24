@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'ServicesController@update', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['action' => ['ServicesController@update', $service->id], 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
