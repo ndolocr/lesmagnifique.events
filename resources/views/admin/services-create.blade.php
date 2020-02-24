@@ -328,7 +328,7 @@
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
                                 <i class="icon-info font-red-sunglo"></i>
-                                <span class="caption-subject bold uppercase"> Event Description </span>
+                                <span class="caption-subject bold uppercase"> Service Description </span>
                             </div>                                   
                         </div>
                         <!-- END FORM TITLE -->

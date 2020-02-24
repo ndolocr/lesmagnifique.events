@@ -37,7 +37,25 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this->validate(
+            $request,
+            [
+                'name'=>'required',
+                'description'=>'required'
+            ]
+        );
+
+        $services = new Service;
+
+        $services->name = $request->get('name');
+        $services->icon = $request->get('icon');
+        $services->description = $request->get('description');
+
+        $services->save();
+
+         //Redirect User to events page
+        return redirect()->route('services-all')->with('success', 'Record Successfully Saved!');
     }
 
     /**
