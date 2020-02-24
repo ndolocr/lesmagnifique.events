@@ -242,7 +242,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- END SPONSOR SIDE MENU -->
 
                         <!-- BEGIN OUR SERVICES SIDE MENU -->
-                        <li class="nav-item @yield('our-services-active') ">
+                        <li class="nav-item @yield('services-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-cog"></i>
                                 <span class="title">Our Services</span>
@@ -250,12 +250,12 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('our-services-add') }}" class="nav-link ">
+                                    <a href="{{ route('services-add') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="{{ route('our-services') }}" class="nav-link ">
+                                    <a href="{{ route('services-all') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
