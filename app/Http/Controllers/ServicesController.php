@@ -91,7 +91,24 @@ class ServicesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        /$this->validate(
+            $request,
+            [
+                'name'=>'required',
+                'description'=>'required'
+            ]
+        );
+
+        $services = Service::find($id);
+
+        $services->name = $request->get('name');
+        $services->icon = $request->get('icon');
+        $services->description = $request->get('description');
+
+        $services->save();
+
+         //Redirect User to events page
+        return redirect()->route('services-all')->with('success', 'Record Successfully Saved!');
     }
 
     /**
