@@ -124,6 +124,13 @@ class ClientController extends Controller
         return redirect()->route('clients-all')->with('success', 'Record Successfully Saved!');
     }
 
+    public function delete($id)
+    {
+        $clients = Client::find($id);
+
+        return view('admin.clients-delete', compact('clients'));
+    }
+
     /**
      * Remove the specified resource from storage.
      *

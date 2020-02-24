@@ -30,6 +30,7 @@ Route::post('/admin/clients/store', 'ClientController@store')->name('clients-sto
 Route::get('/admin/clients/edit/{id}', 'ClientController@edit')->name('clients-edit');
 Route::get('/admin/clients/delete/{id}', 'ClientController@delete')->name('clients-delete');
 Route::put('/admin/clients/update/{id}', 'ClientController@update')->name('clients-update');
+Route::delete('/admin/clients/destroy/{id}', 'ClientController@destroy')->name('clients-destroy');
 
 //SPONSOR ROUTES
 Route::get('/admin/sponsors', 'SponsorController@index')->name('sponsors');
