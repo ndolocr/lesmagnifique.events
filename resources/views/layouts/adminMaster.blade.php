@@ -162,7 +162,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('clients-add') }}" class="nav-link ">
+                                    <a href="{{ route('clients-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>

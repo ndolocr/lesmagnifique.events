@@ -25,8 +25,9 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 //CLIENT ROUTES
 Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
-Route::get('/admin/clients/add', 'ClientController@create')->name('clients-add');
+Route::get('/admin/clients/add', 'ClientController@create')->name('clients-create');
 Route::post('/admin/clients/store', 'ClientController@store')->name('clients-store');
+Route::get('/admin/clients/edit/{id}', 'ClientController@edit')->name('clients-edit');
 
 //SPONSOR ROUTES
 Route::get('/admin/sponsors', 'SponsorController@index')->name('sponsors');
