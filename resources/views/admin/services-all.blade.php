@@ -27,40 +27,34 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th> </th>              
-                        <th> Event Title </th>
-                        <th> Start Date </th>
-                        <th> End Date </th>
-                        <th> View </th>
+                        <th> # </th>
+                        <th> Icon </th>              
+                        <th> Name </th>
+                        <th> Information </th>
                         <th> Edit </th>
                         <th> Delete </th>
                     </tr>
                 </thead>
                 <tbody>
                     
-                    @if($events)
+                    @if($services)
                         
-                        @foreach($events as $event)
+                        @foreach($services as $service)
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
-                                <td> <img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="Feature Image" style="width: 45px;"> </td>
-                                <td> {{ $event->title }} </td>
-                                <td> {{ $event->start_date }} </td>
-                                <td> {{ $event->end_date}} </td>
-                                <td>
-                                    <a href="{{ route('events-show', $event->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
-                                </td>
+                                <td> {{ $service->icon}} </td>
+                                <td> {{ $service->name }} </td>
+                                <td> {{ $service->description }} </td>
                                 <td> 
-                                    <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    <a href="{{ route('events-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('events-delete', $event->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <a href="{{ route('events-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
                             </tr>
                         @endforeach
                         <tr>
-                            <td colspan="7"> {{ $events->links() }} </td>
+                            <td colspan="7"> {{ $services->links() }} </td>
                         </tr>
                     @else
                         <tr>

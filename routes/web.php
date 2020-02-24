@@ -41,8 +41,8 @@ Route::get('/admin/activities', 'ActivityController@index')->name('activities');
 Route::get('/admin/activities/add', 'ActiivityController@create')->name('activities-add');
 
 //OUR SERVICES ROUTES
-Route::get('/admin/our-services', 'ServicesController@index')->name('services-all');
-Route::get('/admin/our-services/add', 'ServicesController@create')->name('services-add');
+Route::get('/admin/services', 'ServicesController@index')->name('services-all');
+Route::get('/admin/services/add', 'ServicesController@create')->name('services-add');
 
 //EVENTS ROUTES
 Route::get('/admin/events', 'EventsController@index')->name('events-all');

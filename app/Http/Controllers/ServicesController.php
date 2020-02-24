@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use App\Service;
 use Illuminate\Http\Request;
 
@@ -14,9 +15,9 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $events = Service::orderBy('created_at')->paginate(6);
+        $services = Event::orderBy('created_at')->paginate(6);
 
-        return view('admin.services-all', compact('events'));
+        return view('admin.services-all', compact('services'));
     }
 
     /**
