@@ -206,7 +206,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('activities-add') }}" class="nav-link ">
+                                    <a href="{{ route('activities-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
@@ -228,7 +228,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('sponsors-add') }}" class="nav-link ">
+                                    <a href="{{ route('sponsors-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
@@ -250,7 +250,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('services-add') }}" class="nav-link ">
+                                    <a href="{{ route('services-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
@@ -272,7 +272,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('service-providers-add') }}" class="nav-link ">
+                                    <a href="{{ route('service-providers-create') }}" class="nav-link ">
                                         <span class="title">Add New</span>
                                     </a>
                                 </li>
