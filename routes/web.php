@@ -12,10 +12,13 @@
 */
 
 use App\Event;
+use App\Service;
 
 Route::get('/', function () {
+	$services = Service::orderBy('name', 'ASC')->limit(4)->get();
 	$events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
-    return view('index', compact('events'));
+
+    return view('index', compact('events', 'services'));
 });
 
 /* ADMIN ROUTES */
