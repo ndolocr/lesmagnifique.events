@@ -45,6 +45,7 @@ Route::get('/admin/services', 'ServicesController@index')->name('services-all');
 Route::post('/admin/services/store', 'ServicesController@store')->name('services-store');
 Route::get('/admin/services/edit/{id}', 'ServicesController@edit')->name('services-edit');
 Route::get('/admin/services/create', 'ServicesController@create')->name('services-create');
+Route::put('/admin/services/update/{id}', 'ServicesController@update')->name('services-update');
 
 //EVENTS ROUTES
 Route::get('/admin/events', 'EventsController@index')->name('events-all');
