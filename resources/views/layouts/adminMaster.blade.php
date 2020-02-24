@@ -285,6 +285,32 @@ License: You must have a valid license purchased only from themeforest(the above
                             </ul>
                         </li>
                         <!-- END SERVICE PROVIDER SIDE MENU -->
+
+                        <li class="heading">
+                            <h3 class="uppercase">Messages</h3>
+                        </li>
+                        
+                        <!-- BEGIN CLIENT SIDE MENU -->
+                        <li class="nav-item @yield('clients-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-envelope"></i>
+                                <span class="title">Inbox</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <!--<li class="nav-item  ">
+                                    <a href="{{ route('clients-create') }}" class="nav-link ">
+                                        <span class="title">Add New</span>
+                                    </a>
+                                </li> -->
+                                <li class="nav-item  ">
+                                    <a href="{{ route('clients-all') }}" class="nav-link ">
+                                        <span class="title">View All</span>
+                                    </a>
+                                </li>                                
+                            </ul>
+                        </li>
+                        <!-- END CLIENT SIDE MENU -->
                                 
                     </ul>
                     <!-- END SIDEBAR MENU -->
