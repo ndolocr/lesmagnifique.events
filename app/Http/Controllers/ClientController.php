@@ -97,7 +97,31 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $client = Client::find($id);
+        
+        //Validation
+        $this->validate(
+            $request,
+            [
+                'name' => 'required',
+                'town' => 'required',
+                'email' => 'required',
+                'address' => 'required',
+                'telephone' => 'required'
+            ]
+        );
+
+        $client->event_id = 1;
+        $client->name = $request->get('name');
+        $client->town = $request->get('town');
+        $client->email = $request->get('email');
+        $client->address = $request->get('address');
+        $client->area_code = $request->get('area_code');
+        $client->telephone = $request->get('telephone');
+
+        $client->save();
+
+        return redirect()->route('clients-all')->with('success', 'Record Successfully Saved!');
     }
 
     /**
