@@ -46,7 +46,7 @@
                                 <td> {{ $service->name }} </td>
                                 <td> {!! $service->description !!} </td>
                                 <td> 
-                                    <a href="{{ route('events-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    <a href="{{ route('services-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
                                     <a href="{{ route('events-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>

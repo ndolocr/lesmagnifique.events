@@ -77,7 +77,9 @@ class ServicesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $service = Service::find($id);
+
+        return view('admin.services-edit', compact('service'));
     }
 
     /**

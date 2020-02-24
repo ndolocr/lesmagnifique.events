@@ -43,6 +43,7 @@ Route::get('/admin/activities/create', 'ActiivityController@create')->name('acti
 //OUR SERVICES ROUTES
 Route::get('/admin/services', 'ServicesController@index')->name('services-all');
 Route::post('/admin/services/store', 'ServicesController@store')->name('services-store');
+Route::get('/admin/services/edit/{id}', 'ServicesController@edit')->name('services-edit');
 Route::get('/admin/services/create', 'ServicesController@create')->name('services-create');
 
 //EVENTS ROUTES
