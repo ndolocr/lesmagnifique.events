@@ -139,6 +139,9 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $client = Client::find($id);
+        $client->delete();
+
+        return redirect()->route('clients-all')->with('success', 'Record Successfully Deleted!');
     }
 }
