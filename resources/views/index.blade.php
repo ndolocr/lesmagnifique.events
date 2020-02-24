@@ -91,46 +91,27 @@
 				</div>
 			</div>
 		</section>
-
-		<section class="section-feature">
-			
-			<div class="row">
-
-				<div class="col-1-of-4">
-					<div class="feature-box">
-						<i class="fa fa-print feature-box__icon"></i>
-						<h3 class="heading-tertiary u-margin-bottom-small">Transcribing</h3>
-						<p class="feature-box__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolorum deleniti repudiandae voluptatibus et eius hic error!</p>
-					</div>
+		
+		@if($services)
+			<section class="section-feature">
+				
+				<div class="row">
+					@foreach($services as $service)
+						<div class="col-1-of-4">
+							<div class="feature-box">
+								<i class="{{ $service->icon }} feature-box__icon"></i>
+								<h3 class="heading-tertiary u-margin-bottom-small"> {{ $service->name }} </h3>
+								<p class="feature-box__text"> {!! $service->description !!} </p>
+							</div>
+						</div>
+					@endforeach
+					
 				</div>
 
-				<div class="col-1-of-4">
-					<div class="feature-box">
-						<i class="fa fa-user feature-box__icon"></i>
-						<h3 class="heading-tertiary u-margin-bottom-small">Event Consultancy</h3>
-						<p class="feature-box__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolorum deleniti repudiandae voluptatibus et eius hic error!</p>
-					</div>
 				</div>
 
-				<div class="col-1-of-4">
-					<div class="feature-box">
-						<i class="fa fa-calendar feature-box__icon"></i>
-						<h3 class="heading-tertiary u-margin-bottom-small">Conferencing</h3>
-						<p class="feature-box__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolorum deleniti repudiandae voluptatibus et eius hic error!</p>
-					</div>
-				</div>
-
-				<div class="col-1-of-4">
-					<div class="feature-box">
-						<i class="fa fa-car feature-box__icon"></i>
-						<h3 class="heading-tertiary u-margin-bottom-small">Transport</h3>
-						<p class="feature-box__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas dolorum deleniti repudiandae voluptatibus et eius hic error!</p>
-					</div>
-				</div>
-
-			</div>
-
-		</section>
+			</section>
+		@endif
 		
 		<!-- CHECK IF EVENTS ARE AVAILABLE -->
 		@if($events)
