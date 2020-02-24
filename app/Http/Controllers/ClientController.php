@@ -15,7 +15,7 @@ class ClientController extends Controller
     public function index()
     {
         $clients = Client::orderBy('created_at')->paginate(6);
-        return view('admin.clients', compact('clients'));
+        return view('admin.clients-all', compact('clients'));
     }
 
     /**
@@ -98,7 +98,7 @@ class ClientController extends Controller
     public function update(Request $request, $id)
     {
         $client = Client::find($id);
-        
+
         //Validation
         $this->validate(
             $request,

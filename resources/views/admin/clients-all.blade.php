@@ -19,6 +19,10 @@
             </h3>
             <!-- END PAGE TITLE-->
 
+            <!-- BEGIN MESSAGES -->
+            @include('includes.messages')
+            <!-- END MESSAGES -->
+
         	<!-- BEGIN TABLE -->
             <table class="table table-striped">
                 <thead>

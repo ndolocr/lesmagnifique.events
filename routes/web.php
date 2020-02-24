@@ -28,6 +28,7 @@ Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
 Route::get('/admin/clients/add', 'ClientController@create')->name('clients-create');
 Route::post('/admin/clients/store', 'ClientController@store')->name('clients-store');
 Route::get('/admin/clients/edit/{id}', 'ClientController@edit')->name('clients-edit');
+Route::put('/admin/clients/update/{id}', 'ClientController@update')->name('clients-update');
 
 //SPONSOR ROUTES
 Route::get('/admin/sponsors', 'SponsorController@index')->name('sponsors');
