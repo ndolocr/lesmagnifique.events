@@ -1,11 +1,11 @@
 
 @extends('layouts.adminMaster')
 
-@section('title') Events @endsection
+@section('title') Clients @endsection
 
-@section('page-title') Events @endsection
+@section('page-title') Clients @endsection
 
-@section('events-active') start active open @endsection
+@section('clients-active') start active open @endsection
 
 @section('content')
 	<!-- BEGIN ROW -->
