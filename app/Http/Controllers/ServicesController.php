@@ -107,7 +107,6 @@ class ServicesController extends Controller
 
         $services->save();
 
-         //Redirect User to events page
         return redirect()->route('services-all')->with('success', 'Record Successfully Saved!');
     }
 
@@ -115,7 +114,7 @@ class ServicesController extends Controller
     {
         $service = Service::find($id);
 
-        return view('admin.services-delete', comapct('service'));
+        return view('admin.services-delete', compact('service'));
     }
 
     /**
@@ -126,6 +125,10 @@ class ServicesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $service = Service::find($id);
+
+        $service->delete();
+
+        return redirect()->route('services-all')->with('success', 'Record Successfully Deleted!');
     }
 }

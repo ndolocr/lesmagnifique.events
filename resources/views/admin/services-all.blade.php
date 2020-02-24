@@ -52,7 +52,7 @@
                                 </td>
                                 <td>
                                     <p>
-                                        <a href="{{ route('events-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                        <a href="{{ route('services-delete', $service->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                     </p>
                                 </td>
                             </tr>

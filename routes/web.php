@@ -47,6 +47,7 @@ Route::get('/admin/services/edit/{id}', 'ServicesController@edit')->name('servic
 Route::get('/admin/services/create', 'ServicesController@create')->name('services-create');
 Route::get('/admin/services/delete/{id}', 'ServicesController@delete')->name('services-delete');
 Route::put('/admin/services/update/{id}', 'ServicesController@update')->name('services-update');
+Route::delete('/admin/services/destroy/{id}', 'ServicesController@destroy')->name('services-destroy');
 
 //EVENTS ROUTES
 Route::get('/admin/events', 'EventsController@index')->name('events-all');
