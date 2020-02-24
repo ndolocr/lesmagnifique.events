@@ -49,7 +49,7 @@
                                 </td>
 
                                 <td> 
-                                    <a href="{{ route('clients-all', $client->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    <a href="{{ route('clients-edit', $client->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
 
                                 <td>

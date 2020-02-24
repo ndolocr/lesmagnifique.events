@@ -84,7 +84,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $clients = Client::find($id);
+        return view('admin.client-edit', compact('clients'));
     }
 
     /**
