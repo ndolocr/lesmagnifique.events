@@ -30,7 +30,7 @@
                         <th> # </th>
                         <th> Icon </th>              
                         <th> Name </th>
-                        <th> Information </th>
+                        <th> Service Description </th>
                         <th> Edit </th>
                         <th> Delete </th>
                     </tr>
