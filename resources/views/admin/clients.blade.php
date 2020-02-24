@@ -23,7 +23,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th></th>              
+                        <th>#</th>              
                         <th> Name </th>
                         <th> Address </th>
                         <th> Email </th>
@@ -43,24 +43,27 @@
                                 <td> {{ $client->name }} </td>
                                 <td> {{ $client->address }} - {{$client->area_code}}, {{$client->town}} </td>
                                 <td> {{ $client->email }} </td>
-                                <td> {{ $client->telephone }} </td>
+                                <td> 0{{ $client->telephone }} </td>
                                 <td>
                                     <a href="{{ route('clients-all', $client->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
+
                                 <td> 
                                     <a href="{{ route('clients-all', $client->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
+
                                 <td>
                                     <a href="{{ route('clients-all', $client->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
+
                             </tr>
                         @endforeach
                         <tr>
-                            <td colspan="7"> {{ $clients->links() }} </td>
+                            <td colspan="8"> {{ $clients->links() }} </td>
                         </tr>
                     @else
                         <tr>
-                            <td colspan="7"> No records Available! </td>
+                            <td colspan="8"> No records Available! </td>
                         </tr>
 
                     @endif

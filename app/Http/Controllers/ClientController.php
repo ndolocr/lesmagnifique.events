@@ -44,13 +44,14 @@ class ClientController extends Controller
                 'name' => 'required',
                 'town' => 'required',
                 'email' => 'required',
-                'phone' => 'required',
-                'address' => 'required'
+                'address' => 'required',
+                'telephone' => 'required'
             ]
         );
 
         $client = new Client;
 
+        $client->event_id = 1;
         $client->name = $request->get('name');
         $client->town = $request->get('town');
         $client->email = $request->get('email');
