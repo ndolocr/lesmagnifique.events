@@ -42,9 +42,9 @@
                         @foreach($services as $service)
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
-                                <td> {{ $service->icon}} </td>
+                                <td> <i class=" {{ $service->icon}} "> </i> </td>
                                 <td> {{ $service->name }} </td>
-                                <td> {{ $service->description }} </td>
+                                <td> {!! $service->description !!} </td>
                                 <td> 
                                     <a href="{{ route('events-edit', $service->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
