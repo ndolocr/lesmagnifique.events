@@ -369,25 +369,25 @@
 					<ul class="footer__list">
 						<li class="footer__item--social">
 							<a href="" class="footer__link">
-								<i class="fa fa-facebook"></i>
+								<i class="fab fa-facebook-f"></i>
 							</a>
 						</li>
 
 						<li class="footer__item--social">
 							<a href="" class="footer__link">
-								<i class="fa fa-twitter"></i>
+								<i class="fab fa-twitter"></i>
 							</a>
 						</li>
 
 						<li class="footer__item--social">
 							<a href="" class="footer__link">
-								<i class="fa fa-instagram"></i>
+								<i class="fab fa-instagram"></i>
 							</a>
 						</li>
 
 						<li class="footer__item--social">
 							<a href="" class="footer__link">
-								<i class="fa fa-google-plus"></i>
+								<i class="fab fa-google-plus-g"></i>
 							</a>
 						</li>
 						
