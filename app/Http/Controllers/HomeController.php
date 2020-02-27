@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $services = Service::orderBy('name', 'ASC')->limit(4)->get();
+        $events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
+
+        return view('index', compact('events', 'services'));
     }
 }
