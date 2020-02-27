@@ -26,6 +26,9 @@ Route::get('/', function () {
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 
+//CONTACT ROUTES
+Route::post('/admin/contact/store', 'ContactController@store')->name('contact-store');
+
 //CLIENT ROUTES
 Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
 Route::get('/admin/clients/create', 'ClientController@create')->name('clients-create');
