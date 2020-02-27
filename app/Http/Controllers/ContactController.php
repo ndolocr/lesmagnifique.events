@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -34,7 +35,17 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //CREATE NEW INSTANCE OF CONTACT
+        $contact = new Contact;
+
+        $contact->message = $request->get('message');
+        $contact->first_name = $request->get('last_name');
+        $contact->first_name = $request->get('first_name');
+        $contact->email_address = $request->get('email_address');
+
+        $contact->save();
+
+        return redirect()->route('index')->with('success', 'Message Successfully Sent!');
     }
 
     /**

@@ -324,7 +324,7 @@
 
 							<div class="form__group">
 
-								{{ Form::text('email', '', ['class' => 'form__input', 'id' => 'email', 'placeholder' => 'Email', 'required']) }}
+								{{ Form::text('email_address', '', ['class' => 'form__input', 'id' => 'email_address', 'placeholder' => 'Email', 'required']) }}
 
 							</div>							
 					</div>
