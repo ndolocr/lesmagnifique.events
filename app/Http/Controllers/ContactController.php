@@ -14,7 +14,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Contact::orderBy('created_at')->paginate(6);
+
+        return view('admin.messages-all', compact('messages'));
     }
 
     /**
