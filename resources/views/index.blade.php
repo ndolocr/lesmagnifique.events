@@ -306,34 +306,44 @@
 					<div class="contact__cover"> <h2> Contact Form </h2> </div>
 
 					<div class="contact__box contact-title">
-						<form action="">
+
+						<!-- BEGIN FORM CREATION -->
+						 {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+
 							<div class="form__group">
-								<!--<label for="first__name" class="form__label">First Name:</label>-->
-								<input type="text" class="form__input" placeholder="First Name" id="first__name" name="first__name" required>
+
+								{{ Form::text('first_name', '', ['class' => 'form__input', 'id' => 'first_name', 'placeholder' => 'First Name', 'required']) }}
+
 							</div>
 
 							<div class="form__group">
-								<!--<label for="last__name" class="form__label">Last Name:</label>-->
-								<input type="text" class="form__input" placeholder="Last Name" id="last__name" name="last__name" >
+
+								{{ Form::text('last_name', '', ['class' => 'form__input', 'id' => 'last_name', 'placeholder' => 'Last Name', 'required']) }}
+
 							</div>
 
 							<div class="form__group">
-								<!--<label for="email" class="form__label">Email:</label>-->
-								<input type="email" class="form__input" placeholder="Email" id="email" name="email" required>
+
+								{{ Form::text('email', '', ['class' => 'form__input', 'id' => 'email', 'placeholder' => 'Email', 'required']) }}
+
 							</div>							
 					</div>
 
 					<div class="contact__message">
 							<div class="form__group">
 								<label for="message" class="form__label--message">Message:</label>
-								<textarea class="form__textarea ckeditor" name="message" id="message"></textarea>
+								{{ Form::textarea('message', '', ['class' => 'ckeditor form__textarea', 'id' => 'message'], 'required') }}
+								
 							</div>
 
 							<div class="form__group">
-								<input type="submit" class="form__btn btn__submit" value="Send">
+			
+								{{  Form::submit('Send', ['class' => 'form__btn btn__submit blue uppercase']) }}
+			
 							</div>
 
-						</form>
+						{!! Form::close() !!}
+            			<!-- END FORM CREATION -->
 					</div>
 				</div>
 			</div>
