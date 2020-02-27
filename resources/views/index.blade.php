@@ -308,7 +308,7 @@
 					<div class="contact__box contact-title">
 
 						<!-- BEGIN FORM CREATION -->
-						 {!! Form::Open( ['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+						 {!! Form::Open( ['action' => 'ContactController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
 
 							<div class="form__group">
 
