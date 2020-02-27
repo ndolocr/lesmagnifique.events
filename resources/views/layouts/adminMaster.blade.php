@@ -291,7 +291,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                         
                         <!-- BEGIN CLIENT SIDE MENU -->
-                        <li class="nav-item @yield('clients-active') ">
+                        <li class="nav-item @yield('messages-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-envelope"></i>
                                 <span class="title">Inbox</span>
@@ -304,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li> -->
                                 <li class="nav-item  ">
-                                    <a href="{{ route('clients-all') }}" class="nav-link ">
+                                    <a href="{{ route('message-inbox') }}" class="nav-link ">
                                         <span class="title">View All</span>
                                     </a>
                                 </li>                                
