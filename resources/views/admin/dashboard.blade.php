@@ -61,9 +61,9 @@
             </div>
             <div class="details">
                 <div class="number">
-                    <span data-counter="counterup" data-value="549">0</span>
+                    <span data-counter="counterup" data-value="{{ $messages_count }}"></span>
                 </div>
-                <div class="desc"> New Orders </div>
+                <div class="desc"> Inbox </div>
             </div>
             <a class="more" href="javascript:;"> View more
                 <i class="m-icon-swapright m-icon-white"></i>
