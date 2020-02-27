@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Events;
+use App\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -36,10 +36,10 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         //CREATE NEW INSTANCE OF CONTACT
-        $contact = new Events;
+        $contact = new Contact;
 
         $contact->message = $request->get('message');
-        $contact->first_name = $request->get('last_name');
+        $contact->last_name = $request->get('last_name');
         $contact->first_name = $request->get('first_name');
         $contact->email_address = $request->get('email_address');
 
