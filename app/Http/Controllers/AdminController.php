@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Client;
+use App\Contact;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -16,7 +17,10 @@ class AdminController extends Controller
         $clients = Client::all();
         $clients_count = $clients->count();
 
-    	return view('admin.dashboard', compact('events_count', 'clients_count'));
+        $messages = Contact::all();
+        $messages_count = $messages->count();
+
+    	return view('admin.dashboard', compact('events_count', 'clients_count', 'messages_count'));
     }
 
 }
