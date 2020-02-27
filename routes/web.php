@@ -19,7 +19,7 @@ Route::get('/', function () {
 	$events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
 
     return view('index', compact('events', 'services'));
-});
+})->name('index');
 
 /* ADMIN ROUTES */
 
@@ -27,7 +27,7 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 
 //CONTACT ROUTES
-Route::post('/admin/contact/store', 'ContactController@store')->name('contact-store');
+Route::post('/', 'ContactController@store')->name('contact-store');
 
 //CLIENT ROUTES
 Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
