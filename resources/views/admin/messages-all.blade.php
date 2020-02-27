@@ -45,7 +45,7 @@
                                 <td> {{ $message->email_address }} </td>
                                 <td> {{ $message->created_at }} </td>
                                 <td>
-                                    <a href="{{ route('events-show', $message->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
+                                    <a href="{{ route('message-show', $message->id) }}" class='btn green btn-outline sbold uppercase'> <i class='fa fa-eye'></i> </a>
                                 </td>
                             </tr>
                         @endforeach

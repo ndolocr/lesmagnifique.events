@@ -58,7 +58,9 @@ class ContactController extends Controller
      */
     public function show($id)
     {
-        //
+        $messages = Contact::find($id);
+
+        return view('admin.messages-single', compact('messages'));
     }
 
     /**

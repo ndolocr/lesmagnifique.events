@@ -29,6 +29,7 @@ Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 //CONTACT ROUTES
 Route::post('/', 'ContactController@store')->name('contact-store');
 Route::get('/admin/message/inbox', 'ContactController@index')->name('message-inbox');
+Route::get('/admin/message/show/{id}', 'ContactController@show')->name('message-show');
 
 //CLIENT ROUTES
 Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
