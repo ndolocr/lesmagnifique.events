@@ -65,7 +65,7 @@
                 </div>
                 <div class="desc"> Inbox </div>
             </div>
-            <a class="more" href="javascript:;"> View more
+            <a class="more" href="{{ route('message-inbox') }}"> View more
                 <i class="m-icon-swapright m-icon-white"></i>
             </a>
         </div>
