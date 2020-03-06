@@ -16,6 +16,7 @@ use App\Service;
 
 /* HOME PAGE ROUTES */
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 
 
 /* ADMIN ROUTES */
@@ -70,4 +71,4 @@ Route::get('/admin/service-providers/create', 'ServiceProviderController@create'
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
