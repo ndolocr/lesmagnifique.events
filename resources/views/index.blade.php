@@ -165,7 +165,7 @@
 								<div class="card__side card__side--back card__side--back-one">
 									<div class="card__cta">
 										<h4> {{ $event->title }} </h4>
-										<a href="" class="btn btn--white__narrow"> view Event </a>
+										<a href="{{ route('event-show', $event->id) }}" class="btn btn--white__narrow"> view Event </a>
 									</div>
 								</div>		
 							</div>
