@@ -1,1 +1,0 @@
-This is the event Page. Single Events.
