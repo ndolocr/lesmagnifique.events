@@ -4,13 +4,11 @@
 	<head>
 		<meta name="viewport" content="width=device-width initial-scale=1.0" charset="UTF-8">
 		<title> @yield('title') </title>
-		
 
-		<link rel="stylesheet" href="assets/font-awesome/css/all.css">
-		<link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/font-awesome/css/all.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/font-awesome/css/all.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/styles.css') }}">
 		
-
-		<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 	</head>
 
 	<body> @yield('content') </body>
