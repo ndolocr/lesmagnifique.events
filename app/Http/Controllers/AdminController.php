@@ -33,7 +33,15 @@ class AdminController extends Controller
     	return view ('admin.home-page-header-title-create');
     }
 
-    public function homePageHeaderTitleStore($request){
+    public function homePageHeaderTitleStore(Request $request){
+
+    	$this->validate(
+    		$request[
+    			'title'=>'required'
+    		]
+    	);
+
+    	
     	return "Saving Title";
     }
 

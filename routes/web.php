@@ -23,6 +23,7 @@ Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 Route::get('/admin/pages/home/header/title', 'AdminController@homePageHeaderTitle')->name('home-page-header-title');
+Route::post('/admin/pages/home/header/title/store', 'AdminController@homePageHeaderTitleStore')->name('home-page-header-title-store');
 Route::get('/admin/pages/home/header/title/create', 'AdminController@homePageHeaderTitleCreate')->name('home-page-header-title-create');
 
 
