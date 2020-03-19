@@ -22,9 +22,10 @@ Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 /* ADMIN ROUTES */
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
-Route::get('/admin/pages/home/header/title', 'AdminController@homePageHeaderTitle')->name('home-page-header-title');
-Route::post('/admin/pages/home/header/title/store', 'AdminController@homePageHeaderTitleStore')->name('home-page-header-title-store');
-Route::get('/admin/pages/home/header/title/create', 'AdminController@homePageHeaderTitleCreate')->name('home-page-header-title-create');
+
+Route::get('/admin/pages/home/header', 'AdminController@homePageHeader')->name('home-page-header');
+Route::post('/admin/pages/home/header/store', 'AdminController@homePageHeaderStore')->name('home-page-header-store');
+Route::get('/admin/pages/home/header/title/create', 'AdminController@homePageHeaderCreate')->name('home-page-header-create');
 
 
 //CONTACT ROUTES

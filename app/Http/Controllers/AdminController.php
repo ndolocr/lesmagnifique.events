@@ -24,16 +24,16 @@ class AdminController extends Controller
     	return view('admin.dashboard', compact('events_count', 'clients_count', 'messages_count'));
     }
 
-    public function homePageHeaderTitle(){
+    public function homePageHeader(){
     	$data = HomePageHeaderTitle::all();
     	return view ('admin.home-page-header-title', compact('data'));
     }
 
-    public function homePageHeaderTitleCreate(){
+    public function homePageHeaderCreate(){
     	return view ('admin.home-page-header-title-create');
     }
 
-    public function homePageHeaderTitleStore(Request $request){
+    public function homePageHeaderStore(Request $request){
 
     	$this->validate(
     		$request[
@@ -41,7 +41,7 @@ class AdminController extends Controller
     		]
     	);
 
-    	
+
     	return "Saving Title";
     }
 
