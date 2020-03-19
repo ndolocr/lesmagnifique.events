@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Client;
 use App\Contact;
-use App\HomePageHeaderTitle;
+use App\HomePageHeader;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -26,18 +26,18 @@ class AdminController extends Controller
 
     public function homePageHeader(){
     	$data = HomePageHeader::all();
-    	return view ('admin.home-page-header-title', compact('data'));
+    	return view ('admin.home-page-header', compact('data'));
     }
 
     public function homePageHeaderCreate(){
-    	return view ('admin.home-page-header-title-create');
+    	return view ('admin.home-page-header-create');
     }
 
     public function homePageHeaderStore(Request $request){
 
     	$this->validate(
     		$request[
-    			'title'=>'required'
+    			
     		]
     	);
 

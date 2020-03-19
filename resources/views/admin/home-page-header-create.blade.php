@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'AdminController@homePageHeaderTitleStore', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['action' => 'AdminController@homePageHeaderStore', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
@@ -61,6 +61,21 @@
                                 </div>
                                 <!-- END FORM GROUP FOR TITLE -->
 
+                                <!-- BEGIN FORM GROUP FOR SUB TITLE -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('sub_title', 'Header Sub-Title') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-info"></i>
+                                        </span>
+                                        {{ Form::text('sub_title', '', ['class' => 'form-control', 'id' => 'sub_title', 'placeholder' => 'Header Sub-Title']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR SUB TITLE -->
+
                             </div>
                         
                         </div>
@@ -91,6 +106,21 @@
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
                             <div class="form-body">
+                                
+                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('cover_image', 'Cover Image - (Image size 800 x 560 pixels)') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-image"></i>
+                                        </span>
+                                        {{ Form::file('cover_image', ['class' => 'form-control']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
 
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">

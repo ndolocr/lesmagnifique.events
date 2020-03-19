@@ -28,7 +28,9 @@
                 @if(count($data)>0)
                     <thead>
                         <tr>              
+                            <th> Cover Image </th>
                             <th> Title </th>
+                            <th> Sub-Title </th>
                             <th> Edit </th>
                             <th> Delete </th>
                         </tr>
@@ -36,6 +38,8 @@
                     <tbody>
                         @foreach($data as $data)
                             <tr>
+                                <td> {{ $data->cover_image }} </td>
+                                <td> {{ $data->sub_title }} </td>
                                 <td> {{ $data->title }} </td>
                                 <td> 
                                     <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
@@ -50,7 +54,7 @@
                     <tbody>
                         <tr>
                             <td> 
-                                <a href="{{ route('home-page-header-title-create') }}" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
+                                <a href="{{ route('home-page-header-create') }}" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
                             </td>
                         </tr>
                     </tbody>
