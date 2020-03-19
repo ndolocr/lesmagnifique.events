@@ -33,4 +33,8 @@ class AdminController extends Controller
     	return view ('admin.home-page-header-title-create');
     }
 
+    public function homePageHeaderTitleStore($request){
+    	return "Saving Title";
+    }
+
 }
