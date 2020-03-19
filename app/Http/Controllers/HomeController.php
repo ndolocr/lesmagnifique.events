@@ -31,6 +31,10 @@ class HomeController extends Controller
         return view('index', compact('events', 'services'));
     }
 
+    public function about(){
+        return view('front-end.about');
+    }
+
     public function eventShow($id){
         $events = Event::find('$id');
 
