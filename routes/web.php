@@ -19,7 +19,6 @@ Route::get('/', 'HomeController@index')->name('index');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 
-
 /* ADMIN ROUTES */
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
