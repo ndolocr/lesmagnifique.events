@@ -22,6 +22,7 @@ Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 /* ADMIN ROUTES */
 
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
+Route::get('/admin/pages/home', 'AdminController@home')->name('home-page');
 
 
 //CONTACT ROUTES
