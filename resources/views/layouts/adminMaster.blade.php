@@ -285,12 +285,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </ul>
                         </li>
                         <!-- END SERVICE PROVIDER SIDE MENU -->
-
+                        
+                        <!-- BEGIN MESSAGE SIDE MENU -->
                         <li class="heading">
                             <h3 class="uppercase">Messages</h3>
                         </li>
                         
-                        <!-- BEGIN CLIENT SIDE MENU -->
+                        
                         <li class="nav-item @yield('messages-active') ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-envelope"></i>
@@ -310,7 +311,59 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </li>                                
                             </ul>
                         </li>
-                        <!-- END CLIENT SIDE MENU -->
+                        <!-- END MESSAGE SIDE MENU -->
+
+                        <!-- BEGIN MESSAGE SIDE MENU -->
+                        <li class="heading">
+                            <h3 class="uppercase">Pages</h3>
+                        </li>
+                        
+                        
+                        <li class="nav-item @yield('pages-active') ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-file"></i>
+                                <span class="title">Home</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="" class="nav-link ">
+                                        <span class="title">Header Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Header Sub-Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Header Background Image</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">About Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Services Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Events Title</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="#" class="nav-link ">
+                                        <span class="title">Contact Title</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END MESSAGE SIDE MENU -->
                                 
                     </ul>
                     <!-- END SIDEBAR MENU -->
