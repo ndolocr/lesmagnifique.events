@@ -26,9 +26,11 @@
 
 		<nav>
 			
+			<a href="{{ route('index') }}">
 			<div class="logo-box">
 				<img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo">
 			</div>
+			</a>
 			
 			<!--<div class="menu">
 				<ul>
