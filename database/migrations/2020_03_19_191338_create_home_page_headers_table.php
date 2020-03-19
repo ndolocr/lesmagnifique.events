@@ -15,6 +15,9 @@ class CreateHomePageHeadersTable extends Migration
     {
         Schema::create('home_page_headers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('sub_title');
+            $table->string('cover_image');
             $table->timestamps();
         });
     }

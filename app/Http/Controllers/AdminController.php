@@ -25,7 +25,7 @@ class AdminController extends Controller
     }
 
     public function homePageHeader(){
-    	$data = HomePageHeaderTitle::all();
+    	$data = HomePageHeader::all();
     	return view ('admin.home-page-header-title', compact('data'));
     }
 
