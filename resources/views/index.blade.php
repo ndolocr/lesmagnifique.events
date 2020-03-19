@@ -68,7 +68,7 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
 						</p>
 		
-						<a href="{{ route('index') }}" class="btn-text">Learn More &rarr;</a>
+						<a href="{{ route('about') }}" class="btn-text">Learn More &rarr;</a>
 
 					</div>
 
