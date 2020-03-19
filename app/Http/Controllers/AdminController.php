@@ -23,4 +23,8 @@ class AdminController extends Controller
     	return view('admin.dashboard', compact('events_count', 'clients_count', 'messages_count'));
     }
 
+    public function headerTitle(){
+    	return view ('admin.header-title');
+    }
+
 }
