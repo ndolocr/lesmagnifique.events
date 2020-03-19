@@ -25,7 +25,7 @@
 
         	<!-- BEGIN TABLE -->
             <table class="table table-striped">
-                @if(count($events)>0)
+                @if(count($data)>0)
                     <thead>
                         <tr>              
                             <th> Title </th>
@@ -34,9 +34,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($events as $event)
+                        @foreach($data as $data)
                             <tr>
-                                <td> {{ $event->title }} </td>
+                                <td> {{ $data->title }} </td>
                                 <td> 
                                     <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
@@ -50,7 +50,7 @@
                     <tbody>
                         <tr>
                             <td> 
-                                <a href="" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
+                                <a href="{{ route('home-page-header-title-create') }}" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
                             </td>
                         </tr>
                     </tbody>

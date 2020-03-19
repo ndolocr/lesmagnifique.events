@@ -327,7 +327,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="{{ route('header-title') }}" class="nav-link ">
+                                    <a href="{{ route('home-page-header-title') }}" class="nav-link ">
                                         <span class="title">Header Title</span>
                                     </a>
                                 </li>

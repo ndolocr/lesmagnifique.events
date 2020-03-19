@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Role;
 use App\Event;
 use App\Client;
 use App\Contact;
+use App\HomePageHeaderTitle;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -24,9 +24,13 @@ class AdminController extends Controller
     	return view('admin.dashboard', compact('events_count', 'clients_count', 'messages_count'));
     }
 
-    public function headerTitle(){
-    	$events = Role::all();
-    	return view ('admin.header-title', compact('events'));
+    public function homePageHeaderTitle(){
+    	$data = HomePageHeaderTitle::all();
+    	return view ('admin.home-page-header-title', compact('data'));
+    }
+
+    public function homePageHeaderTitleCreate(){
+    	return view ('admin.home-page-header-title-create');
     }
 
 }
