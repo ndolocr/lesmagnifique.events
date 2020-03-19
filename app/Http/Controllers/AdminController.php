@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Role;
 use App\Event;
 use App\Client;
 use App\Contact;
@@ -24,7 +25,8 @@ class AdminController extends Controller
     }
 
     public function headerTitle(){
-    	return view ('admin.header-title');
+    	$events = Role::all();
+    	return view ('admin.header-title', compact('events'));
     }
 
 }
