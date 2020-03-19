@@ -15,6 +15,7 @@ class CreateHomePageHeaderTitlesTable extends Migration
     {
         Schema::create('home_page_header_titles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
             $table->timestamps();
         });
     }
