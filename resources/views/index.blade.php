@@ -12,50 +12,39 @@
 	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 </head>
 <body>
-	
+
+	<!-- BEGIN HEADER -->
 	<header class="header">
 		
-
-		<div class="header__img">
-			<img src="assets/img/hero/hero.jpg" alt="Header Background Image">
-		</div>
-
-		<div class="header__cover">
-			
-		</div>
-
-		<nav>
-			
-			<a href="{{ route('index') }}">
-			<div class="logo-box">
-				<img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo">
-			</div>
-			</a>
-			
-			<!--<div class="menu">
-				<ul>
-					<li> <a href="#"> Home </a> </li>
-					<li> <a href="#"> About Us </a> </li>
-					<li> <a href="#"> Services </a> </li>
-					<li> <a href="#"> Events </a> </li>
-					<li> <a href="#"> Contact Us </a> </li>
-				</ul>			
-			</div> -->
-			
-		</nav>
+		<!-- BEGIN HEADER IMAGE SECTION-->
+		<div class="header__img"> <img src="assets/img/hero/hero.jpg" alt="Header Background Image"> </div>
+		<!-- END HEADER IMAGE SECTION-->
 		
+		<!-- BEGIN HEADER COVER SECTION-->
+		<div class="header__cover"> </div>
+		<!-- END HEADER COVER SECTION-->
+		
+		<!-- BEGIN NAV SECTION -->
+		<nav>
+			<a href="{{ route('index') }}">
+				<div class="logo-box"> <img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo"> </div>
+			</a>
+		</nav>
+		<!-- END NAV SECTION -->
+		
+		<!-- BEGIN TEXTBOX CLASS -->
 		<div class="text-box">
-
 			<h1 class="heading-primary">	
 				<span class="heading-primary-main"> Magnifique</span>	
 				<span class="heading-primary-sub"> Organizers for all your events</span>
 			</h1>
 
 			<a href="#about" class="btn btn-white"> About us </a>
-
 		</div>
+		<!-- END TEXTBOX CLASS -->
 
 	</header>
+	<!-- END HEADER -->
 	
 	<main>
 
@@ -79,7 +68,7 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
 						</p>
 		
-						<a href="#" class="btn-text">Learn More &rarr;</a>
+						<a href="{{ route('index') }}" class="btn-text">Learn More &rarr;</a>
 
 					</div>
 
