@@ -16,6 +16,7 @@ use App\Service;
 
 /* HOME PAGE ROUTES */
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 
 
