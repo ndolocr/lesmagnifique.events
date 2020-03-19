@@ -98,8 +98,10 @@ body {
 body {
   font-weight: 400;
   color: #777777;
+  max-width: 100%;
   font-size: 1.6rem;
-  background: white; }
+  background: white; 
+  overflow-x: hidden;}
 
 .heading-primary {
   color: #ffffff;
@@ -186,6 +188,37 @@ nav {
   nav::after {
     content: '';
     clear: both; }
+
+.page-header{
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%); }
+  .page-header nav{ 
+    top: 0;
+    left: 0;
+    z-index: 2; 
+    position: absolute; }
+  .page-header .heading{
+    top: 20%;
+    left: 50%;
+    z-index: 3;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 4.2rem;
+    text-align: center;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%); }
+  .page-header__cover{
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right bottom, rgba(248, 237, 200, 0.8), rgba(196, 151, 4, 0.8)); }
 
 .header {
   height: 95vh;
