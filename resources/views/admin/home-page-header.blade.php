@@ -38,7 +38,7 @@
                     <tbody>
                         @foreach($data as $data)
                             <tr>
-                                <td> {{ $data->cover_image }} </td>
+                                <td> <img src="/storage/assets/img/homepage/{{ $data ->cover_image }}" alt="Cover Image" style="width: 150px;"> </td>
                                 <td> {{ $data->sub_title }} </td>
                                 <td> {{ $data->title }} </td>
                                 <td> 
