@@ -36,13 +36,47 @@ class AdminController extends Controller
     public function homePageHeaderStore(Request $request){
 
     	$this->validate(
-    		$request[
-    			
-    		]
+    		$request,
+            [
+                'title'=>'required',
+                'sub_title'=>'required',
+                'cover_image'=>'image|nullable|max:1999'
+            ]
     	);
 
+    	//Handle Feature Image Upload
+        if($request->hasFile('cover_image')){
+            //Get file name with extension
+            $fileNameWithExtension = $request->file('cover_image')->getClientOriginalName();
 
-    	return "Saving Title";
+            //Get file name witout extension
+            $filename = pathinfo($fileNameWithExtension, PATHINFO_FILENAME);
+
+            //get extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            //Create a eunique filename to store
+            $fileNameToStore = time().'.'.$extension;
+
+            //Upload feature image
+            $path = $request->file('cover_image')->storeAs('public/assets/img/homepage', $fileNameToStore); 
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        //Initialize a new Event
+        $data = new HomePageHeader;
+
+        //Assign Request values to database fields
+        $data->title = $request->get('title');
+        $data->cover_image = $fileNameToStore;
+        $data->sub_title = $request->get('sub_title');
+
+        //Save events data in the database
+        $data->save();
+
+        //Redirect User to events page
+        return redirect()->route('home-page-header')->with('success', 'Record Successfully Saved!');
     }
 
 }

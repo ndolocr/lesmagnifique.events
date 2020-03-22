@@ -42,10 +42,10 @@
                                 <td> {{ $data->sub_title }} </td>
                                 <td> {{ $data->title }} </td>
                                 <td> 
-                                    <a href="{{ route('events-edit', $event->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
+                                    <a href="{{ route('events-edit', $data->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('events-delete', $event->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
+                                    <a href="{{ route('events-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
                                 </td>
                             </tr>
                         @endforeach                   

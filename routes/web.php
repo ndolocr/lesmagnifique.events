@@ -24,8 +24,9 @@ Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 Route::get('/admin/pages/home/header', 'AdminController@homePageHeader')->name('home-page-header');
+Route::post('/admin/pages/home/header/edit', 'AdminController@homePageHeaderEdit')->name('home-page-header-edit');
 Route::post('/admin/pages/home/header/store', 'AdminController@homePageHeaderStore')->name('home-page-header-store');
-Route::get('/admin/pages/home/header/title/create', 'AdminController@homePageHeaderCreate')->name('home-page-header-create');
+Route::get('/admin/pages/home/header/create', 'AdminController@homePageHeaderCreate')->name('home-page-header-create');
 
 
 //CONTACT ROUTES
