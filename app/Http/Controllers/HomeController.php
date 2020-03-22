@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         $services = Service::orderBy('name', 'ASC')->limit(4)->get();
         $events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
-        $homePageHeader = homePageHeader::orderBy('start_date', 'DESC')->limit(1)->get();
+        $homePageHeader = homePageHeader::orderBy('created_at', 'DESC')->limit(1)->get();
 
         return view('index', compact('events', 'services', 'homePageHeader'));
     }

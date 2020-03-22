@@ -143,6 +143,8 @@ body {
   -moz-background-clip: text;
   -webkit-background-clip: text; }
 
+  .white{ color:#ffffff; }
+
 .row {
   margin: 0 auto;
   max-width: 114rem; }
@@ -595,6 +597,7 @@ form .side-search {
 
 .section-feature {
   padding: 20rem 0;
+  padding-top: 10rem;
   margin-top: -10rem;
   background-size: cover;
   transform: skewY(-7deg);

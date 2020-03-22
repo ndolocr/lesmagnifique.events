@@ -12,39 +12,42 @@
 	<link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 </head>
 <body>
+	@if($homePageHeader)
+		@foreach($homePageHeader as $home_page_header)
+		<!-- BEGIN HEADER -->
+		<header class="header">
+			
+			<!-- BEGIN HEADER IMAGE SECTION-->
+			<div class="header__img"> <img src="storage/assets/img/homepage/{{ $home_page_header->cover_image }}" alt="Header Background Image"> </div>
+			<!-- END HEADER IMAGE SECTION-->
+			
+			<!-- BEGIN HEADER COVER SECTION-->
+			<div class="header__cover"> </div>
+			<!-- END HEADER COVER SECTION-->
+			
+			<!-- BEGIN NAV SECTION -->
+			<nav>
+				<a href="{{ route('index') }}">
+					<div class="logo-box"> <img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo"> </div>
+				</a>
+			</nav>
+			<!-- END NAV SECTION -->
+			
+			<!-- BEGIN TEXTBOX CLASS -->
+			<div class="text-box">
+				<h1 class="heading-primary">	
+					<span class="heading-primary-main"> {{ $home_page_header->title }} </span>	
+					<span class="heading-primary-sub"> {{ $home_page_header->sub_title }} </span>
+				</h1>
 
-	<!-- BEGIN HEADER -->
-	<header class="header">
-		
-		<!-- BEGIN HEADER IMAGE SECTION-->
-		<div class="header__img"> <img src="assets/img/hero/hero.jpg" alt="Header Background Image"> </div>
-		<!-- END HEADER IMAGE SECTION-->
-		
-		<!-- BEGIN HEADER COVER SECTION-->
-		<div class="header__cover"> </div>
-		<!-- END HEADER COVER SECTION-->
-		
-		<!-- BEGIN NAV SECTION -->
-		<nav>
-			<a href="{{ route('index') }}">
-				<div class="logo-box"> <img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo"> </div>
-			</a>
-		</nav>
-		<!-- END NAV SECTION -->
-		
-		<!-- BEGIN TEXTBOX CLASS -->
-		<div class="text-box">
-			<h1 class="heading-primary">	
-				<span class="heading-primary-main"> Magnifique</span>	
-				<span class="heading-primary-sub"> Organizers for all your events</span>
-			</h1>
+				<a href="#about" class="btn btn-white"> About us </a>
+			</div>
+			<!-- END TEXTBOX CLASS -->
 
-			<a href="#about" class="btn btn-white"> About us </a>
-		</div>
-		<!-- END TEXTBOX CLASS -->
-
-	</header>
-	<!-- END HEADER -->
+		</header>
+		<!-- END HEADER -->
+		@endforeach
+	@endif
 	
 	<main>
 
@@ -88,6 +91,14 @@
 		@if($services)
 			<section class="section-feature">
 				
+				<!-- BEGIN EVENTS SECTION HEADER -->
+				<div class="u-center-text u-margin-bottom-medium">
+					<h2 class="heading-secondary white">
+						Services
+					</h2>
+				</div>
+				<!-- END EVENTS SECTION HEADER -->
+
 				<div class="row">
 					@foreach($services as $service)
 						<div class="col-1-of-4">
