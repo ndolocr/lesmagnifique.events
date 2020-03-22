@@ -33,6 +33,12 @@ class AdminController extends Controller
     	return view ('admin.home-page-header-create');
     }
 
+
+    public function homePageHeaderEdit($id){
+    	$data = HomePageHeader::find($id);
+    	return view('admin.home-page-header-edit', compact('data'));
+    }
+
     public function homePageHeaderStore(Request $request){
 
     	$this->validate(
