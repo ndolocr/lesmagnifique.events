@@ -14,8 +14,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             
             <!-- BEGIN PAGE TITLE-->
-            <h3 class="page-title"> Header
-                <small>Title</small>
+            <h3 class="page-title"> Home Page
+                <small>Header</small>
             </h3>
             <!-- END PAGE TITLE-->
 

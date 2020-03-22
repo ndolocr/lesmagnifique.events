@@ -27,8 +27,9 @@ Route::get('/admin/pages/home/header', 'AdminController@homePageHeader')->name('
 Route::post('/admin/pages/home/header/store', 'AdminController@homePageHeaderStore')->name('home-page-header-store');
 Route::get('/admin/pages/home/header/edit/{id}', 'AdminController@homePageHeaderEdit')->name('home-page-header-edit');
 Route::get('/admin/pages/home/header/create', 'AdminController@homePageHeaderCreate')->name('home-page-header-create');
-Route::get('/admin/pages/home/header/delete/{id}', 'AdminController@homePageHeaderEdit')->name('home-page-header-delete');
+Route::get('/admin/pages/home/header/delete/{id}', 'AdminController@homePageHeaderDelete')->name('home-page-header-delete');
 Route::put('/admin/pages/home/header/update/{id}', 'AdminController@homePageHeaderUpdate')->name('home-page-header-update');
+Route::delete('/admin/pages/home/header/destroy/{id}', 'AdminController@homePageHeaderDestroy')->name('home-page-header-destroy');
 
 //CONTACT ROUTES
 Route::post('/', 'ContactController@store')->name('contact-store');

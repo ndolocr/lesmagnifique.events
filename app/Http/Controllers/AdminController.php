@@ -130,4 +130,18 @@ class AdminController extends Controller
         return redirect()->route('home-page-header')->with('success', 'Record Successfully Saved!');
     }
 
+    public function homePageHeaderDelete($id){
+    	$data = HomePageHeader::find($id);
+
+    	return view('admin.home-page-header-delete', compact('data'));
+    }
+
+    public function homePageHeaderDestroy($id){
+    	$data = HomePageHeader::find($id);
+
+    	$data->delete();
+
+        return redirect()->route('home-page-header')->with('success', 'Record Successfully Deleted!');
+    }
+
 }
