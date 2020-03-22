@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Service;
+use App\homePageHeader;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,8 +28,9 @@ class HomeController extends Controller
     {
         $services = Service::orderBy('name', 'ASC')->limit(4)->get();
         $events = Event::orderBy('start_date', 'DESC')->limit(3)->get();
+        $homePageHeader = homePageHeader::orderBy('start_date', 'DESC')->limit(1)->get();
 
-        return view('index', compact('events', 'services'));
+        return view('index', compact('events', 'services', 'homePageHeader'));
     }
     
     public function about(){ return view('front-end.about'); }
