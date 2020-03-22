@@ -176,11 +176,7 @@
                                             </div>
                                         </div>
 
-                                    </div>
-                                    
-                                    
-
-                                    
+                                    </div>  
 
                                 </div>
                                 <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->

@@ -24,10 +24,11 @@ Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 Route::get('/admin', 'AdminController@dashboard')->name('dashboard');
 
 Route::get('/admin/pages/home/header', 'AdminController@homePageHeader')->name('home-page-header');
-Route::post('/admin/pages/home/header/edit', 'AdminController@homePageHeaderEdit')->name('home-page-header-edit');
 Route::post('/admin/pages/home/header/store', 'AdminController@homePageHeaderStore')->name('home-page-header-store');
+Route::get('/admin/pages/home/header/edit/{id}', 'AdminController@homePageHeaderEdit')->name('home-page-header-edit');
 Route::get('/admin/pages/home/header/create', 'AdminController@homePageHeaderCreate')->name('home-page-header-create');
-
+/*Route::get('/admin/pages/home/header/delete/{id}', 'AdminController@homePageHeaderEdit')->name('home-page-header-delete');*/
+Route::put('/admin/pages/home/header/update/{id}', 'AdminController@homePageHeaderUpdate')->name('home-page-header-update');
 
 //CONTACT ROUTES
 Route::post('/', 'ContactController@store')->name('contact-store');
@@ -36,9 +37,9 @@ Route::get('/admin/message/show/{id}', 'ContactController@show')->name('message-
 
 //CLIENT ROUTES
 Route::get('/admin/clients', 'ClientController@index')->name('clients-all');
-Route::get('/admin/clients/create', 'ClientController@create')->name('clients-create');
 Route::post('/admin/clients/store', 'ClientController@store')->name('clients-store');
 Route::get('/admin/clients/edit/{id}', 'ClientController@edit')->name('clients-edit');
+Route::get('/admin/clients/create', 'ClientController@create')->name('clients-create');
 Route::get('/admin/clients/delete/{id}', 'ClientController@delete')->name('clients-delete');
 Route::put('/admin/clients/update/{id}', 'ClientController@update')->name('clients-update');
 Route::delete('/admin/clients/destroy/{id}', 'ClientController@destroy')->name('clients-destroy');

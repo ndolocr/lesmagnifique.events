@@ -39,6 +39,51 @@ class AdminController extends Controller
     	return view('admin.home-page-header-edit', compact('data'));
     }
 
+    public function homePageHeaderUpdate(Request $request, $id){
+    	$data = HomePageHeader::find($id);
+
+    	//Validations
+    	$this->validate(
+    		$request,
+            [
+                'title'=>'required',
+                'sub_title'=>'required',
+                'cover_image'=>'image|nullable|max:1999'
+            ]
+    	);
+
+    	//Handle Feature Image Upload
+        if($request->hasFile('cover_image')){
+            //Get file name with extension
+            $fileNameWithExtension = $request->file('cover_image')->getClientOriginalName();
+
+            //Get file name witout extension
+            $filename = pathinfo($fileNameWithExtension, PATHINFO_FILENAME);
+
+            //get extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            //Create a eunique filename to store
+            $fileNameToStore = time().'.'.$extension;
+
+            //Upload feature image
+            $path = $request->file('cover_image')->storeAs('public/assets/img/homepage', $fileNameToStore); 
+
+            $data->cover_image = $fileNameToStore;
+        }
+
+        //Assign Request values to database fields
+        $data->title = $request->get('title');
+        $data->sub_title = $request->get('sub_title');
+
+        //Save events data in the database
+        $data->save();
+
+        //Redirect User to events page
+        return redirect()->route('home-page-header')->with('success', 'Record Successfully Updated!'); 
+
+    }
+
     public function homePageHeaderStore(Request $request){
 
     	$this->validate(

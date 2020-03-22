@@ -25,7 +25,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'AdminController@homePageHeaderStore', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['action' => ['AdminController@homePageHeaderUpdate', $data->id], 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">
@@ -55,7 +55,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('title', '', ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'Header Title']) }}
+                                        {{ Form::text('title', $data->title, ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'Header Title']) }}
                                     </div>
 
                                 </div>
@@ -70,7 +70,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('sub_title', '', ['class' => 'form-control', 'id' => 'sub_title', 'placeholder' => 'Header Sub-Title']) }}
+                                        {{ Form::text('sub_title', $data->sub_title, ['class' => 'form-control', 'id' => 'sub_title', 'placeholder' => 'Header Sub-Title']) }}
                                     </div>
 
                                 </div>
@@ -106,24 +106,38 @@
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
                             <div class="form-body">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        {{ Form::label('original_cover_image', 'Featured Image') }}
+                                        <div class="input-group">
+                                            <img src="/storage/assets/img/homepage/{{ $data ->cover_image }}" alt="Cover Image" style="width: 100px;">
+                                        </div> 
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        {{ Form::label('cover_image', 'Cover Image - (Image size 800 x 560 pixels)') }}
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-image"></i>
+                                            </span>
+                                            {{ Form::file('cover_image', ['class' => 'form-control']) }}
+                                        </div>  
+                                    </div>
+                                </div>
                                 
                                 <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('cover_image', 'Cover Image - (Image size 800 x 560 pixels)') }}
-
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('cover_image', ['class' => 'form-control']) }}
-                                    </div>
+                                    
 
                                 </div>
                                 <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
 
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">
+                                    {{ Form::hidden('_method', 'PUT') }}
                                     {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
                                     {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
                                 </div>
