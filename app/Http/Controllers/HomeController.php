@@ -37,7 +37,7 @@ class HomeController extends Controller
 
     public function events(){
         $events = Event::orderBy('start_date', 'DESC')->get();
-
+        //
         return view('front-end.events', compact('events'));
     }
 

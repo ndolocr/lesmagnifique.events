@@ -11,6 +11,16 @@
 		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/singlePageStyles.css') }}">
 	</head>
 
-	<body> @yield('content') </body>
+	<body> 
+		@yield('content') 
+		
+		<footer class="footer">
+		
+			<div class="footer__logo-box">
+				<img src="assets/img/logo/logo.PNG" alt="Logo" class="footer__logo">
+			</div>
+
+		</footer>
+	</body>
 
 </html>
