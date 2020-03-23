@@ -18,6 +18,7 @@ use App\Service;
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/events', 'HomeController@events')->name('events');
+Route::get('/services', 'HomeController@services')->name('services');
 Route::get('/event/show/{id}', 'HomeController@eventShow')->name('event-show');
 
 /* ADMIN ROUTES */
