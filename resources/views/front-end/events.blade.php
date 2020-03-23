@@ -9,34 +9,28 @@
 				<header class="header-page">
 
 					<!-- BEGIN CLASS FOR COVER IMAGE -->
-					<div class="cover-image">	</div>
+					<div class="cover-image"> <img src="storage/assets/img/homepage/1584683134.jpg" alt=""> </div>
 					<!-- END CLASS FOR COVER IMAGE -->
 
-					<!-- BEGIN LOGO ROW -->
-					<div class="row">	
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
-							<div class="logo">	
-								<!-- BEGIN NAV SECTION -->
-								<nav>
-									<a href="{{ route('index') }}">
-										<div class="logo-box"> <img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo"> </div>
-									</a>
-								</nav>
-								<!-- END NAV SECTION -->
-							</div>
-						</div>
-					</div>
-					<!-- END LOGO ROW -->
+					<!-- BEGIN CLASS FOR COVER GRADIENT -->
+					<div class="cover-gradient"> </div>
+					<!-- END CLASS FOR COVER GRADIENT -->
 					
-					<!-- BEGIN TITLE ROW -->
-					<div class="row">	
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="header-title">	
-								Services
-							</div>
-						</div>
+					<!-- BEGIN LOGO SECTION -->
+					<div class="logo">	
+						<!-- BEGIN NAV SECTION -->
+						<nav>
+							<a href="{{ route('index') }}">
+								<div class="logo-box"> <img src="assets/img/logo/sitelogo.png" alt="Logo" class="logo"> </div>
+							</a>
+						</nav>
+						<!-- END NAV SECTION -->
 					</div>
-					<!-- END TITLE ROW -->
+					<!-- END LOGO SECTION -->
+
+					<div class="header-title">	
+						Services
+					</div>
 
 				</header>
 			</div>
