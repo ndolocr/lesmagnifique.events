@@ -46,4 +46,10 @@ class HomeController extends Controller
 
         return view('front-end.event-show', compact('events'));
     }
+
+    public function services(){
+        $services = Service::orderBy('created_at', 'DESC')->get();
+
+        return view('front-end.services', compact('services'));
+    }
 }
