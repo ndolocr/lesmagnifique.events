@@ -1,0 +1,11 @@
+.header-page{
+  height: 500px;
+  background: #F00;
+  position: relative;
+  margin-top: 1.5rem;}
+
+.logo{
+  top: 2rem;
+  left: 2rem;
+  height: 9rem;
+  position: absolute;}

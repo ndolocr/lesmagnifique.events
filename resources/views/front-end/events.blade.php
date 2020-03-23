@@ -7,6 +7,11 @@
 		<div class="row">	
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
 				<header class="header-page">
+
+					<!-- BEGIN CLASS FOR COVER IMAGE -->
+					<div class="cover-image">	</div>
+					<!-- END CLASS FOR COVER IMAGE -->
+
 					<!-- BEGIN LOGO ROW -->
 					<div class="row">	
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
