@@ -35,6 +35,12 @@ class HomeController extends Controller
     
     public function about(){ return view('front-end.about'); }
 
+    public function events(){
+        $events = Event::orderBy('start_date', 'DESC')->get();
+
+        return view('front-end.events', compact('events'));
+    }
+
     public function eventShow($id){
         $events = Event::find($id);
 

@@ -192,10 +192,11 @@ nav {
     clear: both; }
 
 .page-header{
+  height: 50vh;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
-  -moz-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%); }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -moz-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   .page-header nav{ 
     top: 0;
     left: 0;
@@ -222,6 +223,9 @@ nav {
     position: absolute;
     background-image: linear-gradient(to right bottom, rgba(248, 237, 200, 0.8), rgba(196, 151, 4, 0.8)); }
 
+.page-body{
+  background: #ff0;
+}
 
 .header {
   height: 95vh;

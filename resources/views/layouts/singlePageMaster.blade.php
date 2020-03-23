@@ -7,10 +7,7 @@
 
 		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/font-awesome/css/all.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/font-awesome/css/all.min.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/bootstrap/css/bootstrap.min.css') }}"/>
-
-		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/styles.css') }}">
-		
+		<link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/bootstrap/css/bootstrap.min.css') }}"/>	
 	</head>
 
 	<body> @yield('content') </body>
