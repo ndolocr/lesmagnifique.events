@@ -48,25 +48,16 @@
 	
 				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
 				@foreach($services as $service)
-					<!-- BEGIN COL FOR EVENT INFROMATION -->
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-						<div class="card">
-							<a href="{{ route('event-show', $service->id)}}">
-								<div class="card__image">
-									<i class="{{ $service ->icon }}"></i>
-								</div>
-							</a>
-						
-							<div class="card__title">
-								<a href="{{ route('event-show', $service->id)}}"> {{ $service->name }} </a>
+					<a href="">
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+							<div class="feature-box">
+								<i class="{{ $service->icon }} feature-box__icon"></i>
+								<h3 class="heading-tertiary u-margin-bottom-small"> {{ $service->name }} </h3>
+								<p class="feature-box__text"> {!! $service->description !!} </p>
 							</div>
-
-							
-							
 						</div>
-					</div>
-					<!-- END COL FOR EVENT INFROMATION -->
-				@endforeach
+					</a>
+					@endforeach
 				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
 
 			@endif
