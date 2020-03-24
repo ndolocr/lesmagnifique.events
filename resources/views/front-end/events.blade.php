@@ -4,12 +4,64 @@
 @section('content')
 
 	<!-- BEGIN CONTAINER -->
-	<div class="container-fluid">
+	<div class="container-fluid main-row">
+		<!-- BEGIN PAGE HEADER ROW -->
+		<div class="row heading-row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				<div class="head">Our Events</div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>				
+			</div>
+		</div>
+		<!-- END PAGE HEADER ROW -->
+		<div class="row first_event">
+
+			<!-- BEGIN CHECK FOR FIRST EVENT -->
+			@if($events)
+				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
+				@foreach($first_event as $first)
+					<!-- BEGIN COL FOR EVENT INFROMATION -->
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="first_card">
+							<a href="{{ route('event-show', $first->id)}}">
+								<div class="first_card__image">
+									<img src="/storage/assets/img/events/{{ $first ->feature_image }}" alt="{{  $first->title }}">
+
+								</div>
+							</a>
+						
+							<!--<div class="card__title">
+								<div class="date"> {{ date('d-M-Y', strtotime($first->start_date)) }} </div> 
+								<div class="country"> <i class="fa fa-flag"></i> KE</div>
+								<br>
+								{{ $first->title }}
+							</div>-->
+
+							<!-- <div class="card__tint"></div> -->
+
+							First Event
+							
+						</div>
+					</div>
+					<!-- END COL FOR EVENT INFROMATION -->
+				@endforeach
+				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
+
+			@endif
+			<!-- END CHECK FOR FIRST EVENT -->
+		</div>
+		<!-- BEGIN FIRST EVENT ROW -->
+
+		<!-- END FIRST EVENT ROW -->
+
 		<!-- BEGIN EVENTS ROW -->
 		<div class="row">
 			<!-- BEGIN CHECK FOR AVAILABLE EVENTS -->
 			@if($events)
-	
 				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
 				@foreach($events as $event)
 					<!-- BEGIN COL FOR EVENT INFROMATION -->
@@ -23,8 +75,13 @@
 							</a>
 						
 							<div class="card__title">
-								<a href="{{ route('event-show', $event->id)}}"> {{ $event->title }} </a>
+								<div class="date"> {{ date('d-M-Y', strtotime($event->start_date)) }} </div> 
+								<div class="country"> <i class="fa fa-flag"></i> KE</div>
+								<br>
+								{{ $event->title }}
 							</div>
+
+							<!-- <div class="card__tint"></div> -->
 
 							
 							

@@ -49,21 +49,25 @@
 			<!-- END ROW -->
 		</div>
 		<!-- END CONTAINER -->
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-				@yield('content') 		
+		
+		<!-- BEGIN CONTAINER -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+					@yield('content') 		
+				</div>
 			</div>
 		</div>
+		<!-- END CONTAINER -->
 		
-		
+		<!--
 		<footer class="footer">
 		
 			<div class="footer__logo-box">
 				<img src="assets/img/logo/logo.PNG" alt="Logo" class="footer__logo">
 			</div>
 
-		</footer>
+		</footer> -->
 	</body>
 
 </html>

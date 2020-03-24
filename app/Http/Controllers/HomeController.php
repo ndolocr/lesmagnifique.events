@@ -36,9 +36,15 @@ class HomeController extends Controller
     public function about(){ return view('front-end.about'); }
 
     public function events(){
-        $events = Event::orderBy('start_date', 'DESC')->get();
-        //
-        return view('front-end.events', compact('events'));
+        $events_count = Event::count();
+        $events_skip = 1;
+        $events_limit = $events_count - $events_skip;
+
+        $events = Event::orderBy('start_date', 'DESC')->skip($events_skip)->take($events_limit)->get();
+        
+        $first_event = Event::orderBy('start_date', 'DESC')->limit(1)->get();
+
+        return view('front-end.events', compact('events', 'first_event'));
     }
 
     public function eventShow($id){
