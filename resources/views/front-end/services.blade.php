@@ -44,22 +44,21 @@
 		<!-- BEGIN EVENTS ROW -->
 		<div class="row">
 			<!-- BEGIN CHECK FOR AVAILABLE EVENTS -->
-			@if($events)
+			@if($services)
 	
 				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
-				@foreach($events as $event)
+				@foreach($services as $service)
 					<!-- BEGIN COL FOR EVENT INFROMATION -->
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 						<div class="card">
-							<a href="{{ route('event-show', $event->id)}}">
+							<a href="{{ route('event-show', $service->id)}}">
 								<div class="card__image">
-									<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="{{  $event->title }}">
-
+									<i class="{{ $service ->icon }}"></i>
 								</div>
 							</a>
 						
 							<div class="card__title">
-								<a href="{{ route('event-show', $event->id)}}"> {{ $event->title }} </a>
+								<a href="{{ route('event-show', $service->id)}}"> {{ $service->name }} </a>
 							</div>
 
 							
