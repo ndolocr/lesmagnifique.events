@@ -145,9 +145,12 @@
 				</div>
 
 					@foreach($services as $service)
-					<div class="row service-information">
-						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">{{ $service->name }}</div>
-					</div>
+					<a href="">
+						<div class="row service-information">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <i class="{{ $service->icon }}"> </i></div>
+							<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">{{ $service->name }}</div>
+						</div>
+					</a>
 					@endforeach
 			<!-- END COUNTRY SECTION -->
 		</div>
@@ -182,5 +185,27 @@
 		</div>
 	</div>
 	<!-- END SOCIAL MEDIA ACCOUNT -->	
+
+	<!-- BEGIN SUBSCRIPTION ROW -->
+	<div class="row newsletter">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 newsletter__heading">
+			Newsletter
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- BEGIN FORM -->
+			{!! Form::Open( ['action' => 'ContactController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+				<div class="form__group">
+					{{ Form::text('email', '', ['class' => 'form__input', 'id' => 'email', 'placeholder' => 'Enter your email address...', 'required']) }}
+				</div>
+
+				<div class="form__group">
+					{{  Form::submit('subscribe', ['class' => 'form__btn btn__submit blue uppercase']) }}
+				</div>
+			{!! Form::close() !!}
+            <!-- END FORM -->
+		</div>
+
+	</div>
+	<!-- BEGIN SUBSCRIPTION ROW -->
 @endsection
 <!-- END SECOND COLUMN -->
