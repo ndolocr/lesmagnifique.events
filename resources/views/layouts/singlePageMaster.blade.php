@@ -52,7 +52,7 @@
 		
 		<!-- BEGIN CONTAINER -->
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row row-eq-height">
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 					@yield('content') 		
 				</div>

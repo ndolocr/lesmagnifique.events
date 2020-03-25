@@ -239,3 +239,26 @@ body{ background: #eeeeee; }
     background: #f4b711;
     padding: .3rem .3rem .3rem .3rem;
   }
+
+  .first_column{
+    border-right: solid 1px #dfdfdf;
+  }
+
+  .category-heading{
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem 0 1rem 0;
+    border-bottom: solid 2px #666666;
+  }
+
+  .number{
+    text-align: center;
+    background: #dedede;
+  }
+
+  .category-information{ 
+    font-size: 1.2rem;
+    padding: .3rem 0 .3rem 0;
+    text-transform: uppercase;
+  }
