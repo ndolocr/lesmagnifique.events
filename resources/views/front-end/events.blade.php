@@ -135,6 +135,26 @@
 		</div>
 	</div>
 	<!-- END ROW -->
+
+	<!-- BEGIN ROW -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- BEGIN COUNTRY SECTION -->
+				<div class="category-heading">
+					All Categories
+				</div>
+
+					@foreach($events as $inf)
+					<div class="row category-information">
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Kenya</div>
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 number"> 20 </div>
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
+					</div>
+					@endforeach
+			<!-- END COUNTRY SECTION -->
+		</div>
+	</div>
+	<!-- END ROW -->
 @endsection
 <!-- END FIRST COLUMN -->
 

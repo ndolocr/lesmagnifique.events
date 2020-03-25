@@ -44,7 +44,9 @@ class HomeController extends Controller
         
         $first_event = Event::orderBy('start_date', 'DESC')->limit(1)->get();
 
-        return view('front-end.events', compact('events', 'first_event'));
+        $services = Service::all();
+
+        return view('front-end.events', compact('events', 'first_event', 'services'));
     }
 
     public function eventShow($id){
