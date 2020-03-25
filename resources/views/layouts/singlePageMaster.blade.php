@@ -109,6 +109,41 @@
 
 					</div>
 					<!-- BEGIN SUBSCRIPTION ROW -->
+
+					<!-- BEGIN SUBSCRIPTION ROW -->
+					<div class="row newsletter">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 newsletter__heading">
+							Contact Us
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<!-- BEGIN FORM -->
+							{!! Form::Open( ['action' => 'ContactController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+								<div class="form__group">
+									{{ Form::text('first_name', '', ['class' => 'form__input', 'id' => 'first_name', 'placeholder' => 'First Name', 'required']) }}
+								</div>
+
+								<div class="form__group">
+									{{ Form::text('last_name', '', ['class' => 'form__input', 'id' => 'last_name', 'placeholder' => 'Last Name', 'required']) }}
+								</div>
+
+								<div class="form__group">
+									{{ Form::text('email_address', '', ['class' => 'form__input', 'id' => 'email_address', 'placeholder' => 'Email', 'required']) }}
+								</div>
+
+								<div class="form__group">
+									{{ Form::textarea('message', '', ['class' => 'form__textarea', 'id' => 'message'], 'required') }}
+								</div>
+
+								<div class="form__group">
+									{{  Form::submit('Send', ['class' => 'form__btn btn__submit green uppercase']) }}
+								</div>
+							{!! Form::close() !!}
+				            <!-- END FORM -->
+						</div>
+
+					</div>
+					<!-- BEGIN SUBSCRIPTION ROW -->
+
 				</div>
 				<!-- END SECOND COLUMN -->
 

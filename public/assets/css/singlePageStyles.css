@@ -257,6 +257,7 @@ body{ background: #eeeeee; }
   margin-bottom: 1rem;
   text-transform: uppercase;
   border-bottom: solid 1px #dddddd;}
+.form__textarea{ width: 100%; }
 .form__input{
   width: 100%;
   padding: .5rem;
@@ -271,6 +272,7 @@ body{ background: #eeeeee; }
   text-transform: uppercase;}
 .btn__submit{ color: #ffffff; }
 .blue{ background: #4aa8df; }
+.green{ background: #82b541; }
 .event-information{
   color: #666666;
   text-align: left;
