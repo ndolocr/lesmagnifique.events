@@ -262,3 +262,12 @@ body{ background: #eeeeee; }
     padding: .3rem 0 .3rem 0;
     text-transform: uppercase;
   }
+
+  .row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}

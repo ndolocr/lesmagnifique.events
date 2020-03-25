@@ -4,7 +4,7 @@
 @section('content')
 
 	<!-- BEGIN CONTAINER -->
-	<div class="container-fluid main-row">
+	<div class="container-fluid">
 		<!-- BEGIN PAGE HEADER ROW -->
 		<div class="row heading-row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
@@ -117,7 +117,7 @@
 <!-- BEGIN FIRST COLUMN -->
 @section('first_column')
 	<!-- BEGIN ROW -->
-	<div class="row first_column">
+	<div class="row">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<!-- BEGIN COUNTRY SECTION -->
 				<div class="category-heading">

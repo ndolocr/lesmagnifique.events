@@ -52,12 +52,12 @@
 		
 		<!-- BEGIN CONTAINER -->
 		<div class="container-fluid">
-			<div class="row row-eq-height">
-				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+			<div class="row display-flex">
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-row">
 					@yield('content') 		
 				</div>
 				
-				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 first_column">
 					@yield('first_column')
 				</div>
 
