@@ -56,6 +56,15 @@
 				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 					@yield('content') 		
 				</div>
+				
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+					@yield('first_column')
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+					@yield('second_column')
+				</div>
+
 			</div>
 		</div>
 		<!-- END CONTAINER -->

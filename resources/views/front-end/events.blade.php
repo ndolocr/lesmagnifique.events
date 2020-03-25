@@ -8,7 +8,7 @@
 		<!-- BEGIN PAGE HEADER ROW -->
 		<div class="row heading-row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
-				<div class="head">Our Events</div>
+				<div class="head">Recent Event</div>
 				<div class="tail"></div>
 				<div class="tail"></div>
 				<div class="tail"></div>
@@ -34,16 +34,14 @@
 								</div>
 							</a>
 						
-							<!--<div class="card__title">
+							<div class="first_card__title">
 								<div class="date"> {{ date('d-M-Y', strtotime($first->start_date)) }} </div> 
 								<div class="country"> <i class="fa fa-flag"></i> KE</div>
 								<br>
 								{{ $first->title }}
-							</div>-->
+							</div>
 
 							<!-- <div class="card__tint"></div> -->
-
-							First Event
 							
 						</div>
 					</div>
@@ -57,15 +55,30 @@
 		<!-- BEGIN FIRST EVENT ROW -->
 
 		<!-- END FIRST EVENT ROW -->
+		
+		<!-- BEGIN PAGE HEADER ROW -->
+		<div class="row heading-row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				<div class="head">Other Events</div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>				
+			</div>
+		</div>
+		<!-- END PAGE HEADER ROW -->
 
 		<!-- BEGIN EVENTS ROW -->
-		<div class="row">
+		<div class="row other_events">
+
 			<!-- BEGIN CHECK FOR AVAILABLE EVENTS -->
 			@if($events)
 				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
 				@foreach($events as $event)
 					<!-- BEGIN COL FOR EVENT INFROMATION -->
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 						<div class="card">
 							<a href="{{ route('event-show', $event->id)}}">
 								<div class="card__image">
@@ -100,3 +113,17 @@
 	</div>
 	<!-- END CONTAINER -->
 @endsection
+
+<!-- BEGIN FIRST COLUMN -->
+@section('first_column')
+	<!-- BEGIN ROW -->
+	
+	<!-- END ROW -->
+@endsection
+<!-- END FIRST COLUMN -->
+
+<!-- BEGIN SECOND COLUMN -->
+@section('second_column')
+	Second Section
+@endsection
+<!-- END SECOND COLUMN -->
