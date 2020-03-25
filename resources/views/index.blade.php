@@ -292,7 +292,7 @@
 				<!-- END EVENTS SECTION -->
 
 				<div class="u-center-text u-margin-top-big">
-					<a href="#" class="btn btn--gold"> View All Events </a>	
+					<a href="{{ route('events') }}" class="btn btn--gold"> View All Events </a>	
 
 			</section>
 			<!-- END EVENTS SECTION -->
