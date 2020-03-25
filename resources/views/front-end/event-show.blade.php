@@ -8,47 +8,23 @@
 		<!-- BEGIN PAGE HEADER ROW -->
 		<div class="row heading-row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
-				<div class="head">Recent Event</div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>				
+								
 			</div>
 		</div>
 		<!-- END PAGE HEADER ROW -->
 		<div class="row first_event">
 
 			<!-- BEGIN CHECK FOR FIRST EVENT -->
-			@if($events)
-				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
-				@foreach($first_event as $first)
-					<!-- BEGIN COL FOR EVENT INFROMATION -->
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="first_card">
-							<a href="{{ route('event-show', $first->id)}}">
-								<div class="first_card__image">
-									<img src="/storage/assets/img/events/{{ $first ->feature_image }}" alt="{{  $first->title }}">
-
-								</div>
-							</a>
-						
-							<div class="first_card__title">
-								<div class="date"> {{ date('d-M-Y', strtotime($first->start_date)) }} </div> 
-								<div class="country"> <i class="fa fa-flag"></i> KE</div>
-								<br>
-								{{ $first->title }}
-							</div>
-
-							<!-- <div class="card__tint"></div> -->
-							
+			@if($event)
+				<!-- BEGIN COL FOR EVENT INFROMATION -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="first_card">
+						<div class="first_card__image">
+							<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="{{  $event->title }}">
 						</div>
 					</div>
-					<!-- END COL FOR EVENT INFROMATION -->
-				@endforeach
-				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
-
+				</div>
+				<!-- END COL FOR EVENT INFROMATION -->
 			@endif
 			<!-- END CHECK FOR FIRST EVENT -->
 		</div>
@@ -58,57 +34,39 @@
 		
 		<!-- BEGIN PAGE HEADER ROW -->
 		<div class="row heading-row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
-				<div class="head">Other Events</div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>
-				<div class="tail"></div>				
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 event-title"> 
+				{{ $event->title }}				
 			</div>
 		</div>
 		<!-- END PAGE HEADER ROW -->
 
 		<!-- BEGIN EVENTS ROW -->
-		<div class="row other_events">
+		<div class="row event__tags">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				<div class="delegates"> Delegates </div>
+				<div class="delegates__no"> {{ $event->delegates }} </div>
 
-			<!-- BEGIN CHECK FOR AVAILABLE EVENTS -->
-			@if($events)
-				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
-				@foreach($events as $event)
-					<!-- BEGIN COL FOR EVENT INFROMATION -->
-					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-						<div class="card">
-							<a href="{{ route('event-show', $event->id)}}">
-								<div class="card__image">
-									<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="{{  $event->title }}">
+				<div class="nationalities"> Nationalities </div>
+				<div class="nationalities__no"> {{ $event->nationalities }} </div>	
 
-								</div>
-							</a>
-						
-							<div class="card__title">
-								<div class="date"> {{ date('d-M-Y', strtotime($event->start_date)) }} </div> 
-								<div class="country"> <i class="fa fa-flag"></i> KE</div>
-								<br>
-								{{ $event->title }}
-							</div>
+				<div class="date__title"> Start Date </div>
+				<div class="date"> {{ date('d-M-Y', strtotime($event->start_date)) }} </div>
 
-							<!-- <div class="card__tint"></div> -->
+				<div class="date__title"> End Date </div>
+				<div class="date"> {{ date('d-M-Y', strtotime($event->end_date)) }} </div>
 
-							
-							
-						</div>
-					</div>
-					<!-- END COL FOR EVENT INFROMATION -->
-				@endforeach
-				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
-
-			@endif
-			<!-- END CHECK FOR AVAILABLE EVENTS -->
-
+				<div class="clear__float"></div>			
+			</div>
 		</div>
 		<!-- END EVENTS ROW -->
+
+		<!-- BEGIN ROW -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				{!! $event->description !!}
+			</div>
+		</div>
+		<!-- END ROW -->
 
 	</div>
 	<!-- END CONTAINER -->
@@ -121,15 +79,18 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<!-- BEGIN COUNTRY SECTION -->
 				<div class="category-heading">
-					All Categories
+					Events
 				</div>
 
-					@foreach($events as $inf)
-					<div class="row category-information">
-						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Kenya</div>
-						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 number"> 20 </div>
-						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
-					</div>
+					@foreach($events as $event)
+					<a href="{{ route('event-show', $event->id) }}">
+						<div class="row event-information">
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 event__feature_image">
+								<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="{{  $event->title }}">
+							</div>
+							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">{{ $event->title }}</div>
+						</div>
+					</a>
 					@endforeach
 			<!-- END COUNTRY SECTION -->
 		</div>
