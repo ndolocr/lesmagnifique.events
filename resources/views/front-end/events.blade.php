@@ -1,8 +1,8 @@
 @extends('layouts.singlePageMaster')
 
 @section('page-title') Events @endsection
-@section('content')
 
+@section('content')
 	<!-- BEGIN CONTAINER -->
 	<div class="container-fluid">
 		<!-- BEGIN PAGE HEADER ROW -->
@@ -158,6 +158,29 @@
 
 <!-- BEGIN SECOND COLUMN -->
 @section('second_column')
-	
+	<!-- BEGIN SOCIAL MEDIA ACCOUNT -->
+	<div class="row social__media">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			
+			<div class="row member__number">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 72,416 </div>
+			</div>
+			
+			<div class="row tags">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				Followers/Fans/Likes
+				</div>
+			</div>
+
+			<div class="row social__icons">
+				<a href="">	<div class="twitter"> <i class="fab fa-twitter"></i> </div> </a>
+				<a href="">	<div class="facebook"> <i class="fab fa-facebook-f"></i> </div>	</a>
+				<a href="">	<div class="instagram"> <i class="fab fa-instagram"></i> </div> </a>
+				<a href=""> <div class="google"> <i class="fab fa-google-plus-g"></i> </div> </a>
+			</div>
+
+		</div>
+	</div>
+	<!-- END SOCIAL MEDIA ACCOUNT -->	
 @endsection
 <!-- END SECOND COLUMN -->
