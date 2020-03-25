@@ -1,10 +1,211 @@
-@extends('layouts.frontEndMaster')
+@extends('layouts.singlePageMaster')
+
+@section('page-title') Events @endsection
 
 @section('content')
-	<header class="event-header">
-		<img src="assets/img/about/image1.jpg" alt="Events">
-	</header>
-	<body>
-		{{ $events->title }}
-	</body>
+	<!-- BEGIN CONTAINER -->
+	<div class="container-fluid">
+		<!-- BEGIN PAGE HEADER ROW -->
+		<div class="row heading-row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				<div class="head">Recent Event</div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>				
+			</div>
+		</div>
+		<!-- END PAGE HEADER ROW -->
+		<div class="row first_event">
+
+			<!-- BEGIN CHECK FOR FIRST EVENT -->
+			@if($events)
+				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
+				@foreach($first_event as $first)
+					<!-- BEGIN COL FOR EVENT INFROMATION -->
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="first_card">
+							<a href="{{ route('event-show', $first->id)}}">
+								<div class="first_card__image">
+									<img src="/storage/assets/img/events/{{ $first ->feature_image }}" alt="{{  $first->title }}">
+
+								</div>
+							</a>
+						
+							<div class="first_card__title">
+								<div class="date"> {{ date('d-M-Y', strtotime($first->start_date)) }} </div> 
+								<div class="country"> <i class="fa fa-flag"></i> KE</div>
+								<br>
+								{{ $first->title }}
+							</div>
+
+							<!-- <div class="card__tint"></div> -->
+							
+						</div>
+					</div>
+					<!-- END COL FOR EVENT INFROMATION -->
+				@endforeach
+				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
+
+			@endif
+			<!-- END CHECK FOR FIRST EVENT -->
+		</div>
+		<!-- BEGIN FIRST EVENT ROW -->
+
+		<!-- END FIRST EVENT ROW -->
+		
+		<!-- BEGIN PAGE HEADER ROW -->
+		<div class="row heading-row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				<div class="head">Other Events</div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>
+				<div class="tail"></div>				
+			</div>
+		</div>
+		<!-- END PAGE HEADER ROW -->
+
+		<!-- BEGIN EVENTS ROW -->
+		<div class="row other_events">
+
+			<!-- BEGIN CHECK FOR AVAILABLE EVENTS -->
+			@if($events)
+				<!-- BEGIN LOOP TO DISPLAY EVENT INFORMATION -->
+				@foreach($events as $event)
+					<!-- BEGIN COL FOR EVENT INFROMATION -->
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+						<div class="card">
+							<a href="{{ route('event-show', $event->id)}}">
+								<div class="card__image">
+									<img src="/storage/assets/img/events/{{ $event ->feature_image }}" alt="{{  $event->title }}">
+
+								</div>
+							</a>
+						
+							<div class="card__title">
+								<div class="date"> {{ date('d-M-Y', strtotime($event->start_date)) }} </div> 
+								<div class="country"> <i class="fa fa-flag"></i> KE</div>
+								<br>
+								{{ $event->title }}
+							</div>
+
+							<!-- <div class="card__tint"></div> -->
+
+							
+							
+						</div>
+					</div>
+					<!-- END COL FOR EVENT INFROMATION -->
+				@endforeach
+				<!-- END LOOP TO DISPLAY EVENT INFORMATION -->
+
+			@endif
+			<!-- END CHECK FOR AVAILABLE EVENTS -->
+
+		</div>
+		<!-- END EVENTS ROW -->
+
+	</div>
+	<!-- END CONTAINER -->
 @endsection
+
+<!-- BEGIN FIRST COLUMN -->
+@section('first_column')
+	<!-- BEGIN ROW -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- BEGIN COUNTRY SECTION -->
+				<div class="category-heading">
+					All Categories
+				</div>
+
+					@foreach($events as $inf)
+					<div class="row category-information">
+						<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Kenya</div>
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 number"> 20 </div>
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"> </div>
+					</div>
+					@endforeach
+			<!-- END COUNTRY SECTION -->
+		</div>
+	</div>
+	<!-- END ROW -->
+
+	<!-- BEGIN ROW -->
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- BEGIN COUNTRY SECTION -->
+				<div class="service-heading">
+					Services
+				</div>
+
+					@foreach($services as $service)
+					<a href="">
+						<div class="row service-information">
+							<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> <i class="{{ $service->icon }}"> </i></div>
+							<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">{{ $service->name }}</div>
+						</div>
+					</a>
+					@endforeach
+			<!-- END COUNTRY SECTION -->
+		</div>
+	</div>
+	<!-- END ROW -->
+@endsection
+<!-- END FIRST COLUMN -->
+
+<!-- BEGIN SECOND COLUMN -->
+@section('second_column')
+	<!-- BEGIN SOCIAL MEDIA ACCOUNT -->
+	<div class="row social__media">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			
+			<div class="row member__number">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 72,416 </div>
+			</div>
+			
+			<div class="row tags">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				Followers/Fans/Likes
+				</div>
+			</div>
+
+			<div class="row social__icons">
+				<a href="">	<div class="twitter"> <i class="fab fa-twitter"></i> </div> </a>
+				<a href="">	<div class="facebook"> <i class="fab fa-facebook-f"></i> </div>	</a>
+				<a href="">	<div class="instagram"> <i class="fab fa-instagram"></i> </div> </a>
+				<a href=""> <div class="google"> <i class="fab fa-google-plus-g"></i> </div> </a>
+			</div>
+
+		</div>
+	</div>
+	<!-- END SOCIAL MEDIA ACCOUNT -->	
+
+	<!-- BEGIN SUBSCRIPTION ROW -->
+	<div class="row newsletter">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 newsletter__heading">
+			Newsletter
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- BEGIN FORM -->
+			{!! Form::Open( ['action' => 'ContactController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+				<div class="form__group">
+					{{ Form::text('email', '', ['class' => 'form__input', 'id' => 'email', 'placeholder' => 'Enter your email address...', 'required']) }}
+				</div>
+
+				<div class="form__group">
+					{{  Form::submit('subscribe', ['class' => 'form__btn btn__submit blue uppercase']) }}
+				</div>
+			{!! Form::close() !!}
+            <!-- END FORM -->
+		</div>
+
+	</div>
+	<!-- BEGIN SUBSCRIPTION ROW -->
+@endsection
+<!-- END SECOND COLUMN -->
