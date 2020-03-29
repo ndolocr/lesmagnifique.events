@@ -1,6 +1,6 @@
 @extends('layouts.singlePageMaster')
 
-@section('page-title') Events @endsection
+@section('page-title') Event @endsection
 
 @section('content')
 	<!-- BEGIN CONTAINER -->
