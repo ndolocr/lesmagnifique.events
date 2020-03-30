@@ -151,14 +151,13 @@
 		</div>
 		<!-- END CONTAINER -->
 		
-		<!--
 		<footer class="footer">
 		
 			<div class="footer__logo-box">
 				<img src="assets/img/logo/logo.PNG" alt="Logo" class="footer__logo">
 			</div>
 
-		</footer> -->
+		</footer>
 	</body>
 
 </html>
