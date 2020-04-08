@@ -33,6 +33,8 @@ Route::get('/admin/pages/home/header/delete/{id}', 'AdminController@homePageHead
 Route::put('/admin/pages/home/header/update/{id}', 'AdminController@homePageHeaderUpdate')->name('home-page-header-update');
 Route::delete('/admin/pages/home/header/destroy/{id}', 'AdminController@homePageHeaderDestroy')->name('home-page-header-destroy');
 
+Route::get('/admin/pages/home/about', 'AdminController@homePageAbout')->name('home-page-about');
+
 //CONTACT ROUTES
 Route::post('/', 'ContactController@store')->name('contact-store');
 Route::get('/admin/message/inbox', 'ContactController@index')->name('message-inbox');
