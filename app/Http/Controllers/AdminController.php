@@ -144,11 +144,9 @@ class AdminController extends Controller
         return redirect()->route('home-page-header')->with('success', 'Record Successfully Deleted!');
     }
 
-}
-
-
-/*ABOUT SECTION */
-public function homePageAbout(){
-    $data = HomePageHeader::all();
-    return view("admin.about-section.home-page-about", compact("data"));
+    /*ABOUT SECTION */
+    public function homePageAbout(){
+        $data = HomePageHeader::all();
+        return view("admin.about-section.home-page-about", compact("data"));
+    }
 }
