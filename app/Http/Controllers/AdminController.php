@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Client;
 use App\Contact;
+use App\HomePageAbout;
 use App\HomePageHeader;
 use Illuminate\Http\Request;
 
@@ -146,7 +147,7 @@ class AdminController extends Controller
 
     /*ABOUT SECTION */
     public function homePageAbout(){
-        $data = HomePageHeader::all();
+        $data = HomePageAbout::all();
         return view("admin.about-section.home-page-about", compact("data"));
     }
 }
