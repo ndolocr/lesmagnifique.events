@@ -15,6 +15,12 @@ class CreateHomePageAboutsTable extends Migration
     {
         Schema::create('home_page_abouts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('sub_title');
+            $table->text('description');
+            $table->string('third_image');
+            $table->string('first_image');
+            $table->string('second_image');
             $table->timestamps();
         });
     }
