@@ -26,17 +26,17 @@ class AdminController extends Controller
 
     public function homePageHeader(){
     	$data = HomePageHeader::all();
-    	return view ('admin.home-page-header', compact('data'));
+    	return view ('admin.header-section.home-page-header', compact('data'));
     }
 
     public function homePageHeaderCreate(){
-    	return view ('admin.home-page-header-create');
+    	return view ('admin.header-section.home-page-header-create');
     }
 
 
     public function homePageHeaderEdit($id){
     	$data = HomePageHeader::find($id);
-    	return view('admin.home-page-header-edit', compact('data'));
+    	return view('admin.header-section.home-page-header-edit', compact('data'));
     }
 
     public function homePageHeaderUpdate(Request $request, $id){
@@ -133,7 +133,7 @@ class AdminController extends Controller
     public function homePageHeaderDelete($id){
     	$data = HomePageHeader::find($id);
 
-    	return view('admin.home-page-header-delete', compact('data'));
+    	return view('admin.header-section.home-page-header-delete', compact('data'));
     }
 
     public function homePageHeaderDestroy($id){
