@@ -332,8 +332,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="#" class="nav-link ">
-                                        <span class="title">About Title</span>
+                                    <a href="{{ route('home-page-about') }}" class="nav-link ">
+                                        <span class="title">About</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
