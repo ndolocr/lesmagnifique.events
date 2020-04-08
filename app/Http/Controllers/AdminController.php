@@ -145,3 +145,10 @@ class AdminController extends Controller
     }
 
 }
+
+
+/*ABOUT SECTION */
+public function homePageAbout(){
+    $data = HomePageHeader::all();
+    return view("admin.about-section.home-page-about", compact("data"));
+}
