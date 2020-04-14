@@ -212,4 +212,9 @@ class AdminController extends Controller
         //Redirect User to events page
         return redirect()->route('home-page-about')->with('success', 'Record Successfully Saved!');
     }
+
+    public function homePageAboutEdit($id){
+        $data = HomePageAbout::find($id);
+        return view('home-page-about-edit', compact('data'));
+    }
 }
