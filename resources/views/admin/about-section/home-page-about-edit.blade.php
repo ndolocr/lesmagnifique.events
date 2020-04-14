@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 600px">
+                    <div class="portlet light bordered" style="height: 650px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -54,7 +54,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('title', '', ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'Header Title']) }}
+                                        {{ Form::text('title', $data->title, ['class' => 'form-control', 'id' => 'title', 'placeholder' => 'Header Title']) }}
                                     </div>
 
                                 </div>
@@ -69,7 +69,7 @@
                                         <span class="input-group-addon">
                                             <i class="fa fa-info"></i>
                                         </span>
-                                        {{ Form::text('sub_title', '', ['class' => 'form-control', 'id' => 'sub_title', 'placeholder' => 'Header Sub-Title']) }}
+                                        {{ Form::text('sub_title', $data->sub_title, ['class' => 'form-control', 'id' => 'sub_title', 'placeholder' => 'Header Sub-Title']) }}
                                     </div>
 
                                 </div>
@@ -77,29 +77,57 @@
                                 
                                 <!-- BEGIN FORM GROUP FOR IMAGE ONE -->
                                 <div class="form-group">
-                                    
-                                    {{ Form::label('first_image', 'First Image - (Image size 800 x 800 pixels)') }}
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            
+                                            {{ Form::label('original_first_image', 'First Image') }}
+                                            <div class="input-group">
+                                                <img src="/storage/assets/img/about/{{ $data ->first_image }}" alt="First Image" style="width: 100px;">
+                                            </div> 
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('first_image', ['class' => 'form-control']) }}
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            
+                                            {{ Form::label('first_image', 'Choose New Image - (Image size 800 x 800 pixels)') }}
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-image"></i>
+                                                </span>
+                                                {{ Form::file('first_image', ['class' => 'form-control']) }}
+                                            </div>
+
+                                        </div>
                                     </div>
+
+                                    
 
                                 </div>
                                 <!-- END FORM GROUP FOR IMAGE ONE -->
 
                                 <!-- BEGIN FORM GROUP FOR IMAGE TWO -->
                                 <div class="form-group">
-                                    
-                                    {{ Form::label('second_image', 'Second Image - (Image size 800 x 800 pixels)') }}
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                                
+                                            {{ Form::label('original_second_image', 'Second Image') }}
+                                            <div class="input-group">
+                                                <img src="/storage/assets/img/about/{{ $data ->second_image }}" alt="First Image" style="width: 100px;">
+                                            </div> 
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('second_image', ['class' => 'form-control']) }}
+                                        </div>
+                                        
+                                        <div class="col-md-8">
+                                            {{ Form::label('second_image', 'Choose New Image - (Image size 800 x 800 pixels)') }}
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-image"></i>
+                                                </span>
+                                                {{ Form::file('second_image', ['class' => 'form-control']) }}
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -107,25 +135,32 @@
 
                                 <!-- BEGIN FORM GROUP FOR IMAGE THREE -->
                                 <div class="form-group">
-                                    
-                                    {{ Form::label('third_image', 'Third Image - (Image size 800 x 800 pixels)') }}
 
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('third_image', ['class' => 'form-control']) }}
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                                
+                                            {{ Form::label('original_second_image', 'Third Image') }}
+                                            <div class="input-group">
+                                                <img src="/storage/assets/img/about/{{ $data ->third_image }}" alt="First Image" style="width: 100px;">
+                                            </div> 
+
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            {{ Form::label('third_image', 'Choose New Image - (Image size 800 x 800 pixels)') }}
+
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-image"></i>
+                                                </span>
+                                                {{ Form::file('third_image', ['class' => 'form-control']) }}
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
                                 <!-- END FORM GROUP FOR IMAGE THREE -->
-
-                                <!-- BEGIN FORM ACTION SECTION -->
-                                <div class="form-actions" style="border: none !important">
-                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
-                                    {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
-                                </div>
-                                <!-- BEGIN FORM ACTION SECTION -->
 
                             </div>
                         
@@ -143,7 +178,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered" style="height: 600px">
+                    <div class="portlet light bordered" style="height: 650px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -158,17 +193,24 @@
                         <div class="portlet-body form">
                             <div class="form-body">
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS DESCRIPTION -->
+                                <!-- BEGIN FORM GROUP FOR DESCRIPTION -->
                                 <div class="form-group">
                                     
                                     <div class="input-group">
-                                        {{ Form::textarea('description', '', ['class' => 'ckeditor form-control', 'id' => 'description']) }}
+                                        {{ Form::textarea('description', $data->description, ['class' => 'ckeditor form-control', 'id' => 'description']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS DESCRIPTION -->
+                                <!-- END FORM GROUP FOR DESCRIPTION -->
 
                             </div>
+
+                            <!-- BEGIN FORM ACTION SECTION -->
+                            <div class="form-actions" style="border: none !important">
+                                {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
+                                {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
+                            </div>
+                            <!-- BEGIN FORM ACTION SECTION -->
                         
                         </div>
                         <!-- END FORM BODY -->

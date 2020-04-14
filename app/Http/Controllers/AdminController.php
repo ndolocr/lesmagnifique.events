@@ -215,6 +215,6 @@ class AdminController extends Controller
 
     public function homePageAboutEdit($id){
         $data = HomePageAbout::find($id);
-        return view('home-page-about-edit', compact('data'));
+        return view('admin.about-section.home-page-about-edit', compact('data'));
     }
 }

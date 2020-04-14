@@ -35,12 +35,7 @@
                                         <tr> 
                                             <th colspan="3" style="font-size: 3rem; text-transform: uppercase; text-align: center;"> 
                                                 {{ $data->title }} 
-                                            </th>             
-                                        <!--<th> Title </th>
-                                        <th> Sub-Title </th>
-                                        <th> First Image </th>
-                                        <th> Second Image </th>
-                                        <th> Third Image </th>-->
+                                            </th>
                                         </tr>
                                     </thead>
 
