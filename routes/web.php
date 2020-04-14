@@ -37,6 +37,7 @@ Route::get('/admin/pages/home/about', 'AdminController@homePageAbout')->name('ho
 Route::post('/admin/pages/home/about/store', 'AdminController@homePageAboutStore')->name('home-page-about-store');
 Route::get('/admin/pages/home/about/edit/{id}', 'AdminController@homePageAboutEdit')->name('home-page-about-edit');
 Route::get('/admin/pages/home/about/create', 'AdminController@homePageAboutCreate')->name('home-page-about-create');
+Route::put('/admin/pages/home/about/update/{id}', 'AdminController@homePageAboutUpdate')->name('home-page-about-update');
 
 //CONTACT ROUTES
 Route::post('/', 'ContactController@store')->name('contact-store');
