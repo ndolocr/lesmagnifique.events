@@ -50,46 +50,43 @@
 	@endif
 	
 	<main>
+		@if($homePageAbout)
+			@foreach($homePageAbout as $home_page_about)
+				<section class="section-about">
+					<div id="about">
+						<div class="u-center-text u-margin-bottom-big">
+							<h2 class="heading-secondary">
+								{{ $home_page_about->title }}
+							</h2>
+						</div>
 
-		<section class="section-about">
-			<div id="about">
-				<div class="u-center-text u-margin-bottom-big">
-					<h2 class="heading-secondary">
-						About Les Magnifique
-					</h2>
-				</div>
+						<div class="row">
+							<div class="col-1-of-2"> 
+								
+								<h3 class="heading-tertiary u-margin-bottom-small"> {{ $home_page_about->sub_title }} </h3>
+								
+								<p class="paragraph"> 
+									<div class="about-description"> {!! $home_page_about->description !!} </div>
+								</p>
+				
+								<a href="{{ route('about') }}" class="btn-text">Learn More &rarr;</a>
 
-				<div class="row">
-					<div class="col-1-of-2"> 
-						<h3 class="heading-tertiary u-margin-bottom-small"> Quality of service </h3>
-						<p class="paragraph">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
-						
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
+							</div>
 
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
+							<div class="col-1-of-2"> 
+								
+								<div class="composition">
+									<img src="/storage/assets/img/about/{{ $home_page_about->first_image }}" alt="First Image" class="composition__photo composition__photo--p1">
+									<img src="/storage/assets/img/about/{{ $home_page_about->second_image }}" alt="Second Image" class="composition__photo composition__photo--p2">
+									<img src="/storage/assets/img/about/{{ $home_page_about->third_image}}" alt="Third Image" class="composition__photo composition__photo--p3">
+								</div>
+							</div>
 
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
-
-
-						</p>
-		
-						<a href="{{ route('about') }}" class="btn-text">Learn More &rarr;</a>
-
-					</div>
-
-					<div class="col-1-of-2"> 
-						
-						<div class="composition">
-							<img src="assets/img/about/image1.jpg" alt="Image One" class="composition__photo composition__photo--p1">
-							<img src="assets/img/about/image2.jpg" alt="Image Two" class="composition__photo composition__photo--p2">
-							<img src="assets/img/about/image4.jpg" alt="Image three" class="composition__photo composition__photo--p3">
 						</div>
 					</div>
-
-				</div>
-			</div>
-		</section>
+				</section>
+			@endforeach
+		@endif
 		
 		@if($services)
 			<section class="section-feature">
