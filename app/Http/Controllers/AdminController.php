@@ -173,8 +173,8 @@ class AdminController extends Controller
             $firstFileNameWithExtension = $request->file('first_image')->getClientOriginalName(); //Get file name with extension
             $firstFilename = pathinfo($firstFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
             $firstExtension = $request->file('first_image')->getClientOriginalExtension(); //Get extension
-            $firstFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
-            $firstPath = $request->file('first_image')->storeAs('public/assets/img/homepage', $firstFileNameToStore); //Upload feature image 
+            $firstFileNameToStore = time().'.'.$firstExtension; //Create a eunique filename to store
+            $firstPath = $request->file('first_image')->storeAs('public/assets/img/about', $firstFileNameToStore); //Upload feature image 
         }else{ $firstFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
 
         //Handle Second Image Upload
@@ -182,8 +182,8 @@ class AdminController extends Controller
             $secondFileNameWithExtension = $request->file('second_image')->getClientOriginalName(); //Get file name with extension
             $secondFilename = pathinfo($secondFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
             $secondExtension = $request->file('second_image')->getClientOriginalExtension(); //Get extension
-            $secondFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
-            $secondPath = $request->file('second_image')->storeAs('public/assets/img/homepage', $secondFileNameToStore); //Upload feature image 
+            $secondFileNameToStore = time().'.'.$secondExtension; //Create a eunique filename to store
+            $secondPath = $request->file('second_image')->storeAs('public/assets/img/about', $secondFileNameToStore); //Upload feature image 
         }else{ $secondFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
 
         //Handle Second Image Upload
@@ -191,8 +191,8 @@ class AdminController extends Controller
             $thirdFileNameWithExtension = $request->file('third_image')->getClientOriginalName(); //Get file name with extension
             $thirdFilename = pathinfo($thirdFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
             $thirdExtension = $request->file('third_image')->getClientOriginalExtension(); //Get extension
-            $thirdFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
-            $thirdPath = $request->file('third_image')->storeAs('public/assets/img/homepage', $thirdFileNameToStore); //Upload feature image 
+            $thirdFileNameToStore = time().'.'.$thirdExtension; //Create a eunique filename to store
+            $thirdPath = $request->file('third_image')->storeAs('public/assets/img/about', $thirdFileNameToStore); //Upload feature image 
         }else{ $thirdFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
 
         //Initialize a new Object
@@ -200,11 +200,11 @@ class AdminController extends Controller
 
         //Assign Request values to database fields
         $data->title = $request->get('title');
-        $data->description = get('description');
         $data->first_image = $firstFileNameToStore;
-        $data->third_image = $ThirdFileNameToStore;
+        $data->third_image = $thirdFileNameToStore;
         $data->second_image = $secondFileNameToStore;
         $data->sub_title = $request->get('sub_title');
+        $data->description = $request->get('description');
 
         //Save events data in the database
         $data->save();
