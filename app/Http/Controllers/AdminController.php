@@ -186,7 +186,7 @@ class AdminController extends Controller
             $secondPath = $request->file('second_image')->storeAs('public/assets/img/about', $secondFileNameToStore); //Upload feature image 
         }else{ $secondFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
 
-        //Handle Second Image Upload
+        //Handle Third Image Upload
         if($request->hasFile('third_image')){
             $thirdFileNameWithExtension = $request->file('third_image')->getClientOriginalName(); //Get file name with extension
             $thirdFilename = pathinfo($thirdFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
@@ -216,5 +216,68 @@ class AdminController extends Controller
     public function homePageAboutEdit($id){
         $data = HomePageAbout::find($id);
         return view('admin.about-section.home-page-about-edit', compact('data'));
+    }
+
+    public function homePageAboutUpdate(Request $request, $id){
+
+        //Get Record
+        $data = HomePageAbout::find($id);
+
+        $this->validate(
+            $request,
+            [
+                'title'=>'required',
+                'sub_title'=>'required',
+                'description'=>'required',
+                'first_image'=>'image|nullable|max:1999',
+                'third_image'=>'image|nullable|max:1999',
+                'second_image'=>'image|nullable|max:1999'
+            ]
+        );
+
+        //Handle First Image Upload
+        if($request->hasFile('first_image')){
+            $firstFileNameWithExtension = $request->file('first_image')->getClientOriginalName(); //Get file name with extension
+            $firstFilename = pathinfo($firstFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $firstExtension = $request->file('first_image')->getClientOriginalExtension(); //Get extension
+            $firstFileNameToStore = time().'_1'.'.'.$firstExtension; //Create a eunique filename to store
+            $firstPath = $request->file('first_image')->storeAs('public/assets/img/about', $firstFileNameToStore); //Upload feature image
+
+            //Save Image
+            $data->first_image = $firstFileNameToStore; 
+        }
+
+        //Handle Second Image Upload
+        if($request->hasFile('second_image')){
+            $secondFileNameWithExtension = $request->file('second_image')->getClientOriginalName(); //Get file name with extension
+            $secondFilename = pathinfo($secondFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $secondExtension = $request->file('second_image')->getClientOriginalExtension(); //Get extension
+            $secondFileNameToStore = time().'_2'.'.'.$secondExtension; //Create a eunique filename to store
+            $secondPath = $request->file('second_image')->storeAs('public/assets/img/about', $secondFileNameToStore); //Upload feature image 
+
+            //Save Image
+            $data->second_image = $secondFileNameToStore; 
+        }
+
+        //Handle Third Image Upload
+        if($request->hasFile('third_image')){
+            $thirdFileNameWithExtension = $request->file('third_image')->getClientOriginalName(); //Get file name with extension
+            $thirdFilename = pathinfo($thirdFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $thirdExtension = $request->file('third_image')->getClientOriginalExtension(); //Get extension
+            $thirdFileNameToStore = time().'_3'.'.'.$thirdExtension; //Create a eunique filename to store
+            $thirdPath = $request->file('third_image')->storeAs('public/assets/img/about', $thirdFileNameToStore); //Upload feature image 
+
+            //Save Image
+            $data->third_image = $thirdFileNameToStore; 
+        }
+
+        //Assign Request values to database fields
+        $data->title = $request->get('title');       
+        $data->sub_title = $request->get('sub_title');
+        $data->description = $request->get('description');
+
+        $data->save();
+
+        return redirect()->route('home-page-about')->with('success', 'Record Successfully Updated!');
     }
 }
