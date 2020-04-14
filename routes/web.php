@@ -37,6 +37,7 @@ Route::get('/admin/pages/home/about', 'AdminController@homePageAbout')->name('ho
 Route::post('/admin/pages/home/about/store', 'AdminController@homePageAboutStore')->name('home-page-about-store');
 Route::get('/admin/pages/home/about/edit/{id}', 'AdminController@homePageAboutEdit')->name('home-page-about-edit');
 Route::get('/admin/pages/home/about/create', 'AdminController@homePageAboutCreate')->name('home-page-about-create');
+Route::get('/admin/pages/home/about/delete/{id}', 'AdminController@homePageAboutDelete')->name('home-page-about-delete');
 Route::put('/admin/pages/home/about/update/{id}', 'AdminController@homePageAboutUpdate')->name('home-page-about-update');
 
 //CONTACT ROUTES
