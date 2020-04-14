@@ -154,4 +154,62 @@ class AdminController extends Controller
     public function homePageAboutCreate(){
         return view("admin.about-section.home-page-about-create");
     }
+
+    public function homePageAboutStore(Request $request){
+        $this->validate(
+            $request,
+            [
+                'title'=>'required',
+                'sub_title'=>'required',
+                'description'=>'required',
+                'first_image'=>'image|nullable|max:1999',
+                'third_image'=>'image|nullable|max:1999',
+                'second_image'=>'image|nullable|max:1999'
+            ]
+        );
+
+        //Handle First Image Upload
+        if($request->hasFile('first_image')){
+            $firstFileNameWithExtension = $request->file('first_image')->getClientOriginalName(); //Get file name with extension
+            $firstFilename = pathinfo($firstFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $firstExtension = $request->file('first_image')->getClientOriginalExtension(); //Get extension
+            $firstFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
+            $firstPath = $request->file('first_image')->storeAs('public/assets/img/homepage', $firstFileNameToStore); //Upload feature image 
+        }else{ $firstFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
+
+        //Handle Second Image Upload
+        if($request->hasFile('second_image')){
+            $secondFileNameWithExtension = $request->file('second_image')->getClientOriginalName(); //Get file name with extension
+            $secondFilename = pathinfo($secondFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $secondExtension = $request->file('second_image')->getClientOriginalExtension(); //Get extension
+            $secondFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
+            $secondPath = $request->file('second_image')->storeAs('public/assets/img/homepage', $secondFileNameToStore); //Upload feature image 
+        }else{ $secondFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
+
+        //Handle Second Image Upload
+        if($request->hasFile('third_image')){
+            $thirdFileNameWithExtension = $request->file('third_image')->getClientOriginalName(); //Get file name with extension
+            $thirdFilename = pathinfo($thirdFileNameWithExtension, PATHINFO_FILENAME); //Get file name witout extension
+            $thirdExtension = $request->file('third_image')->getClientOriginalExtension(); //Get extension
+            $thirdFileNameToStore = time().'.'.$extension; //Create a eunique filename to store
+            $thirdPath = $request->file('third_image')->storeAs('public/assets/img/homepage', $thirdFileNameToStore); //Upload feature image 
+        }else{ $thirdFileNameToStore = 'noSquareImage.jpg'; /* Save default image */ }
+
+        //Initialize a new Object
+        $data = new HomePageAbout;
+
+        //Assign Request values to database fields
+        $data->title = $request->get('title');
+        $data->description = get('description');
+        $data->first_image = $firstFileNameToStore;
+        $data->third_image = $ThirdFileNameToStore;
+        $data->second_image = $secondFileNameToStore;
+        $data->sub_title = $request->get('sub_title');
+
+        //Save events data in the database
+        $data->save();
+
+        //Redirect User to events page
+        return redirect()->route('home-page-about')->with('success', 'Record Successfully Saved!');
+    }
 }
