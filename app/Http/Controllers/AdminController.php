@@ -286,4 +286,12 @@ class AdminController extends Controller
 
         return view('admin.about-section.home-page-about-delete', compact('data'));
     }
+
+    public function homePageAboutDestroy($id){
+        $data = HomePageAbout::find($id);
+
+        $data->delete();
+
+        return redirect()->route('home-page-about')->with('success', 'Record Successfully Deleted!');
+    }
 }
