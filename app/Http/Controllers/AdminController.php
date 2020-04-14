@@ -280,4 +280,10 @@ class AdminController extends Controller
 
         return redirect()->route('home-page-about')->with('success', 'Record Successfully Updated!');
     }
+
+    public function homePageAboutDelete($id){
+        $data = HomePageAbout::find($id);
+
+        return view('admin.about-section.home-page-about-delete', compact('data'));
+    }
 }
