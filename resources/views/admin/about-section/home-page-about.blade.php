@@ -30,42 +30,47 @@
                         
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <table class="table table-striped">
-                                <thead>
-                                    <tr>              
-                                        <th> Title </th>
+                                @foreach($data as $data)
+                                    <thead>
+                                        <tr> 
+                                            <th colspan="3" style="font-size: 3rem; text-transform: uppercase; text-align: center;"> 
+                                                {{ $data->title }} 
+                                            </th>             
+                                        <!--<th> Title </th>
                                         <th> Sub-Title </th>
                                         <th> First Image </th>
                                         <th> Second Image </th>
-                                        <th> Third Image </th>
-                                        <th> Edit </th>
-                                        <th> Delete </th>
-                                    </tr>
-                                </thead>
+                                        <th> Third Image </th>-->
+                                        </tr>
+                                    </thead>
 
-                                <tbody>
-                                    @foreach($data as $data)
-                                        <tr>
-                                            <td> {{ $data->title }} </td>
-                                            <td> {{ $data->sub_title }} </td>
-                                            <td> <img src="/storage/assets/img/about/{{ $data ->first_image }}" alt="First Image" style="width: 100px;"> </td>
-                                            <td> <img src="/storage/assets/img/about/{{ $data ->second_image }}" alt="Second Image" style="width: 100px;"> </td>
-                                            <td> <img src="/storage/assets/img/about/{{ $data ->third_image }}" alt="Third Image" style="width: 100px;"> </td>
-                                            
-                                            
-                                            <td> 
-                                                <a href="{{ route('home-page-header-edit', $data->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
-                                            </td>
-                                            <td>
-                                                <a href="{{ route('home-page-header-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
-                                            </td>
+                                    <tbody>
+                                        <tr>                                            
+                                            <td> <img src="/storage/assets/img/about/{{ $data ->first_image }}" alt="First Image" style="width: 150px;" class="img-thumbnail"> </td>
+                                            <td> <img src="/storage/assets/img/about/{{ $data ->second_image }}" alt="Second Image" style="width: 150px;" class="img-thumbnail"> </td>
+                                            <td> <img src="/storage/assets/img/about/{{ $data ->third_image }}" alt="Third Image" style="width: 150px;" class="img-thumbnail"> </td>
+                                        </tr>
+
+                                        <tr> 
+                                            <td colspan="3" style="font-size: 2rem;"> {{ $data->sub_title }} </td>
                                         </tr>
 
                                         <tr>
-                                            <td colspan="7" style="border-bottom: solid 2px #eeeeee"> {!! $data->description !!} </td>
+                                            <td colspan="3"> {!! $data->description !!} </td>
                                         </tr>
-                                    @endforeach
 
-                            </tbody>
+                                        <tr>
+                                            <td> </td>
+                                            <td> </td>
+                                             <td style="text-align: right;"> 
+                                                <a href="{{ route('home-page-about-edit', $data->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> Edit </a>
+                                            
+                                                <a href="{{ route('home-page-header-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> Delete </a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                @endforeach
                             </table>
                         </div>                    
 
