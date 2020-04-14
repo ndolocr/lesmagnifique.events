@@ -64,11 +64,14 @@
 						<h3 class="heading-tertiary u-margin-bottom-small"> Quality of service </h3>
 						<p class="paragraph">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
-						</p>
-
-						<h3 class="heading-tertiary u-margin-bottom-small"> All in one </h3>
-						<p class="paragraph">
+						
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
+
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
+
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nostrum aperiam, porro qui velit. Rerum fuga nisi saepe, aspernatur laboriosam ex, nostrum, suscipit beatae maiores neque quam cum, ut sapiente.
+
+
 						</p>
 		
 						<a href="{{ route('about') }}" class="btn-text">Learn More &rarr;</a>

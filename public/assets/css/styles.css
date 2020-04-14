@@ -595,6 +595,12 @@ form .side-search {
   padding: 25rem 0;
   margin-top: -15vh;
   background: #f7f7f7; }
+  p.paragraph{
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    overflow: hidden !important;
+    -webkit-box-orient: vertical;
+  }
   @media (max-width: 56.25em) {
     .section-about {
       padding: 10rem 0; } }
