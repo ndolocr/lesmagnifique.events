@@ -60,7 +60,7 @@
                                              <td style="text-align: right;"> 
                                                 <a href="{{ route('home-page-about-edit', $data->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> Edit </a>
                                             
-                                                <a href="{{ route('home-page-header-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> Delete </a>
+                                                <a href="{{ route('home-page-about-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> Delete </a>
                                             </td>
                                         </tr>
 
