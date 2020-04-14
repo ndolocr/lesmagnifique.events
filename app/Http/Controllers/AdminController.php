@@ -150,4 +150,8 @@ class AdminController extends Controller
         $data = HomePageAbout::all();
         return view("admin.about-section.home-page-about", compact("data"));
     }
+
+    public function homePageAboutCreate(){
+        return view("admin.about-section.home-page-about-create");
+    }
 }
