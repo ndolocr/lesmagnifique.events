@@ -48,7 +48,7 @@
                                 <!-- BEGIN FORM GROUP FOR TITLE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('title', 'Header Title') }}
+                                    {{ Form::label('title', 'About Us Title') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -63,7 +63,7 @@
                                 <!-- BEGIN FORM GROUP FOR SUB TITLE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('sub_title', 'Header Sub-Title') }}
+                                    {{ Form::label('sub_title', 'About Us Sub-Title') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -78,13 +78,13 @@
                                 <!-- BEGIN FORM GROUP FOR IMAGE ONE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('image_one', 'Image One - (Image size 800 x 800 pixels)') }}
+                                    {{ Form::label('first_image', 'First Image - (Image size 800 x 800 pixels)') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-image"></i>
                                         </span>
-                                        {{ Form::file('image_one', ['class' => 'form-control']) }}
+                                        {{ Form::file('first_image', ['class' => 'form-control']) }}
                                     </div>
 
                                 </div>
@@ -93,13 +93,13 @@
                                 <!-- BEGIN FORM GROUP FOR IMAGE TWO -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('image_two', 'Image Two - (Image size 800 x 800 pixels)') }}
+                                    {{ Form::label('second_image', 'Second Image - (Image size 800 x 800 pixels)') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-image"></i>
                                         </span>
-                                        {{ Form::file('image_two', ['class' => 'form-control']) }}
+                                        {{ Form::file('second_image', ['class' => 'form-control']) }}
                                     </div>
 
                                 </div>
@@ -108,13 +108,13 @@
                                 <!-- BEGIN FORM GROUP FOR IMAGE THREE -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('image_three', 'Image Three - (Image size 800 x 800 pixels)') }}
+                                    {{ Form::label('third_image', 'Third Image - (Image size 800 x 800 pixels)') }}
 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <i class="fa fa-image"></i>
                                         </span>
-                                        {{ Form::file('image_three', ['class' => 'form-control']) }}
+                                        {{ Form::file('third_image', ['class' => 'form-control']) }}
                                     </div>
 
                                 </div>
