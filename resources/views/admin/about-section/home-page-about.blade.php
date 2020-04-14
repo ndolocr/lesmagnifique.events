@@ -26,40 +26,18 @@
         	<!-- BEGIN TABLE -->
             <table class="table table-striped">
                 @if(count($data)>0)
-                    <thead>
-                        <tr>              
-                            <th> Cover Image </th>
-                            <th> Title </th>
-                            <th> Sub-Title </th>
-                            <th> Edit </th>
-                            <th> Delete </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($data as $data)
-                            <tr>
-                                <td> <img src="/storage/assets/img/homepage/{{ $data ->cover_image }}" alt="Cover Image" style="width: 150px;"> </td>
-                                <td> {{ $data->sub_title }} </td>
-                                <td> {{ $data->title }} </td>
-                                <td> 
-                                    <a href="{{ route('home-page-header-edit', $data->id)}}" class='btn yellow btn-outline sbold uppercase'> <i class='fa fa-edit'></i> </a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('home-page-header-delete', $data->id)}}" class='btn red btn-outline sbold uppercase'> <i class='fa fa-trash'></i> </a>
-                                </td>
-                            </tr>
-                        @endforeach                   
-                    </tbody>
+                    Data Available  
                 @else
+                <table>
                     <tbody>
                         <tr>
                             <td> 
-                                <a href="{{ route('home-page-header-create') }}" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
+                                <a href="{{ route('home-page-about-create') }}" class='btn blue btn-outline sbold uppercase'>Add New <i class='fa fa-plus'></i> </a>
                             </td>
                         </tr>
                     </tbody>
+                </table>
                 @endif
-            </table>
         </div>
     </div>  
     <!-- END ROW -->
