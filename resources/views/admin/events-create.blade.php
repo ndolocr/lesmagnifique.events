@@ -185,20 +185,20 @@
                     <!-- BEGIN SAMPLE FORM PORTLET-->
                     <div class="portlet light bordered" style="height: 600px">
                         
-                        <!-- BEGIN FORM TITLE -->
+                        <!-- BEGIN FORM DESCRIPTION -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
                                 <i class="icon-info font-red-sunglo"></i>
                                 <span class="caption-subject bold uppercase"> Event Description </span>
                             </div>                                   
                         </div>
-                        <!-- END FORM TITLE -->
+                        <!-- END FORM DESCRIPTION -->
                         
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
                             <div class="form-body">
 
-                                <!-- BEGIN FORM GROUP FOR EVENTS TITLE -->
+                                <!-- BEGIN FORM GROUP FOR EVENTS DESCRIPTION -->
                                 <div class="form-group">
                                     
                                     <div class="input-group">
@@ -206,7 +206,7 @@
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS TITLE -->
+                                <!-- END FORM GROUP FOR EVENTS DESCRIPTION -->
                                 
                                 <!-- BEGIN FORM ACTION SECTION -->
                                 <div class="form-actions" style="border: none !important">

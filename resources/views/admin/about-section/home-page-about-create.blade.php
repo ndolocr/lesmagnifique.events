@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered">
+                    <div class="portlet light bordered" style="height: 600px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
@@ -74,6 +74,58 @@
 
                                 </div>
                                 <!-- END FORM GROUP FOR SUB TITLE -->
+                                
+                                <!-- BEGIN FORM GROUP FOR IMAGE ONE -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('image_one', 'Image One - (Image size 800 x 800 pixels)') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-image"></i>
+                                        </span>
+                                        {{ Form::file('image_one', ['class' => 'form-control']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR IMAGE ONE -->
+
+                                <!-- BEGIN FORM GROUP FOR IMAGE TWO -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('image_two', 'Image Two - (Image size 800 x 800 pixels)') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-image"></i>
+                                        </span>
+                                        {{ Form::file('image_two', ['class' => 'form-control']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR IMAGE TWO -->
+
+                                <!-- BEGIN FORM GROUP FOR IMAGE THREE -->
+                                <div class="form-group">
+                                    
+                                    {{ Form::label('image_three', 'Image Three - (Image size 800 x 800 pixels)') }}
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-image"></i>
+                                        </span>
+                                        {{ Form::file('image_three', ['class' => 'form-control']) }}
+                                    </div>
+
+                                </div>
+                                <!-- END FORM GROUP FOR IMAGE THREE -->
+
+                                <!-- BEGIN FORM ACTION SECTION -->
+                                <div class="form-actions" style="border: none !important">
+                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
+                                    {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
+                                </div>
+                                <!-- BEGIN FORM ACTION SECTION -->
 
                             </div>
                         
@@ -91,13 +143,13 @@
                 <div class="col-md-6">
                     
                     <!-- BEGIN SAMPLE FORM PORTLET-->
-                    <div class="portlet light bordered">
+                    <div class="portlet light bordered" style="height: 600px">
                         
                         <!-- BEGIN FORM TITLE -->
                         <div class="portlet-title">
                             <div class="caption font-red-sunglo">
-                                <i class="icon-settings font-red-sunglo"></i>
-                                <span class="caption-subject bold uppercase"> Controls </span>
+                                <i class="icon-info font-red-sunglo"></i>
+                                <span class="caption-subject bold uppercase"> ABOUT US </span>
                             </div>                                   
                         </div>
                         <!-- END FORM TITLE -->
@@ -105,28 +157,16 @@
                         <!-- CREATE FORM BODY -->
                         <div class="portlet-body form">
                             <div class="form-body">
-                                
-                                <!-- BEGIN FORM GROUP FOR EVENTS FEATURE IMAGE -->
+
+                                <!-- BEGIN FORM GROUP FOR EVENTS DESCRIPTION -->
                                 <div class="form-group">
                                     
-                                    {{ Form::label('cover_image', 'Cover Image - (Image size 800 x 560 pixels)') }}
-
                                     <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="fa fa-image"></i>
-                                        </span>
-                                        {{ Form::file('cover_image', ['class' => 'form-control']) }}
+                                        {{ Form::textarea('description', '', ['class' => 'ckeditor form-control', 'id' => 'description']) }}
                                     </div>
 
                                 </div>
-                                <!-- END FORM GROUP FOR EVENTS FEATURE IMAGE -->
-
-                                <!-- BEGIN FORM ACTION SECTION -->
-                                <div class="form-actions" style="border: none !important">
-                                    {{  Form::submit('Save', ['class' => 'btn blue uppercase']) }}
-                                    {{ Form::reset('Cancel', ['class' => 'btn red uppercase']) }}
-                                </div>
-                                <!-- BEGIN FORM ACTION SECTION -->
+                                <!-- END FORM GROUP FOR EVENTS DESCRIPTION -->
 
                             </div>
                         
