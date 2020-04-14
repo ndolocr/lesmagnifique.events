@@ -24,7 +24,7 @@
             <!-- END MESSAGES -->
             
             <!-- BEGIN FORM CREATION -->
-            {!! Form::Open( ['action' => 'AdminController@homePageHeaderStore', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
+            {!! Form::Open( ['action' => 'AdminController@homePageAboutStore', 'method' => 'POST', 'enctype' => 'multipart/form-data'] ) !!}
                 
                 <!-- BEGIN FIRST FORM SECTION COLUMN-->
                 <div class="col-md-6">

@@ -34,6 +34,7 @@ Route::put('/admin/pages/home/header/update/{id}', 'AdminController@homePageHead
 Route::delete('/admin/pages/home/header/destroy/{id}', 'AdminController@homePageHeaderDestroy')->name('home-page-header-destroy');
 
 Route::get('/admin/pages/home/about', 'AdminController@homePageAbout')->name('home-page-about');
+Route::post('/admin/pages/home/about/store', 'AdminController@homePageAboutStore')->name('home-page-about-store');
 Route::get('/admin/pages/home/about/create', 'AdminController@homePageAboutCreate')->name('home-page-about-create');
 
 //CONTACT ROUTES
